@@ -1,3 +1,6 @@
+@import '../variables/colors';
+@import '../variables/fonts';
+
 /* RESETS */
 *,
 *::before,
@@ -8,36 +11,24 @@
     outline: 1px solid black;
 }
 
-html {
-    box-sizing: border-box;
-    font: 62.5% / 1.15 sans-serif;
-}
-
-html,
 body {
-    //overflow: auto;
-    //position: relative;
-    margin: 0;
-    padding: 0;
+    max-width: 90rem;
+    min-height: 100vh;
+    margin: auto;
+    background-color: $page-background;
 }
 
-h1,
-h2 {
-    margin-bottom: 0;
-}
 
 ul {
     list-style: none;
     padding: 0;
 }
 
-body,
 button,
 input[type='text'],
 optgroup,
 select,
-textarea,
-button {
+textarea {
     margin: 0;
 }
 
@@ -48,10 +39,6 @@ input {
 
 input[type='text'] {
     border-radius: 0;
-}
-
-body {
-    width: 100%;
 }
 
 .pointer {
