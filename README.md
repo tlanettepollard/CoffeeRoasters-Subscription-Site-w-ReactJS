@@ -1,93 +1,112 @@
-<h1 align="center">
-  Vite Template React
-</h1>
+# Frontend Mentor - Coffeeroasters subscription site solution
 
-<p align="center">
-  <a href="https://github.com/SafdarJamal/vite-template-react/releases">
-    <img src="https://img.shields.io/github/v/release/SafdarJamal/vite-template-react" alt="GitHub Release (latest by date)" />
-  </a>
-  <a href="https://github.com/SafdarJamal/vite-template-react/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/SafdarJamal/vite-template-react" alt="License" />
-  </a>
-</p>
+This is a solution to the [Coffeeroasters subscription site challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/coffeeroasters-subscription-site-5Fc26HVY6). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-<p align="center">
-    A <a href="https://vitejs.dev">Vite</a> + <a href="https://react.dev">React</a> starter template.
-</p>
+## Table of contents
 
-![Vite Template React](https://github.com/SafdarJamal/vite-template-react/assets/48409548/4b1eb99e-01b8-4752-91c0-76930e7948c1)
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-## Folder Structure
+**Note: Delete this note and update the table of contents based on what sections you keep.**
 
-No configuration or complicated folder structures, just the files you need to build your app:
+## Overview
 
+### The challenge
+
+Users should be able to:
+
+- View the optimal layout for each page depending on their device's screen size
+- See hover states for all interactive elements throughout the site
+- Make selections to create a coffee subscription and see an order summary modal of their choices
+
+### Screenshot
+
+![](./screenshot.jpg)
+
+Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+
+Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
+
+Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
+
+**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+
+### Links
+
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- [React](https://reactjs.org/) - JS library
+- [Next.js](https://nextjs.org/) - React framework
+- [Styled Components](https://styled-components.com/) - For styles
+
+**Note: These are just examples. Delete this note and replace the list above with your own choices**
+
+### What I learned
+
+Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+
+To see how you can add code snippets, see below:
+
+```html
+<h1>Some HTML code I'm proud of</h1>
 ```
-vite-template-react
-├── node_modules
-├── public
-│   ├── favicon.svg
-│   └── robots.txt
-└── src
-    ├── App.css
-    ├── App.jsx
-    ├── App.test.jsx
-    ├── index.css
-    ├── index.jsx
-    └── logo.svg
-    └── setupTests.js
-├── .gitignore
-├── index.html
-├── package.json
-├── README.md
-├── vite.config.js
+```css
+.proud-of-this-css {
+  color: papayawhip;
+}
+```
+```js
+const proudOfThisFunc = () => {
+  console.log('🎉')
+}
 ```
 
-## Development
+If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
 
-To get a local copy of the code, clone it using git:
+**Note: Delete this note and the content within this section and replace with your own learnings.**
 
-```
-git clone https://github.com/SafdarJamal/vite-template-react.git
-cd vite-template-react
-```
+### Continued development
 
-Make it your own:
+Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
 
-```
-rm -rf .git && git init && npm init
-git add .
-git commit -m "Initial commit"
-```
+**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
-Install dependencies:
+### Useful resources
 
-```
-npm i
-```
+- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
-Now, you can start a local web server by running:
+**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
-```
-npm start
-```
+## Author
 
-And then open http://localhost:3000 to view it in the browser.
+- Website - [Add your name here](https://www.your-site.com)
+- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Twitter - [@yourusername](https://www.twitter.com/yourusername)
 
-#### Available Scripts
+**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
-In this project, you can run the following scripts:
+## Acknowledgments
 
-| Script        | Description                                             |
-| ------------- | ------------------------------------------------------- |
-| npm start     | Runs the app in the development mode.                   |
-| npm test      | Launches the test runner in the interactive watch mode. |
-| npm run build | Builds the app for production to the `dist` folder.     |
-| npm run serve | Serves the production build from the `dist` folder.     |
+This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
 
-## Credits
-
-Vite Template React is built and maintained by [Safdar Jamal](https://safdarjamal.github.io).
-
-## License
-
-This project is licensed under the terms of the [MIT license](https://github.com/SafdarJamal/vite-template-react/blob/main/LICENSE).
+**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
