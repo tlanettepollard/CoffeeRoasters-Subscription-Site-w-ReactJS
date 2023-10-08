@@ -1,0 +1,69 @@
+// Font Mixins
+@mixin HomeSection1Title() {
+    font-family: $header-font;
+    font-size: $home-section1-heading-size;
+    color: $home-section1-heading-color;
+    line-height: 4.5rem;
+    text-transform: lowercase;
+}
+
+@mixin HeaderOne() {
+    font-family: $header-font;
+    font-size: $h1-heading-size;
+    color: $header-font-color;
+    line-height: 4.5rem;
+    letter-spacing: 0rem;
+}
+
+@mixin HeaderTwo() {
+    font-family: $header-font;
+    font-size: $h2-heading-size;
+    color: $header-font-color;
+    line-height: 3rem;
+    letter-spacing: 0rem;
+}
+
+@mixin HeaderThree() {
+    font-family: $header-font;
+    font-size: $h3-heading-size;
+    color: $header-font-color;
+    line-height: 2.25rem;
+    letter-spacing: 0rem;
+}
+
+@mixin HeaderFour() {
+    font-family: $header-font;
+    font-size: $h4-heading-size;
+    color: $header-font-color;
+    line-height: 2rem;
+    letter-spacing: 0rem;
+}
+
+@mixin BodyFont() {
+    font-family: $body-font;
+    color: $body-font-color;
+    font-size: $body-font-size;
+    line-height: 1.625rem;
+    font-weight: 400;
+}
+
+@mixin ButtonFont() {
+    font-family: $header-font;
+    font-size: $button-font-size;
+    line-height: 1.5625rem;
+}
+
+@mixin NavbarFont() {
+    font-family: $body-font;
+    font-size: $navbar-font-size;
+    line-height: .9375rem;
+    text-transform: uppercase;
+}
+
+@mixin AccordionMenuTitle() {
+    font-family: $header-font;
+    font-size: $accordion-menu-title-size;
+    color: $grey;
+}
+
+// Media Mixins
