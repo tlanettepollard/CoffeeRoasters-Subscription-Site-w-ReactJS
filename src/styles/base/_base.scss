@@ -1,0 +1,61 @@
+/* RESETS */
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 1px solid black;
+}
+
+html {
+    box-sizing: border-box;
+    font: 62.5% / 1.15 sans-serif;
+}
+
+html,
+body {
+    //overflow: auto;
+    //position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2 {
+    margin-bottom: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+body,
+button,
+input[type='text'],
+optgroup,
+select,
+textarea,
+button {
+    margin: 0;
+}
+
+button,
+input {
+    overflow: visible;
+}
+
+input[type='text'] {
+    border-radius: 0;
+}
+
+body {
+    width: 100%;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+// Global Styles

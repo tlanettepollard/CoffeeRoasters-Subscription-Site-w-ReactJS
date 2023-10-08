@@ -1,0 +1,29 @@
+// Base Colors 
+$prim-color-dk-cyan: hsl(178, 81, 29);
+$sec-color-dk-grey-blue: hsl(215, 19, 25);
+$acc-color-pale-orange: hsl(25, 94, 86);
+
+// Other Colors
+$light-tan: hsl(43, 30, 94);
+$light-cream: hsl(43, 78, 98);
+$grey: hsl(215, 5, 54);
+$light-cyan: hsl(179, 55, 61);
+$light-grey: hsl(25, 11, 87);
+
+// Element Colors
+$page-background: $light-cream;
+$active-btn: $prim-color-dk-cyan;
+$btn-hover: $light-cyan;
+$btn-disabled: $light-grey;
+$selection-opt-active: $prim-color-dk-cyan;
+$selection-opt-hover: $acc-color-pale-orange;
+$selection-opt-default: $light-tan;
+$accordion-caret-default: $prim-color-dk-cyan;
+$accordion-caret-hover: $light-cyan;
+$accordion-caret-disabled: $light-cyan;
+
+//Font Colors
+$body-font-color: $sec-color-dk-grey-blue;
+$header-font-color: $sec-color-dk-grey-blue;
+$home-section-heading-color: $grey;
+$accordion-heading-color: $grey;
