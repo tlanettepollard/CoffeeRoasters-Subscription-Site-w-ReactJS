@@ -1,0 +1,48 @@
+@import '../variables/colors';
+@import '../variables/fonts';
+
+/* RESETS */
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 1px solid black;
+}
+
+body {
+    max-width: 90rem;
+    min-height: 100vh;
+    margin: auto;
+    background-color: $page-background;
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+button,
+input[type='text'],
+optgroup,
+select,
+textarea {
+    margin: 0;
+}
+
+button,
+input {
+    overflow: visible;
+}
+
+input[type='text'] {
+    border-radius: 0;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+// Global Styles
