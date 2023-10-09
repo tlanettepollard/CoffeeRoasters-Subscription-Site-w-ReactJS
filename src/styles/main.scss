@@ -7,6 +7,12 @@
 // Components
 @import './components/buttons';
 
+// Layout
+@import './layout/accordion';
+@import './layout/footer';
+@import './layout/modal';
+@import './layout/navbar';
+
 // Pages
 @import './pages/about';
 @import './pages/home';

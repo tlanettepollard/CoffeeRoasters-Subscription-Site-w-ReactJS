@@ -2,7 +2,8 @@ import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 
-const Navbar = () => {
+export function Navbar() {
+
     const [isNotMobile, setIsNotMobile] = useState(window.innerWidth > 767);
     const [isNavExpanded, setIsNavExpanded] = useState(false);
 
@@ -82,6 +83,6 @@ const Navbar = () => {
             )}
         </>
     );
+
 }
 
-export default Navbar;
