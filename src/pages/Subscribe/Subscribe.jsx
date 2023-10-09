@@ -1,9 +1,7 @@
 import React from 'react';
 
-const Subscribe = () => {
+export function Subscribe() {
     return (
-        <div>Plan</div>
-    )
+        <div>Subscribe Page</div>
+    );
 }
-
-export default Subscribe;
