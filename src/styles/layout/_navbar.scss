@@ -1,9 +1,10 @@
 nav {
-    max-width: 90%;
     margin: auto;
-    padding: 2.5rem 5rem;
+    padding: 2rem 1rem;
+    display: block;
+}
+
+.mobile-nav {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     align-items: center;
 }

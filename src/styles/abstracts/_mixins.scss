@@ -1,3 +1,12 @@
+// Flex Mixin
+@mixin flex ($direction, $justifyContent, $alignItems) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+}
+
+
 // Font Mixins
 @mixin HomeSection1Title() {
     font-family: $header-font;
@@ -67,3 +76,45 @@
 }
 
 // Media Mixins
+
+// XS Mobile
+@mixin bp-xs-mobile {
+    @media screen and (max-width: 375px) {
+        @content;
+    }
+}
+
+// SM Mobile
+@mixin bp-sm-mobile {
+    @media screen and (max-width: 576px) {
+        @content;
+    }
+}
+
+// MD Tablet
+@mixin bp-md-tablet {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+// LG Tablet
+@mixin bp-lg-tablet {
+    @media screen and (max-width: 992px) {
+        @content;
+    }
+}
+
+// XL Desktop
+@mixin bp-xl-desktop {
+    @media screen and (max-width: 1200px) {
+        @content;
+    }
+}
+
+// XXL Desktop
+@mixin bp-xxl-desktop {
+    @media screen and (max-width: 1400px) {
+        @content;
+    }
+}
