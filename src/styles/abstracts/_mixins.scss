@@ -1,3 +1,7 @@
+@import '../variables/colors';
+@import '../variables/fonts';
+@import '../variables/media';
+
 // Flex Mixin
 @mixin flex ($direction, $justifyContent, $alignItems) {
     display: flex;

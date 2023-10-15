@@ -5,6 +5,5 @@ nav {
 }
 
 .mobile-nav {
-    display: flex;
-    align-items: center;
+    @include flex(row, space-between, center);
 }
