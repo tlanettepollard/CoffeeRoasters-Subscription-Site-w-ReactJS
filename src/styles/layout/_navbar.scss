@@ -9,15 +9,19 @@
         @include flex(row, space-between, center);
 
         .navbar-menu {
-
             &--list {
                 @include flex(row, center, flex-start);
                 gap: 2.0625rem;
                 flex-shrink: 0;
-                @include NavbarFont();
+
+                li a {
+                    @include NavbarFont;
+                }
             }
         }
     }
+
+
 
 }
 
@@ -33,6 +37,16 @@
     width: 100%;
     height: 36.0625rem;
     @include flex(column, space-around, center);
+
+    .mobile-menu--list {
+        height: 25%;
+        @include flex(column, space-between, center);
+        @include HeaderFour;
+
+        li a {
+            color: $mobile-navbar-font-color;
+        }
+    }
 }
 
 

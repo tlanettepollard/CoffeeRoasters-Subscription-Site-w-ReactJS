@@ -1,16 +1,16 @@
 import React from 'react';
 import { HomeBanner } from './HomeBanner';
-import { OurCollection } from './OurCollection';
-import { WhyChoose } from './WhyChoose';
-import { HowItWorks } from './HowItWorks';
+import { HomeCollection } from './HomeCollection';
+import { HomeChoose } from './HomeChoose';
+import { HomeWorks } from './HomeWorks';
 
 export function Home() {
     return (
         <>
             <HomeBanner />
-            <OurCollection />
-            <WhyChoose />
-            <HowItWorks />
+            <HomeCollection />
+            <HomeChoose />
+            <HomeWorks />
         </>
     );
 }

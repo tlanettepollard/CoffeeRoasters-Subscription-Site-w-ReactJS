@@ -1,4 +1,4 @@
-export function WhyChoose() {
+export function HomeChoose() {
     return (
         <div className="home-choose">
             <div className="choose">

@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-export function HowItWorks() {
+export function HomeWorks() {
     let navigate = useNavigate();
     const changeRoute = () => {
         let path = '/subscribe';
