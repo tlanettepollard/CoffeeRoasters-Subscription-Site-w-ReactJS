@@ -1,6 +1,6 @@
 export function OurCollection() {
     return (
-        <div className='collection'>
+        <div className='home-collection'>
             <p className='collection-title'>Our collection</p>
             <div className='collection-container'>
                 <div className="collection-card">
