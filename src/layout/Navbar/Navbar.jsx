@@ -32,7 +32,7 @@ export function Navbar() {
                         <img className='company-logo' src='/public/assets/shared/desktop/logo.svg' alt='coffee roasters logo' />
                     </Link>
                     <div className='navbar-menu'>
-                        <ul>
+                        <ul className='navbar-menu--list'>
                             <li>
                                 <Link to='/'>Home</Link>
                             </li>
@@ -64,7 +64,7 @@ export function Navbar() {
                     </nav>
                     {isNavExpanded ? (
                         <nav className='mobile-nav-menu'>
-                            <ul>
+                            <ul className='mobile-menu--list'>
                                 <li>
                                     <Link to='/'>Home</Link>
                                 </li>
@@ -74,7 +74,8 @@ export function Navbar() {
                                 <li>
                                     <Link to='/subscribe'>Create Your Plan</Link>
                                 </li>
-                            </ul>
+                                </ul>
+                                <button>Create Your Plan</button>
                         </nav>
                     ) : (
                         ""
