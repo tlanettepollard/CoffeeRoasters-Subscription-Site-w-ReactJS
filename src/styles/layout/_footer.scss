@@ -1,0 +1,47 @@
+footer {
+    width: 90%;
+    height: 21.625rem;
+    margin: auto;
+    background-color: $footer-background;
+    @include flex(column, center, center);
+    text-align: center;
+
+    @include bp-xl-desktop {
+        height: 7.5rem;
+    }
+
+}
+
+.footer-container {
+    max-width: 80%;
+    margin: auto;
+
+    @include bp-xl-desktop {
+        width: 100%;
+        @include flex(row, space-between, center);
+    }
+
+    .footer-main-menu {
+        @include bp-xl-desktop {
+            width: 100%;
+            @include flex(row, flex-start, flex-start);
+        }
+
+        .footer-menu {
+            @include bp-md-tablet {
+                @include flex(row, center, center);
+            }
+        }
+    }
+
+
+}
+
+footer li a {
+    @include NavbarFont;
+    color: $footer-nav-text;
+}
+
+.footer-social-menu {
+    @include flex(row, space-evenly, center);
+}

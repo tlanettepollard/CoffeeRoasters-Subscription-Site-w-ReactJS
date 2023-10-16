@@ -79,14 +79,7 @@
     color: $grey;
 }
 
-// Media Mixins
-
-// XS Mobile
-@mixin bp-xs-mobile {
-    @media screen and (max-width: 375px) {
-        @content;
-    }
-}
+// Media Mixins-- Min-Width
 
 // SM Mobile
 @mixin bp-sm-mobile {
@@ -97,28 +90,36 @@
 
 // MD Tablet
 @mixin bp-md-tablet {
-    @media screen and (max-width: 768px) {
+    @media screen and (min-width: 768px) {
         @content;
     }
 }
 
 // LG Tablet
 @mixin bp-lg-tablet {
-    @media screen and (max-width: 992px) {
+    @media screen and (min-width: 992px) {
         @content;
     }
 }
 
 // XL Desktop
 @mixin bp-xl-desktop {
-    @media screen and (max-width: 1200px) {
+    @media screen and (min-width: 1200px) {
         @content;
     }
 }
 
 // XXL Desktop
 @mixin bp-xxl-desktop {
-    @media screen and (max-width: 1400px) {
+    @media screen and (min-width: 1400px) {
+        @content;
+    }
+}
+
+// Media Mixins-- Max-Width
+// XS Mobile
+@mixin bp-xs-mobile {
+    @media screen and (max-width: 375px) {
         @content;
     }
 }

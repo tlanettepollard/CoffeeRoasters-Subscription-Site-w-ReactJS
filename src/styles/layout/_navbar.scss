@@ -1,9 +1,43 @@
-nav {
+.navbar {
     margin: auto;
-    padding: 2rem 1rem;
+    padding: 1.5rem 2rem;
     display: block;
+
+    @include bp-md-tablet {
+        width: 90%;
+        padding: 2.5rem 2.5rem;
+        @include flex(row, space-between, center);
+
+        .navbar-menu {
+
+            &--list {
+                @include flex(row, center, flex-start);
+                gap: 2.0625rem;
+                flex-shrink: 0;
+                @include NavbarFont();
+            }
+        }
+    }
+
 }
 
+
+
 .mobile-nav {
+    width: 100%;
+    padding: 1.5rem 1rem;
     @include flex(row, space-between, center);
+}
+
+.mobile-nav-menu {
+    width: 100%;
+    height: 36.0625rem;
+    @include flex(column, space-around, center);
+}
+
+
+.hamburger-icon {
+    @include bp-md-tablet {
+        display: none;
+    }
 }
