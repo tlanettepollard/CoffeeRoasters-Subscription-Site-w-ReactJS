@@ -74,8 +74,8 @@ export function Navbar() {
                                 <li>
                                     <Link to='/subscribe'>Create Your Plan</Link>
                                 </li>
-                                </ul>
-                                <button>Create Your Plan</button>
+                            </ul>
+                            <button>Create Your Plan</button>
                         </nav>
                     ) : (
                         ""

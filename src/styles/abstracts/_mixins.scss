@@ -71,6 +71,7 @@
     font-size: $navbar-font-size;
     line-height: .9375rem;
     text-transform: uppercase;
+    color: $navbar-font-color;
 }
 
 @mixin AccordionMenuTitle() {
