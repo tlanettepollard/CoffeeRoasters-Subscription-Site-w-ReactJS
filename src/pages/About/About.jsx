@@ -1,7 +1,8 @@
 import React from 'react';
+import { AboutBanner } from './AboutBanner';
 
 export function About() {
     return (
-        <div>About Page</div>
+        <AboutBanner />
     );
 }

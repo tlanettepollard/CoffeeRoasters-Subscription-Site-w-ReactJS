@@ -1,0 +1,12 @@
+.about-banner {
+    width: 90%;
+    height: 25rem;
+    overflow: hidden;
+    margin: auto;
+
+    .about-banner-image {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
