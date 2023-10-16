@@ -1,4 +1,4 @@
-export function OurCollection() {
+export function HomeCollection() {
     return (
         <div className='home-collection'>
             <p className='collection-title'>Our collection</p>
