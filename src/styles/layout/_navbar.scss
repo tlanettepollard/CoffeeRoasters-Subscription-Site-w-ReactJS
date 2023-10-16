@@ -4,6 +4,7 @@
     display: block;
 
     @include bp-md-tablet {
+        width: 90%;
         padding: 2.5rem 2.5rem;
         @include flex(row, space-between, center);
 
