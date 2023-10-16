@@ -1,0 +1,31 @@
+.home-banner {
+    width: 90%;
+    height: 31.25rem;
+    overflow: hidden;
+    margin: auto;
+
+    .home-banner-image {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &-container {
+        width: 90%;
+        height: 31.25rem;
+        margin: auto;
+        @include flex(column, center, center);
+
+        .home-banner-title {
+            @include HeaderTwo;
+            color: $light-cream;
+            text-align: center;
+        }
+
+        .home-banner-body {
+            @include BodyFont;
+            color: $light-cream;
+            text-align: center;
+        }
+    }
+}
