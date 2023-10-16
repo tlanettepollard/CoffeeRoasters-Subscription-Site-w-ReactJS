@@ -42,5 +42,5 @@ export function OurCollection() {
                 </div>
             </div>
         </div>
-    )
+    );
 }
