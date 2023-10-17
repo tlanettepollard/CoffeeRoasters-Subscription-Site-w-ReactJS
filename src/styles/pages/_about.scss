@@ -9,4 +9,23 @@
         background-repeat: no-repeat;
         background-position: center;
     }
+
+    &-container {
+        width: 90%;
+        height: 25rem;
+        margin: auto;
+        @include flex(column, center, center);
+
+        .about-banner-title {
+            @include HeaderTwo;
+            color: $light-cream;
+            text-align: center;
+        }
+
+        .about-banner-body {
+            @include BodyFont;
+            color: $light-cream;
+            text-align: center;
+        }
+    }
 }
