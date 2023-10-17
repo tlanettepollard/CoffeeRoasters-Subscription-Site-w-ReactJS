@@ -20,7 +20,14 @@ export function AboutBanner() {
         <div className="about-banner">
             <style scoped>{css}</style>
             <div className="about-banner-image">
-
+                <div className="about-banner-container">
+                    <p className="about-banner-title">
+                        About us
+                    </p>
+                    <p className="about-banner-body">
+                        Coffeeroasters began its journey of exotic discovery in 1999, highlighting stories of coffee from around the world. We have since been dedicated to bring the perfect cup - from bean to brew - in every shipment.
+                    </p>
+                </div>
             </div>
         </div>
 
