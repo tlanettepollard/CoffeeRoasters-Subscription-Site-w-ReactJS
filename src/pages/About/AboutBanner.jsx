@@ -17,13 +17,12 @@ export function AboutBanner() {
 
 
     return (
-        <>
-            <div className="about-banner">
-                <style scoped>{css}</style>
-                <div className="about-banner-image">
+        <div className="about-banner">
+            <style scoped>{css}</style>
+            <div className="about-banner-image">
 
-                </div>
             </div>
-        </>
+        </div>
+
     );
 }
