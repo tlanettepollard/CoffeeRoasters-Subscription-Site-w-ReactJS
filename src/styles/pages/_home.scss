@@ -88,6 +88,7 @@
 // Why Choose
 .home-section2 {
     width: 90%;
+    height: 106.25rem;
     margin: auto;
     margin: 0 1.25rem;
     padding-top: 7.5rem;
@@ -116,6 +117,47 @@
                 margin: 1rem 1.5rem 1.75rem 1.5rem;
             }
         }
+
+        .choose-container {
+            height: auto;
+            @include flex (column, start, center);
+            gap: 1.875rem;
+            margin-top: 3.75rem;
+
+            .choose-card {
+                max-width: 0;
+                max-width: 100%;
+                max-height: 0;
+                max-height: 25rem;
+                @include flex(column, center, center);
+                width: 17.375rem;
+                height: 23.875rem;
+                background-color: $prim-color-dk-cyan;
+                border-radius: .625rem;
+
+                &-image {
+                    width: 100%;
+                    max-width: 3.9063rem;
+                    padding-bottom: 1.875rem;
+                }
+
+                &-copy {
+                    .choose-card-title {
+                        @include HeaderFour;
+                        color: $light-cream;
+                        padding-bottom: 1.875rem;
+                    }
+
+                    .choose-card-body {
+                        @include BodyFont;
+                        color: $light-cream;
+                        font-size: .9375rem;
+                        padding: 1.25rem;
+                    }
+                }
+            }
+
+        }
     }
 }
 
@@ -123,5 +165,6 @@
 .home-section3 {
     width: 90%;
     margin: auto;
+    margin-top: 7.5rem;
     overflow: hidden;
 }

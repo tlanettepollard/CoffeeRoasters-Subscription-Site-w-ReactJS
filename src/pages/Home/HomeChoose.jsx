@@ -16,7 +16,7 @@ export function HomeChoose() {
                     </div>
 
                     <div className="choose-card">
-                        <img src="/public/assets/home/desktop/icon-gift.svg" alt="coffee bean icon" className="card-image" />
+                        <img src="/public/assets/home/desktop/icon-gift.svg" alt="coffee bean icon" className="choose-card-image" />
                         <div className="choose-card-copy">
                             <p className="choose-card-title">Exclusive benefits</p>
                             <p className="choose-card-body">Special offers and swag when you subscribe, including 30% off your first shipment. </p>
