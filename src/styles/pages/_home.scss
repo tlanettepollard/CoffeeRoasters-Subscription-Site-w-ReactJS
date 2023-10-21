@@ -3,6 +3,7 @@
     width: 90%;
     height: 31.25rem;
     overflow: hidden;
+    padding: auto;
     margin: auto;
 
     .home-banner-image {
@@ -32,24 +33,31 @@
     }
 }
 
-// How It Works
-.home-works {
-    width: 90%;
-    margin: auto;
-    overflow: hidden;
-}
-
-
 // Our Collection
-.home-collection {
-    width: 90%;
-    margin: auto;
-    overflow: hidden;
-}
+.home-section1 {
+    @include flex(column, center, center);
 
+    .collection-title {
+        @include HomeSection1Title;
+        padding-top: 7.5rem;
+    }
+
+    .collection-container {
+        width: 90%;
+        @include flex (column, center, center);
+        overflow: hidden;
+    }
+}
 
 // Why Choose
-.home-choose {
+.home-section2 {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+// How It Works
+.home-section3 {
     width: 90%;
     margin: auto;
     overflow: hidden;
