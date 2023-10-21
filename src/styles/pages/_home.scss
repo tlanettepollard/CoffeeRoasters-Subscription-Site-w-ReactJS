@@ -36,16 +36,50 @@
 // Our Collection
 .home-section1 {
     @include flex(column, center, center);
+    width: 100%; 
+    //height: 83.125rem;
 
     .collection-title {
         @include HomeSection1Title;
-        padding-top: 7.5rem;
+        padding-top: 5rem;
+        background: -webkit-linear-gradient($grey,
+                $light-cream );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        z-index: 0;
+        padding-bottom: .8125rem;
     }
 
     .collection-container {
+        background: none;
         width: 90%;
-        @include flex (column, center, center);
+        height: 100%;
+        @include flex (column, space-evenly, center);
         overflow: hidden;
+        
+
+        .collection-card {
+            @include flex (column, center, center);
+            &-image {
+                width: 12.5rem;
+                height: 9.4375rem;
+                z-index: 1;
+                background: none;
+            }
+
+            &-copy {
+                text-align: center;
+                .collection-copy-title {
+                    @include HeaderTwo;
+                    padding-bottom: 1.5rem;
+                }
+
+                .collection-copy-body {
+                    @include BodyFont;
+                    padding-bottom: 3rem;
+                }
+            }
+        }
     }
 }
 
