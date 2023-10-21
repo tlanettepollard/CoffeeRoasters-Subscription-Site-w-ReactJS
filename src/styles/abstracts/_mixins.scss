@@ -18,7 +18,9 @@
     color: $home-section1-heading-color;
     line-height: 4.5rem;
     text-transform: lowercase;
+    text-align: center;
 }
+
 
 @mixin HeaderOne() {
     font-family: $header-font;
