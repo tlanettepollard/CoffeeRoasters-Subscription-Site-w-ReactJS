@@ -35,9 +35,11 @@ export function HomeBanner() {
                     <p className="home-banner-body">
                         Start your mornings with the world’s best coffees. Try our expertly curated artisan coffees from our best roasters delivered directly to your door, at your schedule.
                     </p>
-                    <button onClick={changeRoute} className="primary-button">
-                        Create your plan
-                    </button>
+                    <div>
+                        <button onClick={changeRoute} className="home-primary-button">
+                            Create your plan
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

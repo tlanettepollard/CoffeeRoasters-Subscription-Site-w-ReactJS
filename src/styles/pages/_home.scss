@@ -167,9 +167,12 @@
     height: 69.75rem;
     margin: auto;
     margin-top: 7.5rem;
+    margin-bottom: 7.5rem;
     overflow: hidden;
 
     .home-works {
+        height: 69.75rem;
+        padding-bottom: 6.5rem;
         @include flex(column, center, center);
 
         .works-title {
@@ -180,6 +183,7 @@
 
         .works-container {
             height: auto;
+
             @include flex(column, space-evenly, center);
 
             .works-card {
@@ -204,6 +208,17 @@
                     text-align: center;
                 }
             }
+
+
         }
     }
+}
+
+.home-primary-button {
+    @include MainDefaultBtn;
+}
+
+.works-primary-button {
+    @include MainDefaultBtn;
+
 }
