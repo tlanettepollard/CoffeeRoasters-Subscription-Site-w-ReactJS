@@ -30,7 +30,7 @@ export function HomeWorks() {
                         <div className="works-card-detail">We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning world-class coffees curated to provide a distinct tasting experience.</div>
                     </div>
                 </div>
-                <button onClick={changeRoute} className="button-home-works">
+                <button onClick={changeRoute} className="works-primary-button">
                     Create your plan
                 </button>
             </div>
