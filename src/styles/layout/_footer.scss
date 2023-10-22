@@ -6,6 +6,10 @@ footer {
     @include flex(column, center, center);
     text-align: center;
 
+    @include bp-md-tablet {
+        height: 16.875rem;
+    }
+
     @include bp-xl-desktop {
         height: 7.5rem;
     }
@@ -14,6 +18,7 @@ footer {
 
 .footer-container {
     max-width: 80%;
+    height: auto;
     margin: auto;
 
     @include bp-xl-desktop {
@@ -27,9 +32,25 @@ footer {
             @include flex(row, flex-start, flex-start);
         }
 
+        .footer-logo {
+            padding-bottom: 3rem;
+
+            @include bp-md-tablet {
+                padding-bottom: 2rem;
+            }
+        }
+
         .footer-menu {
             @include bp-md-tablet {
-                @include flex(row, center, center);
+                @include flex(row, space-between, center);
+            }
+
+            li {
+                padding-bottom: 1.5rem;
+
+                @include bp-md-tablet {
+                    padding: 0rem 1.25rem;
+                }
             }
         }
     }
@@ -39,8 +60,20 @@ footer {
 
 footer li a {
     @include NavbarFont;
+
 }
 
 .footer-social-menu {
     @include flex(row, space-evenly, center);
+
+    @include bp-md-tablet {
+        justify-content: center;
+        margin-top: 4.0625rem;
+    }
+
+    li {
+        @include bp-md-tablet {
+            padding: 0rem .625rem;
+        }
+    }
 }
