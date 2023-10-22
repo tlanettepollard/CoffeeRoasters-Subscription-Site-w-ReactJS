@@ -145,7 +145,7 @@
                     .choose-card-title {
                         @include HeaderFour;
                         color: $light-cream;
-                        padding-bottom: 1.875rem;
+                        padding-bottom: 1.25rem;
                     }
 
                     .choose-card-body {
@@ -164,7 +164,46 @@
 // How It Works
 .home-section3 {
     width: 90%;
+    height: 69.75rem;
     margin: auto;
     margin-top: 7.5rem;
     overflow: hidden;
+
+    .home-works {
+        @include flex(column, center, center);
+
+        .works-title {
+            @include HeaderFour;
+            color: $grey;
+            padding-bottom: 1.25rem;
+        }
+
+        .works-container {
+            height: auto;
+            @include flex(column, space-evenly, center);
+
+            .works-card {
+                @include flex(column, center, center);
+                padding-bottom: 3.5rem;
+
+                &-number {
+                    @include HeaderOne;
+                    color: $acc-color-pale-orange;
+                    padding-bottom: 2.5rem;
+                }
+
+                &-step {
+                    @include HeaderFour;
+                    color: $header-font-color;
+                    padding-bottom: 1.5rem;
+                }
+
+                &-detail {
+                    @include BodyFont;
+                    color: $body-font-color;
+                    text-align: center;
+                }
+            }
+        }
+    }
 }
