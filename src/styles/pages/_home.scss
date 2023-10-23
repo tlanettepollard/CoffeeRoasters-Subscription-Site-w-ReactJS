@@ -36,7 +36,7 @@
 // Our Collection
 .home-section1 {
     width: 90%;
-    @include flex(column, center, center);
+    @include flex(column, start, center);
     margin: auto;
     padding: 7.5rem 0 6.25rem 0;
 
@@ -90,8 +90,9 @@
 
 // Why Choose
 .home-section2 {
+    @include flex(column, start, center);
     width: 90%;
-    height: 106.25rem;
+    height: 100rem;
     margin: auto;
     //padding: 4rem 0;
     position: relative;
@@ -162,7 +163,15 @@
 }
 
 
+// How it works
+.home-section3 {
+    @include flex(column, start, center);
+    width: 90%;
+    height: 69.75rem;
+    margin: auto;
 
+    
+}
 
 
 
