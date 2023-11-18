@@ -1,4 +1,4 @@
-export function AboutHeadQu() {
+export function AboutHeadQtrs() {
     return (
         <>
             <div className="about-section3">

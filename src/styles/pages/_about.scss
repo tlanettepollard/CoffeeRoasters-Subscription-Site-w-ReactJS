@@ -72,6 +72,13 @@
     width: 90%;
     height: 36.875rem;
     margin: auto;
+
+    .about-quality-container {
+        width: 100%;
+        height: 100%;
+        @include flex(column, space-evenly, center);
+        text-align: center;
+    }
 }
 
 
@@ -79,4 +86,12 @@
     width: 90%;
     height: 68.75rem;
     margin: auto;
-}
+
+    .about-quality-container {
+        .about-commit-container {
+            width: 100%;
+            height: 100%;
+            @include flex(column, space-evenly, center);
+            text-align: center;
+        }
+    }
