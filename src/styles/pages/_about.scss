@@ -29,3 +29,40 @@
         }
     }
 }
+
+.about-section1 {
+    width: 90%;
+    height: 62.5rem;
+    margin: auto;
+
+    .about-commit-container {
+        width: 100%;
+        height: 100%;
+        @include flex(column, space-evenly, center);
+        text-align: center;
+
+
+        .about-commit-image {
+            width: 327px;
+            height: 400px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .about-commit-copy {
+            .about-commit-title {
+                @include HeaderThree;
+                color: $sec-color-dk-grey-blue;
+                padding-bottom: 1.875rem;
+            }
+
+            .about-commit-body {
+                @include BodyFont;
+                font-size: .9375rem;
+                color: $sec-color-dk-grey-blue;
+                flex-shrink: 0;
+            }
+        }
+    }
+}

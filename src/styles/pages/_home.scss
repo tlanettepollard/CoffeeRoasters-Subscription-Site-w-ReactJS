@@ -31,7 +31,11 @@
             text-align: center;
         }
     }
+    .home-primary-button {
+        @include MainDefaultBtn;
+    }
 }
+
 
 // Our Collection
 .home-section1 {
@@ -179,6 +183,8 @@
             color: $header-font-color;
             padding-bottom: 1.875rem;
             text-align: center;
+
+            
         }
 
         .works-container {
@@ -189,6 +195,8 @@
             grid-template-columns: none;
             gap: 1.875rem;
             margin-top: 3rem;
+
+
 
             .works-card {
                 width: 20.4375rem;
