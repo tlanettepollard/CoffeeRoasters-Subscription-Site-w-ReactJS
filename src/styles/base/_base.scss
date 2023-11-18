@@ -9,14 +9,16 @@
     margin: 0;
     box-sizing: border-box;
     outline: 1px solid black;
+    
 
 }
 
 body {
-    max-width: 90rem;
+    width: 100%;
     min-height: 100vh;
     margin: auto;
     background-color: $page-background;
+
 }
 
 

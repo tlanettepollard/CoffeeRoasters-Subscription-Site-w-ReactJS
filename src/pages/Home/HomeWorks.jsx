@@ -9,6 +9,7 @@ export function HomeWorks() {
 
     return (
         <div className='home-section3'>
+            <div className="accent-image"></div>
             <div className="home-works">
                 <p className="works-title">How it works</p>
                 <div className="works-container">
