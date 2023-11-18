@@ -167,21 +167,23 @@
 .home-section3 {
     @include flex(column, start, center);
     width: 90%;
-    height: 69.75rem;
+    height: 87.5rem;
     margin: auto;
     position: relative;
 
     .home-works {
+        @include flex(column, start, center);
+
         .works-title {
             @include HeaderFour;
             color: $header-font-color;
-            padding-bottom: 3.75rem;
+            padding-bottom: 1.875rem;
             text-align: center;
         }
 
         .works-container {
             width: 100%;
-            height: auto;
+            height: 100%;
             display: grid;
             grid-template-rows: repeat(3, 1fr);
             grid-template-columns: none;
@@ -190,9 +192,37 @@
 
             .works-card {
                 width: 20.4375rem;
-                height: 15.75rem;
+                height: 21.875rem;
+                margin: auto;
+                padding-top: 3rem;
+                @include flex(column, space-evenly, center);
 
+                &-number {
+                    @include HeaderOne;
+                    color: $acc-color-pale-orange;
+                }
+
+                &-step {
+                    @include HeaderThree;
+                    font-size: 1.75rem;
+                    color: $sec-color-dk-grey-blue;
+                    padding-top: 1.5625rem;
+                }
+
+                &-detail {
+                    @include BodyFont;
+                    color: $sec-color-dk-grey-blue;
+                    text-align: center;
+                    padding-top: 1.875rem;
+                }
             }
+
+
+        }
+
+        .works-primary-button {
+            @include MainDefaultBtn;
+
         }
 
     }
