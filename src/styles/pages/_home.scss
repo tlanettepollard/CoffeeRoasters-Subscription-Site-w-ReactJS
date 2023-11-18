@@ -169,8 +169,34 @@
     width: 90%;
     height: 69.75rem;
     margin: auto;
+    position: relative;
 
-    
+    .home-works {
+        .works-title {
+            @include HeaderFour;
+            color: $header-font-color;
+            padding-bottom: 3.75rem;
+            text-align: center;
+        }
+
+        .works-container {
+            width: 100%;
+            height: auto;
+            display: grid;
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: none;
+            gap: 1.875rem;
+            margin-top: 3rem;
+
+            .works-card {
+                width: 20.4375rem;
+                height: 15.75rem;
+
+            }
+        }
+
+    }
+
 }
 
 
