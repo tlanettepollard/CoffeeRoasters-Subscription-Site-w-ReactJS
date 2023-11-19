@@ -1,3 +1,5 @@
+// Subscribe Banner
+
 .subscribe-banner {
     width: 90%;
     height: 25rem;
@@ -33,10 +35,11 @@
     }
 }
 
+// Plan How to Order
 .subscribe-section1 {
     @include flex(column, start, center);
     width: 90%;
-    height: 87.5rem;
+    height: 81.25rem;
     margin: auto;
     margin-top: 6.25rem;
     position: relative;
@@ -55,6 +58,35 @@
             grid-template-columns: none;
             gap: 1.875rem;
             margin-top: 3rem;
+            padding: 2rem 0;
+
+            .howto-card {
+                width: 20.4375rem;
+                height: 21.875rem;
+                margin: auto;
+                //padding-top: 3rem;
+                @include flex(column, space-evenly, center);
+
+                &-number {
+                    @include HeaderOne;
+                    color: $acc-color-pale-orange;
+                }
+
+                &-step {
+                    @include HeaderThree;
+                    font-size: 1.75rem;
+                    color: $subscribe-section1-heading-color;
+                    padding-top: 1.5625rem;
+                }
+
+                &-detail {
+                    @include BodyFont;
+                    color: $subscribe-section1-heading-color;
+                    text-align: center;
+                    padding-top: 1.875rem;
+                }
+            }
         }
     }
 }
+
