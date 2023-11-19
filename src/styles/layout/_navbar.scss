@@ -51,3 +51,7 @@
         display: none;
     }
 }
+
+.mobilenav-primary-btn {
+    @include MainDefaultBtn;
+}
