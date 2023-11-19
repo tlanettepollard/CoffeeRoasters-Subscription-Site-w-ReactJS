@@ -1,6 +1,24 @@
 export function SubscribeSecOne() {
+    const css = `@media (max-width: 767px){
+        .bg-howto-image{
+            background-image: url('/public/assets/plan/mobile/bg-steps.png')
+        }
+    }
+    @media (min-width: 768px) {
+        .bg-howto-image{
+            background-image: url('/public/assets/plan/tablet/bg-steps.png')
+        }
+    }
+    @media (min-width: 1200px){
+        .bg-howto-image{
+            background-image: url('/public/assets/plan/desktop/bg-steps.png')
+        }
+    }`;
+
+
     return (
         <div className="subscribe-section1">
+            <style scoped>{css}</style>
             <div className="accent-image"></div>
             <div className="subscribe-howto">
                 <div className="howto-container">
