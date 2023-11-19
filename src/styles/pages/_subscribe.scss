@@ -1,0 +1,22 @@
+.subscribe-banner {
+    width: 90%;
+    height: 25rem;
+    overflow: hidden;
+    margin: auto;
+
+    &-image {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: .3125rem;
+    }
+
+    &-container {
+        width: 90%;
+        height: 25rem;
+        margin: auto;
+        @include flex(column, center, center);
+    }
+
+    
+}
