@@ -27,5 +27,5 @@ export function SubscribeBanner() {
                 </div>
             </div>
         </div>
-    )
+    );
 }
