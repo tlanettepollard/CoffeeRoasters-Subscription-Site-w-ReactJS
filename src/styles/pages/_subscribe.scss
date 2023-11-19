@@ -1,0 +1,35 @@
+.subscribe-banner {
+    width: 90%;
+    height: 25rem;
+    overflow: hidden;
+    margin: auto;
+
+    &-image {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: .3125rem;
+    }
+
+    &-container {
+        width: 90%;
+        height: 25rem;
+        margin: auto;
+        @include flex(column, center, center);
+
+        .subscribe-banner-title {
+            @include HeaderTwo;
+            color: $light-cream;
+            text-align: center;
+        }
+
+        .subscribe-banner-body {
+            @include BodyFont;
+            color: $light-cream;
+            text-align: center;
+            padding-top: 1.25rem;
+        }
+    }
+
+
+}
