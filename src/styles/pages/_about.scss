@@ -8,6 +8,7 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+        border-radius: .3125rem;
     }
 
     &-container {
@@ -34,6 +35,7 @@
     width: 90%;
     height: 62.5rem;
     margin: auto;
+    margin-top: 3.125rem;
 
 
     .about-commit-container {
@@ -49,6 +51,7 @@
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
+            border-radius: .3125rem;
         }
 
         .about-commit-copy {
