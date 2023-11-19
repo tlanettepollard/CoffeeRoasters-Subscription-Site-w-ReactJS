@@ -30,6 +30,12 @@
             padding-top: 1.25rem;
         }
     }
+}
 
-
+.subscribe-section1 {
+    @include flex(column, start, center);
+        width: 90%;
+        height: 87.5rem;
+        margin: auto;
+        position: relative;
 }

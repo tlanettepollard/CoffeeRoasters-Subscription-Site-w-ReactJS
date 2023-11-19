@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 export function Navbar() {
@@ -22,6 +23,12 @@ export function Navbar() {
 
     const isNavClosed = () => {
         setIsNavExpanded(false);
+    }
+
+    let navigate = useNavigate();
+    const changeRoute = () => {
+        let path = '/subscribe';
+        navigate(path);
     }
 
     return (
@@ -75,7 +82,7 @@ export function Navbar() {
                                     <Link to='/subscribe'>Create Your Plan</Link>
                                 </li>
                             </ul>
-                            <button>Create Your Plan</button>
+                            <button className='mobilenav-primary-btn' onClick={changeRoute}>Create Your Plan</button>
                         </nav>
                     ) : (
                         ""
