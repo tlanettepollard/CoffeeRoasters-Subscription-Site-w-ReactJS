@@ -42,6 +42,7 @@
     height: 81.25rem;
     margin: auto;
     margin-top: 6.25rem;
+    margin-bottom: 6.25rem;
     position: relative;
     background-image: url(/public/assets/plan/mobile/bg-steps.png);
     background-size: cover;
@@ -90,3 +91,10 @@
     }
 }
 
+//Subscribe Menu
+.subscribe-section2 {
+    .subscribe-menu {
+        display: none;
+        cursor: pointer;
+    }
+}
