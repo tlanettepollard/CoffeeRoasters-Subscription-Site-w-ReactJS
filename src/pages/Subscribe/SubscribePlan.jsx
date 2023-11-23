@@ -81,6 +81,7 @@ export function SubscribePlan() {
                     </div>
 
                     {/* Options Accordion */}
+                    
                     <div className="subscribe-section2-right">Render Accordion</div>
 
                     <div className="order-summary-wrapper">
@@ -99,7 +100,7 @@ export function SubscribePlan() {
                             <button disabled={activeButton} className='activated-primary-btn'>Create my plan!</button>
                         )}
                     </div>
-                    
+
                     {/* Order Modal */}
 
 
