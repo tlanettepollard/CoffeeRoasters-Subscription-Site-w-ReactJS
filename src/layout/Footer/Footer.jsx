@@ -17,7 +17,7 @@ export function Footer() {
                             <Link to='/about'>About Us</Link>
                         </li>
                         <li>
-                            <Link to='/subscribe'>Create Your Plan</Link>
+                            <Link to='/plan'>Create Your Plan</Link>
                         </li>
                     </ul>
                 </div>

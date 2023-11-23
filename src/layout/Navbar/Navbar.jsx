@@ -47,7 +47,7 @@ export function Navbar() {
                                 <Link to='/about'>About Us</Link>
                             </li>
                             <li>
-                                <Link to='/subscribe'>Create Your Plan</Link>
+                                <Link to='/plan'>Create Your Plan</Link>
                             </li>
                         </ul>
                     </div>
@@ -79,7 +79,7 @@ export function Navbar() {
                                     <Link to='/about'>About</Link>
                                 </li>
                                 <li>
-                                    <Link to='/subscribe'>Create Your Plan</Link>
+                                    <Link to='/plan'>Create Your Plan</Link>
                                 </li>
                             </ul>
                             <button className='mobilenav-primary-btn' onClick={changeRoute}>Create Your Plan</button>

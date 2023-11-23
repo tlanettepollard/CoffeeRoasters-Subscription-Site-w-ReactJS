@@ -1,13 +1,22 @@
 import { useState, useEffect } from 'react';
-import { SubscribeBanner } from './SubscribeBanner';
-import { SubscribeSecOne } from './SubscribeSecOne';
-import { SubOrderSummary } from './SubscribeSecTwo/SubOrderSummary';
-import { SubAccordion } from './SubscribeSecTwo/SubAccordion.jsx';
-import { OPTIONS } from './SubscribeSecTwo/planData.js';
+import { PlanBanner } from './PlanBanner.jsx';
+import { PlanHowSection } from './PlanHowSection.jsx';
+import { PlanOrderSummary } from './PlanOrderSection/PlanOrderSummary.jsx';
+import { PlanAccordion } from './PlanOrderSection/PlanAccordion.jsx';
+import { OPTIONS } from './PlanOrderSection/planData.js';
 
-export function SubscribePlan() {
+export function Plan() {
     const [options] = useState(OPTIONS);
 
+    {/* For Modal */ }
+    const [isNotMobile, setIsNotMobile] = useState(window.innerWidth > 576);
+
+    {/* For Menu Options */ }
+    const [menuDrink, setMenuDrink] = useState(true);
+    const [menuType, setMenuType] = useState(false);
+    const [menuQuantity, setMenuQuantity] = useState(false);
+    const [menuGrind, setMenuGrind] = useState(false);
+    const [menuDeliver, setMenuDeliver] = useState(false);
 
 
     const [drink, setDrink] = useState("Capsule");
@@ -36,11 +45,28 @@ export function SubscribePlan() {
         }
     }, [drink]);
 
+    {/* For Modal */ }
+
     const closeOrderModal = () => {
         setShowOrderModal(false);
     };
 
-    {/* Modal */ }
+    const display = () => {
+        setShowOrderModal(true);
+        switch (frequency) {
+            case ' Every Week':
+                setPrice('14.00/mo');
+                break;
+            case ' Every 2 Weeks':
+                setPrice('$17.25/mo');
+                break;
+            case ' Every Month':
+                setPrice('$22.50/mo');
+                break;
+            default:
+                return price;
+        }
+    };
 
 
 
@@ -49,17 +75,19 @@ export function SubscribePlan() {
 
     const activeButton = drink !== "____" && type !== "____" && quantity !== "____" && grind !== "____" && frequency !== "____" ? false : true;
 
+
+
     return (
         <>
-            <div className="subscribe-page">
-                <SubscribeBanner />
-                <SubscribeSecOne />
+            <div className="plan-page">
+                <PlanBanner />
+                <PlanHowSection />
 
-                <div className="subscribe-section2">
+                <div className="plan-page-options">
 
-                    {/* Subscribe Menu appears on Desktop */}
-                    <div className="subscribe-section2-left">
-                        <div className="subscribe-menu">
+                    {/* Plan Menu appears on Desktop */}
+                    <div className="plan-menu-left">
+                        <div className="plan-menu">
                             <ul>
                                 <li>
                                     <span className='li-number'>01</span>
@@ -86,37 +114,46 @@ export function SubscribePlan() {
                     </div>
 
                     {/* Options Accordion */}
-                    <div className="subscribe-section2-right">
-                        <SubAccordion
-                            defaultChecked={defaultChecked} option={options[0]} changeWord={(word) => setDrink(word)}
+                    <div className="plan-options-right">
+                        <PlanAccordion
+                            defaultChecked={defaultChecked}
+                            option={options[0]}
+                            changeWord={(word) => setDrink(word)}
+                            setMenuActive={(item) => setMenuDrink(true)}
                         />
-
-                        <SubAccordion
-                            defaultChecked={defaultChecked} option={options[1]} changeWord={(word) => setDrink(word)}
+                        <PlanAccordion
+                            option={options[1]}
+                            changeWord={(word) => setType(word)}
+                            setMenuActive={(item) => setMenuType(true)}
                         />
-
-                        <SubAccordion
-                            defaultChecked={defaultChecked} option={options[2]} changeWord={(word) => setDrink(word)}
+                        <PlanAccordion
+                            option={options[2]}
+                            changeWord={(word) => setQuantity(word)}
+                            setMenuActive={(item) => setMenuQuantity(true)}
                         />
                         {isGrindDisabled ? (
                             <div className="accordion-header">
-                                <h1 style={{ color: '#83888F', opacity: 0.5 }}>Want us to grind them?</h1>
-                                <img src="/public/assets/plan/desktop/icon-arrow.svg" style={{ tranform: `rotate(0)` }} alt="" />
+                                <h1 style={{ color: '#83888F', opacity: 0.5, }}>Want us to grind them?</h1>
+                                <img src="/public/assets/plan/desktop/icon-arrow.svg" style={{ transform: `rotate(0)` }} alt="" />
                             </div>
                         ) : (
-                            <SubAccordion
-                                defaultChecked={defaultChecked} option={options[3]} changeWord={(word) => setDrink(word)}
+                            <PlanAccordion
+                                option={options[3]}
+                                changeWord={(word) => setGrind(word)}
+                                setMenuActive={(item) => setMenuGrind(true)}
                             />
                         )}
 
-                        <SubAccordion
-                            defaultChecked={defaultChecked} option={options[4]} changeWord={(word) => setDrink(word)}
+                        <PlanAccordion
+                            option={options[4]}
+                            changeWord={(word) => setFrequency(word)}
+                            setMenuActive={(item) => setMenuDeliver(true)}
                         />
-
                     </div>
 
+                    {/* Order Summary */}
                     <div className="order-summary-wrapper">
-                        <SubOrderSummary
+                        <PlanOrderSummary
                             drink={drink}
                             type={type}
                             quantity={quantity}

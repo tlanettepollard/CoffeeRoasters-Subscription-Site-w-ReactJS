@@ -1,4 +1,4 @@
-export function SubscribeSecOne() {
+export function PlanHowSection() {
     const css = `@media (max-width: 767px){
         .bg-howto-image{
             background-image: url('/public/assets/plan/mobile/bg-steps.png')
@@ -17,10 +17,10 @@ export function SubscribeSecOne() {
 
 
     return (
-        <div className="subscribe-section1">
+        <div className="plan-section1">
             <style scoped>{css}</style>
-            <div className="accent-image"></div>
-            <div className="subscribe-howto">
+            <div className="plan-accent-image"></div>
+            <div className="plan-howto">
                 <div className="howto-container">
                     <div className="howto-card">
                         <p className="howto-card-number">01</p>
