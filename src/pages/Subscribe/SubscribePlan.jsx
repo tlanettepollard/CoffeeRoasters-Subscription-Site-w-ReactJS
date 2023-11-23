@@ -99,6 +99,7 @@ export function SubscribePlan() {
                             <button disabled={activeButton} className='activated-primary-btn'>Create my plan!</button>
                         )}
                     </div>
+                    
                     {/* Order Modal */}
 
 

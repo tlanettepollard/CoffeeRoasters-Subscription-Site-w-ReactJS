@@ -108,7 +108,7 @@
 
 //SubOrderSumary
 .order-summary-wrapper {
-    @include flex(column, space-evenly, center);
+    @include flex(column, center, center);
     width: 100%;
     height: 37.3125rem;
     margin: auto;
@@ -118,7 +118,27 @@
         background-image: url(/public/assets/plan/mobile/bg-order-summary.png);
         background-size: cover;
         border-radius: .625rem;
+        padding: 2.5rem;
 
+        &-title {
+            @include BodyFont;
+            color: $light-cream;
+            text-transform: uppercase;
+        }
 
+        &-text {
+            @include HeaderFour;
+            line-height: 2.5rem;
+            color: $page-background;
+            margin-top: 1rem;
+        }
+
+    }
+
+    .activated-primary-btn {
+        @include MainDefaultBtn;
+        width: 13.5625rem;
+        height: 3.5rem;
+        margin-top: 3rem;
     }
 }
