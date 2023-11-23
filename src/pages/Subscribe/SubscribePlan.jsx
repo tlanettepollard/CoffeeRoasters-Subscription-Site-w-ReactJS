@@ -83,23 +83,24 @@ export function SubscribePlan() {
                     {/* Options Accordion */}
                     <div className="subscribe-section2-right">Render Accordion</div>
 
-                    <SubOrderSummary
-                        drink={drink}
-                        type={type}
-                        quantity={quantity}
-                        grind={grind}
-                        frequency={frequency}
-                        disabled={isGrindDisabled}
-                    />
+                    <div className="order-summary-wrapper">
+                        <SubOrderSummary
+                            drink={drink}
+                            type={type}
+                            quantity={quantity}
+                            grind={grind}
+                            frequency={frequency}
+                            disabled={isGrindDisabled}
+                        />
 
-                    {isGrindDisabled ? (
-                        <button disabled={disabledButton} className='activated-primary-btn'>Create my plan!</button>
-                    ) : (
-                        <button disabled={activeButton} className='activated-primary-btn'>Create my plan!</button>
-                    )}
-
+                        {isGrindDisabled ? (
+                            <button disabled={disabledButton} className='activated-primary-btn'>Create my plan!</button>
+                        ) : (
+                            <button disabled={activeButton} className='activated-primary-btn'>Create my plan!</button>
+                        )}
+                    </div>
                     {/* Order Modal */}
-                    Modal
+
 
                 </div>
             </div>

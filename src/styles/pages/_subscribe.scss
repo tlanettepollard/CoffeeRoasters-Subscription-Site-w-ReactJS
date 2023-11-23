@@ -92,33 +92,33 @@
 }
 
 //Subscribe Menu
-.subscribe-section2 {
+.subscribe-section2-left {
+    @include flex(column, center, center);
+
     .subscribe-menu {
         display: none;
         cursor: pointer;
     }
+
+
 }
 
 
 
+
 //SubOrderSumary
-.order-summary-container {
-    @include flex(column, center, center);
-    width: 90%;
-    height: 21.125rem;
-    background-color: $sec-color-dk-grey-blue;
+.order-summary-wrapper {
+    @include flex(column, space-evenly, center);
+    width: 100%;
+    height: 37.3125rem;
     margin: auto;
-    margin-top: 6.25rem;
-    margin-bottom: 6.25rem;
-    border-radius: .625rem;
 
     .order-summary {
-        padding: 2.5rem 3rem 3rem 3rem;
+        max-width: 22.5rem;
+        background-image: url(/public/assets/plan/mobile/bg-order-summary.png);
+        background-size: cover;
+        border-radius: .625rem;
 
-        &-title {
-            @include BodyFont;
-            color: $light-cream;
-            text-align: left;
-        }
+
     }
 }
