@@ -45,11 +45,28 @@ export function Plan() {
         }
     }, [drink]);
 
+    {/* For Modal */ }
+
     const closeOrderModal = () => {
         setShowOrderModal(false);
     };
 
-    {/* Modal */ }
+    const display = () => {
+        setShowOrderModal(true);
+        switch (frequency) {
+            case ' Every Week':
+                setPrice('14.00/mo');
+                break;
+            case ' Every 2 Weeks':
+                setPrice('$17.25/mo');
+                break;
+            case ' Every Month':
+                setPrice('$22.50/mo');
+                break;
+            default:
+                return price;
+        }
+    };
 
 
 
@@ -57,6 +74,8 @@ export function Plan() {
     const disabledButton = drink !== "____" && type !== "____" && quantity !== "____" && frequency !== "____" ? false : true;
 
     const activeButton = drink !== "____" && type !== "____" && quantity !== "____" && grind !== "____" && frequency !== "____" ? false : true;
+
+
 
     return (
         <>
