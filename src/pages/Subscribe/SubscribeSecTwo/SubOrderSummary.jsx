@@ -3,10 +3,10 @@ export function SubOrderSummary({
 }) {
     return (
         <>
-            <div className="order-summary-container">
-                <div className="order-summary">
-                    <p className="order-summary-title">Order Summary</p>
-                </div>
+
+            <div className="order-summary">
+                <p className="order-summary-title">Order Summary</p>
+
                 {disabled ? (
                     <p className='order-summary-text'>
                         “I drink coffee as{" "}
@@ -26,6 +26,7 @@ export function SubOrderSummary({
                     </p>
                 )}
             </div>
+
         </>
     );
 }

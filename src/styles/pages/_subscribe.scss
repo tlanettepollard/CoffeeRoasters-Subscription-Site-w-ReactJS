@@ -92,9 +92,33 @@
 }
 
 //Subscribe Menu
-.subscribe-section2 {
+.subscribe-section2-left {
+    @include flex(column, center, center);
+
     .subscribe-menu {
         display: none;
         cursor: pointer;
+    }
+
+
+}
+
+
+
+
+//SubOrderSumary
+.order-summary-wrapper {
+    @include flex(column, space-evenly, center);
+    width: 100%;
+    height: 37.3125rem;
+    margin: auto;
+
+    .order-summary {
+        max-width: 22.5rem;
+        background-image: url(/public/assets/plan/mobile/bg-order-summary.png);
+        background-size: cover;
+        border-radius: .625rem;
+
+
     }
 }
