@@ -2,8 +2,13 @@ import { useState, useEffect } from 'react';
 import { SubscribeBanner } from './SubscribeBanner';
 import { SubscribeSecOne } from './SubscribeSecOne';
 import { SubOrderSummary } from './SubscribeSecTwo/SubOrderSummary';
-//import { OPTIONS } from './SubscribeSecTwo/planData.js';
+import { SubAccordion } from './SubscribeSecTwo/SubAccordion.jsx';
+import { OPTIONS } from './SubscribeSecTwo/planData.js';
+
 export function SubscribePlan() {
+    const [options] = useState(OPTIONS);
+
+
 
     const [drink, setDrink] = useState("Capsule");
     const [type, setType] = useState("____");
@@ -16,11 +21,11 @@ export function SubscribePlan() {
 
     const [isGrindDisabled, setIsGrindDisabled] = useState(false);
 
-    const [defaultSelected, setDefaultSelected] = useState("Capsule");
+    const [defaultChecked, setDefaultChecked] = useState("Capsule");
 
     {/* Setting Default Coffee */ }
     useEffect(() => {
-        setDefaultSelected("");
+        setDefaultChecked("");
     }, []);
 
     useEffect(() => {
@@ -81,8 +86,34 @@ export function SubscribePlan() {
                     </div>
 
                     {/* Options Accordion */}
-                    
-                    <div className="subscribe-section2-right">Render Accordion</div>
+                    <div className="subscribe-section2-right">
+                        <SubAccordion
+                            defaultChecked={defaultChecked} option={options[0]} changeWord={(word) => setDrink(word)}
+                        />
+
+                        <SubAccordion
+                            defaultChecked={defaultChecked} option={options[1]} changeWord={(word) => setDrink(word)}
+                        />
+
+                        <SubAccordion
+                            defaultChecked={defaultChecked} option={options[2]} changeWord={(word) => setDrink(word)}
+                        />
+                        {isGrindDisabled ? (
+                            <div className="accordion-header">
+                                <h1 style={{ color: '#83888F', opacity: 0.5 }}>Want us to grind them?</h1>
+                                <img src="/public/assets/plan/desktop/icon-arrow.svg" style={{ tranform: `rotate(0)` }} alt="" />
+                            </div>
+                        ) : (
+                            <SubAccordion
+                                defaultChecked={defaultChecked} option={options[3]} changeWord={(word) => setDrink(word)}
+                            />
+                        )}
+
+                        <SubAccordion
+                            defaultChecked={defaultChecked} option={options[4]} changeWord={(word) => setDrink(word)}
+                        />
+
+                    </div>
 
                     <div className="order-summary-wrapper">
                         <SubOrderSummary

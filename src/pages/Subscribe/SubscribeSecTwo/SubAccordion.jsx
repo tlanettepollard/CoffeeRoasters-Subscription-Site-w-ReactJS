@@ -13,7 +13,7 @@ export function SubAccordion({
     };
 
     return (
-        <div className={defaultChecked === "" ? 'accordion-item' : active ? 'accordion-item' : hidden}>
+        <div className={defaultChecked === "" ? 'accordion-item' : isActive ? 'accordion-item' : 'hidden'}>
             <div className="accordion-header" onClick={toggleActiveBtn}>
                 <h1>{option.title}</h1>
                 <img src="/public/assets/plan/desktop/icon-arrow.svg" alt="" />
