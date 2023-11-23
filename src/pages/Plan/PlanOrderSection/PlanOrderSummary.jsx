@@ -1,4 +1,4 @@
-export function SubOrderSummary({
+export function PlanOrderSummary({
     drink, type, quantity, grind, frequency, disabled,
 }) {
     return (

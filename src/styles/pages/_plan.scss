@@ -1,6 +1,6 @@
-// Subscribe Banner
+// Plan Banner
 
-.subscribe-banner {
+.plan-banner {
     width: 90%;
     height: 25rem;
     overflow: hidden;
@@ -20,13 +20,13 @@
         margin: auto;
         @include flex(column, center, center);
 
-        .subscribe-banner-title {
+        .plan-banner-title {
             @include HeaderTwo;
             color: $light-cream;
             text-align: center;
         }
 
-        .subscribe-banner-body {
+        .plan-banner-body {
             @include BodyFont;
             color: $light-cream;
             text-align: center;
@@ -36,7 +36,7 @@
 }
 
 // Plan How to Order
-.subscribe-section1 {
+.plan-section1 {
     @include flex(column, start, center);
     width: 90%;
     height: 81.25rem;
@@ -48,7 +48,7 @@
     background-size: cover;
     border-radius: .625rem;
 
-    .subscribe-howto {
+    .plan-howto {
         @include flex(column, start, center);
 
         .howto-container {
@@ -91,11 +91,11 @@
     }
 }
 
-//Subscribe Menu
-.subscribe-section2-left {
+//Plan Menu
+.plan-menu-left {
     @include flex(column, center, center);
 
-    .subscribe-menu {
+    .plan-menu {
         display: none;
         cursor: pointer;
     }
@@ -106,7 +106,7 @@
 
 
 
-//SubOrderSumary
+//PLanOrderSumary
 .order-summary-wrapper {
     @include flex(column, center, center);
     width: 100%;
@@ -142,3 +142,5 @@
         margin-top: 3rem;
     }
 }
+
+// PlanAccordion

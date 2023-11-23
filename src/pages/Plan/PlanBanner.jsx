@@ -1,11 +1,11 @@
-export function SubscribeBanner() {
+export function PlanBanner() {
     const css = `@media (max-width: 767px){
-        .subscribe-banner-image {
+        .plan-banner-image {
             background-image: url('/public/assets/plan/mobile/image-hero-blackcup.jpg')
         }
     }
     @media (min-width: 768px) {
-        .subscribe-banner-image {
+        .plan-banner-image {
             background-image: url('/public/assets/plan/tablet/image-hero-blackcup.jpg')
         }
     }
@@ -14,14 +14,14 @@ export function SubscribeBanner() {
     }`;
 
     return (
-        <div className="subscribe-banner">
+        <div className="plan-banner">
             <style scoped>{css}</style>
-            <div className="subscribe-banner-image">
-                <div className="subscribe-banner-container">
-                    <p className="subscribe-banner-title">
+            <div className="plan-banner-image">
+                <div className="plan-banner-container">
+                    <p className="plan-banner-title">
                         Create a plan
                     </p>
-                    <p className="subscribe-banner-body">
+                    <p className="plan-banner-body">
                         Build a subscription plan that best fits your needs. We offer an assortment of the best artisan coffees from around the globe delivered fresh to your door.
                     </p>
                 </div>
