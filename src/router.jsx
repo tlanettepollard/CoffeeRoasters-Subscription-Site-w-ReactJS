@@ -4,7 +4,7 @@ import { Navbar } from "./layout/Navbar/Navbar";
 import { Footer } from "./layout/Footer/Footer";
 import { Home } from "./pages/Home/Home";
 import { About } from "./pages/About/About";
-import { Subscribe } from "./pages/Subscribe/Subscribe";
+import { SubscribePlan } from "./pages/Subscribe/SubscribePlan";
 
 
 export const router = createBrowserRouter([
@@ -13,7 +13,7 @@ export const router = createBrowserRouter([
         children: [
             { path: '/', element: <Home /> },
             { path: '/about', element: <About /> },
-            { path: '/subscribe', element: <Subscribe /> },
+            { path: '/subscribe', element: <SubscribePlan /> },
         ],
     },
     {
