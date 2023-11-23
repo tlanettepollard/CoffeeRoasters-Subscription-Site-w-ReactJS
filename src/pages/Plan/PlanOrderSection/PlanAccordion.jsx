@@ -11,7 +11,7 @@ export function PlanAccordion({ option, changeWord, setMenuActive, defaultChecke
     return (
         <div className={defaultChecked === "" ? 'accordion-item' : isActive ? 'accordion-item' : 'hidden'}>
             <div className="accordion-header" onClick={toggleActive}>
-                <h1 className="accordion-header-title">{option.title}</h1>
+                <p className="accordion-header-title">{option.title}</p>
                 <img src="/public/assets/plan/desktop/icon-arrow.svg" alt="" />
             </div>
             <div className="accordion-panel">

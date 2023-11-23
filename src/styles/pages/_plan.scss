@@ -106,6 +106,8 @@
 
 
 
+
+
 //PLanOrderSumary
 .order-summary-wrapper {
     @include flex(column, center, center);
@@ -144,3 +146,22 @@
 }
 
 // PlanAccordion
+
+.plan-options-right {
+    @include flex(column, center, center);
+    width: 90%;
+    max-width: 100%;
+    margin: auto;
+
+    .accordion-header {
+        @include flex(row, space-between, baseline);
+        &-title {
+            width: 100%;
+            @include HeaderThree;
+            font-size: 1.5rem;
+            padding-bottom: 3rem;
+            cursor: pointer;
+
+        }
+    }
+}

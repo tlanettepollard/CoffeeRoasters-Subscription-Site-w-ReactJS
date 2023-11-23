@@ -133,7 +133,7 @@ export function Plan() {
                         />
                         {isGrindDisabled ? (
                             <div className="accordion-header">
-                                <h1 style={{ color: '#83888F', opacity: 0.5 }}>Want us to grind them?</h1>
+                                <h1 style={{ color: '#83888F', opacity: 0.5, }}>Want us to grind them?</h1>
                                 <img src="/public/assets/plan/desktop/icon-arrow.svg" style={{ transform: `rotate(0)` }} alt="" />
                             </div>
                         ) : (
