@@ -1,7 +1,8 @@
 import { useState } from 'react';
+import { PlanOptionForm } from './PlanOptionForm';
 
 
-export function PlanAccordion({ option, changeWord, setMenuActive, defaultChecked }) {
+export function PlanAccordion({ option, defaultChecked }) {
     const [isActive, setIsActive] = useState(false);
 
     const toggleActive = () => {
@@ -15,51 +16,7 @@ export function PlanAccordion({ option, changeWord, setMenuActive, defaultChecke
                 <img src="/public/assets/plan/desktop/icon-arrow.svg" alt="" />
             </div>
             <div className="accordion-panel">
-                <label htmlFor={option.optionOne.title} className="label">
-                    <input
-                        type="radio"
-                        className="radio"
-                        name={option.id}
-                        id={option.optionOne.title} value={option.optionOne.title} onChange={(e) => changeWord(e.target.value)}
-                        checked={defaultChecked === 'Capsule' ? 'defaultChecked' : null}
-                        onClick={setMenuActive}
-                    />
-                    <div className="label-container label-container-one">
-                        <p className="label-title">{option.optionOne.title}</p>
-                        <p className="label-description">{option.optionOne.description}</p>
-                    </div>
-                </label>
-
-                <label htmlFor={option.optionTwo.title} className="label">
-                    <input
-                        type="radio"
-                        className="radio"
-                        name={option.id}
-                        id={option.optionTwo.title} value={option.optionTwo.title} onChange={(e) => changeWord(e.target.value)}
-                        checked={defaultChecked === 'Capsule' ? 'defaultChecked' : null}
-                        onClick={setMenuActive}
-                    />
-                    <div className="label-container">
-                        <p className="label-title">{option.optionTwo.title}</p>
-                        <p className="label-description">{option.optionTwo.description}</p>
-                    </div>
-                </label>
-
-                <label htmlFor={option.optionThree.title} className="label">
-                    <input
-                        type="radio"
-                        className="radio"
-                        name={option.id}
-                        id={option.optionThree.title} value={option.optionThree.title} onChange={(e) => changeWord(e.target.value)}
-                        checked={defaultChecked === 'Capsule' ? 'defaultChecked' : null}
-                        onClick={setMenuActive}
-                    />
-                </label>
-                <div className="label-container">
-                    <p className="label-title">{option.optionThree.title}</p>
-                    <p className="label-description">{option.optionThree.description}</p>
-                </div>
-
+                <PlanOptionForm />
             </div>
         </div>
     );

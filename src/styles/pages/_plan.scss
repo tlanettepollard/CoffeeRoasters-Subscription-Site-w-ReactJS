@@ -98,6 +98,10 @@
     .plan-menu {
         display: none;
         cursor: pointer;
+
+        @include bp-xl-desktop {
+            display: block;
+        }
     }
 
 
@@ -155,6 +159,7 @@
 
     .accordion-header {
         @include flex(row, space-between, baseline);
+
         &-title {
             width: 100%;
             @include HeaderThree;

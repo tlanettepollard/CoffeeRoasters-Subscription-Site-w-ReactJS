@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { PlanBanner } from './PlanBanner.jsx';
 import { PlanHowSection } from './PlanHowSection.jsx';
 import { PlanOrderSummary } from './PlanOrderSection/PlanOrderSummary.jsx';
+import { PlanMenu } from './PlanOrderSection/PlanMenu.jsx';
 import { PlanAccordion } from './PlanOrderSection/PlanAccordion.jsx';
 import { OPTIONS } from './PlanOrderSection/planData.js';
 
@@ -16,7 +17,7 @@ export function Plan() {
     const [menuType, setMenuType] = useState(false);
     const [menuQuantity, setMenuQuantity] = useState(false);
     const [menuGrind, setMenuGrind] = useState(false);
-    const [menuDeliver, setMenuDeliver] = useState(false);
+    const [menuDelivery, setMenuDelivery] = useState(false);
 
 
     const [drink, setDrink] = useState("Capsule");
@@ -86,70 +87,10 @@ export function Plan() {
                 <div className="plan-page-options">
 
                     {/* Plan Menu appears on Desktop */}
-                    <div className="plan-menu-left">
-                        <div className="plan-menu">
-                            <ul>
-                                <li>
-                                    <span className='li-number'>01</span>
-                                    <span className='li-text'>Preferences</span>
-                                </li>
-                                <li>
-                                    <span className='li-number'>02</span>
-                                    <span className='li-text'>Bean type</span>
-                                </li>
-                                <li>
-                                    <span className='li-number'>03</span>
-                                    <span className='li-text'>Quantity</span>
-                                </li>
-                                <li>
-                                    <span className='li-number'>04</span>
-                                    <span className='li-text'>Grind option </span>
-                                </li>
-                                <li>
-                                    <span className='li-number'>05</span>
-                                    <span className='li-text'>Deliveries </span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                    <PlanMenu />
 
                     {/* Options Accordion */}
-                    <div className="plan-options-right">
-                        <PlanAccordion
-                            defaultChecked={defaultChecked}
-                            option={options[0]}
-                            changeWord={(word) => setDrink(word)}
-                            setMenuActive={(item) => setMenuDrink(true)}
-                        />
-                        <PlanAccordion
-                            option={options[1]}
-                            changeWord={(word) => setType(word)}
-                            setMenuActive={(item) => setMenuType(true)}
-                        />
-                        <PlanAccordion
-                            option={options[2]}
-                            changeWord={(word) => setQuantity(word)}
-                            setMenuActive={(item) => setMenuQuantity(true)}
-                        />
-                        {isGrindDisabled ? (
-                            <div className="accordion-header">
-                                <h1 style={{ color: '#83888F', opacity: 0.5, }}>Want us to grind them?</h1>
-                                <img src="/public/assets/plan/desktop/icon-arrow.svg" style={{ transform: `rotate(0)` }} alt="" />
-                            </div>
-                        ) : (
-                            <PlanAccordion
-                                option={options[3]}
-                                changeWord={(word) => setGrind(word)}
-                                setMenuActive={(item) => setMenuGrind(true)}
-                            />
-                        )}
 
-                        <PlanAccordion
-                            option={options[4]}
-                            changeWord={(word) => setFrequency(word)}
-                            setMenuActive={(item) => setMenuDeliver(true)}
-                        />
-                    </div>
 
                     {/* Order Summary */}
                     <div className="order-summary-wrapper">
