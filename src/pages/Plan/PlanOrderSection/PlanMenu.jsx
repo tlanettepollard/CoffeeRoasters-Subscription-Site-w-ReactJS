@@ -27,7 +27,7 @@ export function PlanMenu({
                         <span className='li-number'>04</span>
                         <span className='li-text'>Grind option </span>
                     </li>
-                    <li className={menuDelivery ? 'li-selected' : null}>
+                    <li id="fifth-menu" className={menuDelivery ? 'li-selected' : null}>
                         <span className='li-number'>05</span>
                         <span className='li-text'>Deliveries </span>
                     </li>

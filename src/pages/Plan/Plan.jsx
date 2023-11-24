@@ -13,8 +13,8 @@ export function Plan() {
     const [isNotMobile, setIsNotMobile] = useState(window.innerWidth > 576);
 
     {/* For Menu Options */ }
-    const [menuDrink, setMenuDrink] = useState(true);
-    const [menuType, setMenuType] = useState(false);
+    const [menuPref, setMenuPref] = useState(true);
+    const [menuBean, setMenuBean] = useState(false);
     const [menuQuantity, setMenuQuantity] = useState(false);
     const [menuGrind, setMenuGrind] = useState(false);
     const [menuDelivery, setMenuDelivery] = useState(false);
@@ -24,7 +24,7 @@ export function Plan() {
     const [type, setType] = useState("____");
     const [quantity, setQuantity] = useState("____");
     const [grind, setGrind] = useState("____");
-    const [frequency, setFrequency] = useState("____");
+    const [frequency, setFrequency] = useState(" ____");
 
     const [price, setPrice] = useState("");
     const [showOrderModal, setShowOrderModal] = useState(false);
@@ -87,11 +87,56 @@ export function Plan() {
                 <div className="plan-page-options">
 
                     {/* Plan Menu appears on Desktop */}
-                    <PlanMenu />
+                    <PlanMenu
+                        menuPref={menuPref}
+                        menuBean={menuBean}
+                        menuGrind={menuGrind}
+                        menuQuantity={menuQuantity}
+                        menuDelivery={menuDelivery}
+                    />
 
                     {/* Options Accordion */}
 
+                    <div className="plan-options-right">
+                        <PlanAccordion
+                            defaultChecked={defaultChecked}
+                            option={options[0]}
+                            changeWord={(word) => setDrink(word)}
+                            setMenuActive={(item) => setMenuPref(true)}
+                        />
+                        <PlanAccordion
+                            option={options[1]}
+                            changeWord={(word) => setType(word)}
+                            setMenuActive={(item) => setMenuBean(true)}
+                        />
+                        <PlanAccordion
+                            option={options[2]}
+                            changeWord={(word) => setQuantity(word)}
+                            setMenuActive={(item) => setMenuQuantity(true)}
+                        />
+                        {isGrindDisabled ? (
+                            <div className='accordion-header'>
+                                <p className='accordion-header-title' style={{ color: '#83888F', opacity: 0.5 }}>
+                                    Want us to grind them?
+                                </p>
+                                <img src="/public/assets/plan/desktop/icon-arrow.svg" style={{ transform: `rotate(0)` }} alt="" />
+                            </div>
+                        ) : (
+                            <PlanAccordion
+                                option={options[3]}
+                                changeWord={(word) => setGrind(word)}
+                                setMenuActive={(item) => setMenuGrind(true)}
+                            />
+                        )}
 
+                        <PlanAccordion
+                            option={options[4]}
+                            changeWord={(word) => setFrequency(word)}
+                            setMenuActive={(item) => setMenuDelivery(true)}
+                        />
+
+                    </div>
+                    
                     {/* Order Summary */}
                     <div className="order-summary-wrapper">
                         <PlanOrderSummary
