@@ -21,8 +21,8 @@ export function PlanOrderSummary({
                         <span className='order-selection'>{drink}</span> , with a{" "}
                         <span className='order-selection'>{type}</span> type of bean.{" "}
                         <span className='order-selection'>{quantity}</span> ground ala{" "}
-                        <span className='order-selection'>{grind}</span>, sent to me
-                        <span className='order-selection'>{frequency}</span>."
+                        <span className='order-selection'>{grind}</span>, sent to me{" "}
+                        <span className='order-selection'>   {frequency}</span>."
                     </p>
                 )}
             </div>
