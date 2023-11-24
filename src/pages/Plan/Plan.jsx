@@ -119,7 +119,7 @@ export function Plan() {
                                 <p className='accordion-header-title' style={{ color: '#83888F', opacity: 0.5 }}>
                                     Want us to grind them?
                                 </p>
-                                <img src="/public/assets/plan/desktop/icon-arrow.svg" style={{ transform: `rotate(0)` }} alt="" />
+                                <img src="/public/assets/plan/desktop/icon-arrow.svg" alt="" />
                             </div>
                         ) : (
                             <PlanAccordion
@@ -136,7 +136,7 @@ export function Plan() {
                         />
 
                     </div>
-                    
+
                     {/* Order Summary */}
                     <div className="order-summary-wrapper">
                         <PlanOrderSummary
