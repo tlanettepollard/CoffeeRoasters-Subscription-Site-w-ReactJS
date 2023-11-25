@@ -37,7 +37,7 @@ The interactive subscription page has a number of specific behaviours, which are
     - Keep/Add the grind selection text
   - For all other selections, add the selection title in the blank space where appropriate
 - Updating per shipment price (shown in "How often should we deliver?" section at the bottom) based on weight selected
-  - ~If 250g weight is selected~
+  - ~~If 250g weight is selected~~
     - Every Week price per shipment is $7.20
     - Every 2 Weeks price per shipment is $9.60
     - Every Month price per shipment is $12.00
