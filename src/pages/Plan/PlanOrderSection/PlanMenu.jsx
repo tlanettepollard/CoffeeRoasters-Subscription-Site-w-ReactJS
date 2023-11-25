@@ -1,5 +1,31 @@
 import React from 'react';
+import { MenuChoices } from './planData';
 
+{/* New Menu */ }
+
+export function PlanMenu() {
+    return (
+        <div className="plan-menu-left">
+            <ul className='plan-menu'>
+                {MenuChoices.map((choice) => {
+                    return (
+                        <div key={choice.id}>
+                            <li className='li-selected'>
+                                <h4 className="li-selected-title">
+                                    <span className="li-selected-number">{choice.number}</span>{choice.title}
+                                </h4>
+                            </li>
+                        </div>
+                    );
+                })}
+            </ul>
+        </div>
+    );
+}
+
+
+
+{/* 
 export function PlanMenu({
     menuPref,
     menuBean,
@@ -36,3 +62,4 @@ export function PlanMenu({
         </div>
     );
 }
+*/}
