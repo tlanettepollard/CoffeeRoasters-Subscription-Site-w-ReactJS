@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export function PlanAccordion({
     option,
@@ -20,7 +20,7 @@ export function PlanAccordion({
                 <p className="accordion-header-title">{option.title}</p>
                 <img src="/public/assets/plan/desktop/icon-arrow.svg" alt="" />
             </div>
-            <div className="accordion-panel">
+            <div className="accordion-body">
                 <label htmlFor={option.optionOne.title} className="label">
                     <input
                         type="radio"
