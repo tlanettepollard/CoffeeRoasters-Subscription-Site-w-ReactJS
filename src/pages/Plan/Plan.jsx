@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import { PlanBanner } from './PlanBanner.jsx';
 import { PlanHowSection } from './PlanHowSection.jsx';
 import { PlanOrderSummary } from './PlanOrderSection/PlanOrderSummary.jsx';
-import { PlanMenu } from './PlanOrderSection/PlanMenu.jsx';
-import { PlanAccordion } from './PlanOrderSection/PlanAccordion.jsx';
+//import { PlanMenu } from './PlanOrderSection/PlanMenu.jsx';
+//import { PlanAccordion } from './PlanOrderSection/PlanAccordion.jsx';
 import { Questions } from './PlanOrderSection/planData.js';
 
 export function Plan() {
