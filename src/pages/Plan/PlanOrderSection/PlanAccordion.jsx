@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react';
 
+
+
+{/* 
 export function PlanAccordion({
     option,
     changeWord,
@@ -80,3 +83,4 @@ export function PlanAccordion({
         </div>
     );
 }
+*/}
