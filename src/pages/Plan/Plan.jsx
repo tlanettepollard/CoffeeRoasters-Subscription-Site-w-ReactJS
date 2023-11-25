@@ -2,12 +2,12 @@ import { useState, useEffect } from 'react';
 import { PlanBanner } from './PlanBanner.jsx';
 import { PlanHowSection } from './PlanHowSection.jsx';
 import { PlanOrderSummary } from './PlanOrderSection/PlanOrderSummary.jsx';
-//import { PlanMenu } from './PlanOrderSection/PlanMenu.jsx';
-//import { PlanAccordion } from './PlanOrderSection/PlanAccordion.jsx';
+import { PlanMenu } from './PlanOrderSection/PlanMenu.jsx';
+import { PlanAccordionItem } from './PlanOrderSection/PlanAccordionItem.jsx';
 import { Questions } from './PlanOrderSection/planData.js';
 
 export function Plan() {
-    const [questions] = useState(Questions);
+    const [option] = useState(Questions);
 
     {/* For Modal */ }
     const [isNotMobile, setIsNotMobile] = useState(window.innerWidth > 576);
@@ -101,6 +101,30 @@ export function Plan() {
                 <PlanHowSection />
 
                 <div className="plan-page-options">
+                    <PlanMenu
+                        menuPref={menuPref}
+                        menuBean={menuBean}
+                        menuGrind={menuGrind}
+                        menuQuantity={menuQuantity}
+                        menuDelivery={menuDelivery}
+                    />
+
+                    <div className="plan-options-right">
+                        <PlanAccordionItem
+                            defaultChecked={defaultChecked}
+                            option={option[0]}
+                            changeWord={(word) => setDrink(word)}
+                            setMenuActive={(item) => setMenuPref(true)}
+                        />
+                        <PlanAccordionItem option={option[1]} changeWord={(word) => setType(word)} setMenuActive={(item) => setMenuBean(true)}
+                        />
+                        <PlanAccordionItem option={option[2]} changeWord={(word) => setQuantity(word)} setMenuActive={(item) => setMenuQuantity(true)}
+                        />
+                        <PlanAccordionItem option={option[3]} changeWord={(word) => setGrind(word)} setMenuActive={(item) => setMenuGrind(true)}
+                        />
+                        <PlanAccordionItem option={option[4]} changeWord={(word) => setFrequency(word)} setMenuActive={(item) => setMenuDelivery(true)}
+                        />
+                    </div>
 
                     {/* Plan Menu appears on Desktop 
                     <PlanMenu

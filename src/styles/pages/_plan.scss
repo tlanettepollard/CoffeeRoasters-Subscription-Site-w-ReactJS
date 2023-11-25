@@ -149,34 +149,39 @@
     }
 }
 
-// PlanAccordion
+// PlanAccordionItem
 
 .plan-options-right {
-    @include flex(column, center, start);
+    @include flex(column, space-between, start);
     width: 90%;
+    height: 31.25rem;
     max-width: 100%;
     margin: auto;
+    color: $grey;
 
     .accordion {
         width: 100%;
 
-        .accordion-header {
-            @include flex(row, space-between, center);
-            padding-bottom: 2.5rem;
-            cursor: pointer;
-            gap: 4.0625rem;
+        &-header {
+            .option-btn {
+                width: 100%;
+                @include flex(row, space-between, center);
+                text-align: left;
+                background-color: transparent;
+                border: none;
 
-            &-title {
-                @include HeaderThree;
-                font-size: 1.5rem;
+            }
+
+            .accordion-title {
                 color: $grey;
+                width: 80%;
+
             }
 
-            img {
-                transform: rotate(180deg);
-                transition: 0.3s;
-            }
+
         }
+
+
     }
 }
 

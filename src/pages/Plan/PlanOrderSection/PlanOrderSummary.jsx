@@ -5,7 +5,7 @@ export function PlanOrderSummary({
         <>
 
             <div className="order-summary">
-                <p className="order-summary-title">Order Summary</p>
+                <span className="order-summary-title">Order Summary</span>
 
                 {disabled ? (
                     <p className='order-summary-text'>
