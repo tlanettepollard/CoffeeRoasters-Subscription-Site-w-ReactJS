@@ -4,10 +4,10 @@ import { PlanHowSection } from './PlanHowSection.jsx';
 import { PlanOrderSummary } from './PlanOrderSection/PlanOrderSummary.jsx';
 import { PlanMenu } from './PlanOrderSection/PlanMenu.jsx';
 import { PlanAccordion } from './PlanOrderSection/PlanAccordion.jsx';
-import { OPTIONS } from './PlanOrderSection/planData.js';
+import { Questions } from './PlanOrderSection/planData.js';
 
 export function Plan() {
-    const [options] = useState(OPTIONS);
+    const [questions] = useState(Questions);
 
     {/* For Modal */ }
     const [isNotMobile, setIsNotMobile] = useState(window.innerWidth > 576);
@@ -51,7 +51,7 @@ export function Plan() {
     const closeOrderModal = () => {
         setShowOrderModal(false);
     };
-
+    {/*
     const display = () => {
         setShowOrderModal(true);
         switch (frequency) {
@@ -68,8 +68,24 @@ export function Plan() {
                 return price;
         }
     };
+    */}
 
+    {/* New Modal */ }
 
+    const displayPrice = () => {
+        setShowOrderModal(true);
+        switch (quantity) {
+            case '250g':
+                return frequency === 'Every Week' ? setPrice('$28.20/mo') : frequency === 'Every 2 Weeks' ? setPrice('19.20/mo') : setPrice('12.00/mo');
+                break;
+            case '500g':
+                return frequency === 'Every Week' ? setPrice('$52.00/mo') : frequency === 'Every 2 Weeks' ? setPrice('35.00/mo') : setPrice('22.00/mo');
+                break;
+            case '1000g':
+                return frequency === 'Every Week' ? setPrice('$88.00/mo') : frequency === 'Every 2 Weeks' ? setPrice('64.00/mo') : setPrice('42.00/mo');
+                break;
+        }
+    };
 
     {/* Active and Disabled Buttons */ }
     const disabledButton = drink !== "____" && type !== "____" && quantity !== "____" && frequency !== "____" ? false : true;
@@ -86,7 +102,7 @@ export function Plan() {
 
                 <div className="plan-page-options">
 
-                    {/* Plan Menu appears on Desktop */}
+                    {/* Plan Menu appears on Desktop 
                     <PlanMenu
                         menuPref={menuPref}
                         menuBean={menuBean}
@@ -94,8 +110,8 @@ export function Plan() {
                         menuQuantity={menuQuantity}
                         menuDelivery={menuDelivery}
                     />
-
-                    {/* Options Accordion */}
+                    */}
+                    {/* Options Accordion 
 
                     <div className="plan-options-right">
                         <PlanAccordion
@@ -136,6 +152,7 @@ export function Plan() {
                         />
 
                     </div>
+                        */}
 
                     {/* Order Summary */}
                     <div className="order-summary-wrapper">

@@ -1,4 +1,4 @@
-export const OPTIONS = [
+export const Questions = [
     {
         id: 'drink',
         title: 'How do you drink your coffee?',
