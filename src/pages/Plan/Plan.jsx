@@ -116,17 +116,17 @@ export function Plan() {
                     <div className="plan-options-right">
                         <PlanAccordion
                             defaultChecked={defaultChecked}
-                            option={options[0]}
+                            option={questions[0]}
                             changeWord={(word) => setDrink(word)}
                             setMenuActive={(item) => setMenuPref(true)}
                         />
                         <PlanAccordion
-                            option={options[1]}
+                            option={questions[1]}
                             changeWord={(word) => setType(word)}
                             setMenuActive={(item) => setMenuBean(true)}
                         />
                         <PlanAccordion
-                            option={options[2]}
+                            option={questions[2]}
                             changeWord={(word) => setQuantity(word)}
                             setMenuActive={(item) => setMenuQuantity(true)}
                         />
@@ -139,20 +139,20 @@ export function Plan() {
                             </div>
                         ) : (
                             <PlanAccordion
-                                option={options[3]}
+                                option={questions[3]}
                                 changeWord={(word) => setGrind(word)}
                                 setMenuActive={(item) => setMenuGrind(true)}
                             />
                         )}
 
                         <PlanAccordion
-                            option={options[4]}
+                            option={questions[4]}
                             changeWord={(word) => setFrequency(word)}
                             setMenuActive={(item) => setMenuDelivery(true)}
                         />
 
                     </div>
-                        */}
+                    */}
 
                     {/* Order Summary */}
                     <div className="order-summary-wrapper">
@@ -168,7 +168,7 @@ export function Plan() {
                         {isGrindDisabled ? (
                             <button disabled={disabledButton} className='activated-primary-btn'>Create my plan!</button>
                         ) : (
-                            <button disabled={activeButton} className='activated-primary-btn'>Create my plan!</button>
+                            <button onClick={() => displayPrice()} disabled={activeButton} className='activated-primary-btn'>Create my plan!</button>
                         )}
                     </div>
 

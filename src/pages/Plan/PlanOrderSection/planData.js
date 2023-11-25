@@ -1,8 +1,7 @@
 export const Questions = [
     {
-        id: 'drink',
+        id: 1,
         title: 'How do you drink your coffee?',
-        key: '0',
         optionOne: {
             id: 'Capsule',
             title: 'Capsule',
@@ -21,9 +20,8 @@ export const Questions = [
     },
 
     {
-        id: 'type',
+        id: 2,
         title: 'What type of coffee?',
-        key: '1',
         optionOne: {
             id: 'Single Origin',
             title: "Single Origin",
@@ -42,9 +40,8 @@ export const Questions = [
     },
 
     {
-        id: 'quantity',
+        id: 3,
         title: 'How much would you like?',
-        key: '2',
         optionOne: {
             id: '250g',
             title: '250g',
@@ -63,9 +60,8 @@ export const Questions = [
     },
 
     {
-        id: 'grind',
+        id: 4,
         title: 'Want us to grind them?',
-        key: '3',
         optionOne: {
             id: 'Wholebean',
             title: 'Wholebean',
@@ -84,9 +80,8 @@ export const Questions = [
     },
 
     {
-        id: 'frequency',
+        id: 5,
         title: 'How often should we deliver?',
-        key: '4',
         optionOne: {
             id: 'Every week',
             title: 'Every week',
@@ -102,5 +97,34 @@ export const Questions = [
             title: 'Every month',
             description: '$22.50 per shipment. Includes free first-class shipping.',
         },
+    },
+];
+
+
+export const MenuChoices = [
+    {
+        id: 6,
+        number: '01',
+        title: 'Preferences',
+    },
+    {
+        id: 7,
+        number: '02',
+        title: 'Bean Type',
+    },
+    {
+        id: 8,
+        number: '03',
+        title: 'Quantity',
+    },
+    {
+        id: 9,
+        number: '04',
+        title: 'Grind Options',
+    },
+    {
+        id: 10,
+        number: '05',
+        title: 'Deliveries',
     },
 ];
