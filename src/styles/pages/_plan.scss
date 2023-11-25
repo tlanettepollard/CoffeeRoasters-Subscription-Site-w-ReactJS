@@ -157,23 +157,27 @@
     max-width: 100%;
     margin: auto;
 
-    .accordion-header {
-        @include flex(row, space-between, center);
-        padding-bottom: 2.5rem;
-        cursor: pointer;
+    .accordion {
+        width: 100%;
 
-        &-title {
-            @include HeaderThree;
-            font-size: 1.5rem;
-            color: $grey;
-        }
+        .accordion-header {
+            @include flex(row, space-between, center);
+            padding-bottom: 2.5rem;
+            cursor: pointer;
+            gap: 4.0625rem;
 
-        img {
-            transform: rotate(180deg);
-            transition: 0.3s;
+            &-title {
+                @include HeaderThree;
+                font-size: 1.5rem;
+                color: $grey;
+            }
+
+            img {
+                transform: rotate(180deg);
+                transition: 0.3s;
+            }
         }
     }
-
 }
 
 
