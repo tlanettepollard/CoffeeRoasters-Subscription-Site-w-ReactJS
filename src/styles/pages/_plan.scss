@@ -152,7 +152,7 @@
 // PlanAccordion
 
 .plan-options-right {
-    @include flex(column, center, center);
+    @include flex(column, center, start);
     width: 90%;
     max-width: 100%;
     margin: auto;
@@ -163,14 +163,37 @@
         cursor: pointer;
 
         &-title {
-            width: 100%;
             @include HeaderThree;
             font-size: 1.5rem;
+            color: $grey;
         }
 
         img {
             transform: rotate(180deg);
             transition: 0.3s;
         }
+    }
+
+}
+
+
+
+// Accordion Card Hidden Class
+.hidden {
+    .accordion-header {
+        img {
+            transform: rotate(0);
+            transition: 0.3s;
+        }
+    }
+
+    .accordion-body {
+        display: none;
+    }
+}
+
+.disabled {
+    .accordion-body {
+        display: none;
     }
 }
