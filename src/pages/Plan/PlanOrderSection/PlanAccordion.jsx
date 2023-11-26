@@ -1,13 +1,11 @@
 import { useEffect, useState } from 'react';
 
-
-
 {/* 
 export function PlanAccordion({
     option,
     changeWord,
     setMenuActive,
-    defaultChecked }) {
+    defaultChecked }) 
 
     const [isActive, setIsActive] = useState(false);
 

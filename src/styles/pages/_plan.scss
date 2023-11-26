@@ -154,7 +154,7 @@
 .plan-options-right {
     @include flex(column, space-between, start);
     width: 90%;
-    height: 31.25rem;
+    height: 43.75rem;
     max-width: 100%;
     margin: auto;
     color: $grey;
@@ -172,7 +172,7 @@
 
             }
 
-            .accordion-title {
+            .accordion-header-title {
                 color: $grey;
                 width: 80%;
 
