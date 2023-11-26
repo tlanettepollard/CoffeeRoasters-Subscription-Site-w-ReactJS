@@ -3,7 +3,8 @@ import { PlanBanner } from './PlanBanner.jsx';
 import { PlanHowSection } from './PlanHowSection.jsx';
 import { PlanOrderSummary } from './PlanOrderSection/PlanOrderSummary.jsx';
 import { PlanMenu } from './PlanOrderSection/PlanMenu.jsx';
-import { PlanAccordionItem } from './PlanOrderSection/PlanAccordionItem.jsx';
+//import { PlanAccordionItem } from './PlanOrderSection/PlanAccordionItem.jsx';
+import { PlanAccordion } from './PlanOrderSection/PlanAccordion.jsx';
 import { Questions } from './PlanOrderSection/planData.js';
 
 export function Plan() {
@@ -115,18 +116,18 @@ export function Plan() {
 
                     {/* Plan Accordion */}
                     <div className="plan-options-right">
-                        <PlanAccordionItem
+                        <PlanAccordion
                             defaultChecked={defaultChecked}
                             option={option[0]}
                             changeWord={(word) => setDrink(word)}
                             setMenuActive={(item) => setMenuPref(true)}
                         />
-                        <PlanAccordionItem
+                        <PlanAccordion
                             option={option[1]}
                             changeWord={(word) => setType(word)}
                             setMenuActive={(item) => setMenuBean(true)}
                         />
-                        <PlanAccordionItem
+                        <PlanAccordion
                             option={option[2]}
                             changeWord={(word) => setQuantity(word)}
                             setMenuActive={(item) => setMenuQuantity(true)}
@@ -141,14 +142,14 @@ export function Plan() {
                             </div>
                         ) : (
 
-                            <PlanAccordionItem
+                            <PlanAccordion
                                 option={option[3]}
                                 changeWord={(word) => setGrind(word)}
                                 setMenuActive={(item) => setMenuGrind(true)}
                             />
                         )}
 
-                        <PlanAccordionItem
+                        <PlanAccordion
                             option={option[4]}
                             changeWord={(word) => setFrequency(word)}
                             setMenuActive={(item) => setMenuDelivery(true)}
