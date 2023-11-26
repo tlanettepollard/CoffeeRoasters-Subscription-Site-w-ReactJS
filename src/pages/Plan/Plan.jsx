@@ -3,11 +3,11 @@ import { PlanBanner } from './PlanBanner.jsx';
 import { PlanHowSection } from './PlanHowSection.jsx';
 import { PlanOrderSummary } from './PlanOrderSection/PlanOrderSummary.jsx';
 import { PlanMenu } from './PlanOrderSection/PlanMenu.jsx';
-import { PlanAccordion } from './PlanOrderSection/PlanAccordion.jsx';
+import { PlanAccordionItem } from './PlanOrderSection/PlanAccordionItem.jsx';
 import { Questions } from './PlanOrderSection/planData.js';
 
 export function Plan() {
-    const [questions] = useState(Questions);
+    const [option] = useState(Questions);
 
     {/* For Modal */ }
     const [isNotMobile, setIsNotMobile] = useState(window.innerWidth > 576);
@@ -26,7 +26,8 @@ export function Plan() {
     const [grind, setGrind] = useState("____");
     const [frequency, setFrequency] = useState(" ____");
 
-    const [price, setPrice] = useState("");
+
+    const [price, setPrice] = useState(0);
     const [showOrderModal, setShowOrderModal] = useState(false);
 
     const [isGrindDisabled, setIsGrindDisabled] = useState(false);
@@ -84,6 +85,8 @@ export function Plan() {
             case '1000g':
                 return frequency === 'Every Week' ? setPrice('$88.00/mo') : frequency === 'Every 2 Weeks' ? setPrice('64.00/mo') : setPrice('42.00/mo');
                 break;
+            default:
+                return price;
         }
     };
 
@@ -100,7 +103,57 @@ export function Plan() {
                 <PlanBanner />
                 <PlanHowSection />
 
+                {/* Plan Menu */}
                 <div className="plan-page-options">
+                    <PlanMenu
+                        menuPref={menuPref}
+                        menuBean={menuBean}
+                        menuGrind={menuGrind}
+                        menuQuantity={menuQuantity}
+                        menuDelivery={menuDelivery}
+                    />
+
+                    {/* Plan Accordion */}
+                    <div className="plan-options-right">
+                        <PlanAccordionItem
+                            defaultChecked={defaultChecked}
+                            option={option[0]}
+                            changeWord={(word) => setDrink(word)}
+                            setMenuActive={(item) => setMenuPref(true)}
+                        />
+                        <PlanAccordionItem
+                            option={option[1]}
+                            changeWord={(word) => setType(word)}
+                            setMenuActive={(item) => setMenuBean(true)}
+                        />
+                        <PlanAccordionItem
+                            option={option[2]}
+                            changeWord={(word) => setQuantity(word)}
+                            setMenuActive={(item) => setMenuQuantity(true)}
+                        />
+
+                        {isGrindDisabled ? (
+                            <div className='accordion-header'>
+                                <p className='accordion-header-title' style={{ color: '#83888F', opacity: 0.5 }}>
+                                    Want us to grind them?
+                                </p>
+                                <img src="/public/assets/plan/desktop/icon-arrow.svg" alt="" />
+                            </div>
+                        ) : (
+
+                            <PlanAccordionItem
+                                option={option[3]}
+                                changeWord={(word) => setGrind(word)}
+                                setMenuActive={(item) => setMenuGrind(true)}
+                            />
+                        )}
+
+                        <PlanAccordionItem
+                            option={option[4]}
+                            changeWord={(word) => setFrequency(word)}
+                            setMenuActive={(item) => setMenuDelivery(true)}
+                        />
+                    </div>
 
                     {/* Plan Menu appears on Desktop 
                     <PlanMenu
@@ -165,18 +218,20 @@ export function Plan() {
                             disabled={isGrindDisabled}
                         />
 
+                        {/* */}
                         {isGrindDisabled ? (
-                            <button disabled={disabledButton} className='activated-primary-btn'>Create my plan!</button>
+                            <button disabled={disabledButton} className='activated-primary-btn' onClick={displayPrice}>Create my plan!</button>
                         ) : (
-                            <button onClick={() => displayPrice()} disabled={activeButton} className='activated-primary-btn'>Create my plan!</button>
+                            <button onClick={displayPrice} disabled={activeButton} className='activated-primary-btn'>Create my plan!</button>
                         )}
+
                     </div>
 
                     {/* Order Modal */}
 
 
                 </div>
-            </div>
+            </div >
         </>
     );
 }
