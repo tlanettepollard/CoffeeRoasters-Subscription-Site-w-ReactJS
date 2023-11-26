@@ -1,0 +1,128 @@
+@import '../variables/colors';
+@import '../variables/fonts';
+@import '../variables/media';
+
+// Flex Mixin
+@mixin flex ($direction, $justifyContent, $alignItems) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+}
+
+
+// Font Mixins
+@mixin HomeSection1Title() {
+    font-family: $header-font;
+    font-size: $home-section1-heading-size;
+    color: $home-section1-heading-color;
+    line-height: 4.5rem;
+    text-transform: lowercase;
+    text-align: center;
+}
+
+
+@mixin HeaderOne() {
+    font-family: $header-font;
+    font-size: $h1-heading-size;
+    color: $header-font-color;
+    line-height: 4.5rem;
+    letter-spacing: 0rem;
+}
+
+@mixin HeaderTwo() {
+    font-family: $header-font;
+    font-size: $h2-heading-size;
+    color: $header-font-color;
+    line-height: 3rem;
+    letter-spacing: 0rem;
+}
+
+@mixin HeaderThree() {
+    font-family: $header-font;
+    font-size: $h3-heading-size;
+    color: $header-font-color;
+    line-height: 2.25rem;
+    letter-spacing: 0rem;
+}
+
+@mixin HeaderFour() {
+    font-family: $header-font;
+    font-size: $h4-heading-size;
+    color: $header-font-color;
+    line-height: 2rem;
+    letter-spacing: 0rem;
+}
+
+@mixin BodyFont() {
+    font-family: $body-font;
+    color: $body-font-color;
+    font-size: $body-font-size;
+    line-height: 1.625rem;
+    font-weight: 400;
+}
+
+@mixin ButtonFont() {
+    font-family: $header-font;
+    font-size: $button-font-size;
+    line-height: 1.5625rem;
+}
+
+@mixin NavbarFont() {
+    font-family: $body-font;
+    font-size: $navbar-font-size;
+    line-height: .9375rem;
+    text-transform: uppercase;
+    color: $navbar-font-color;
+}
+
+@mixin AccordionMenuTitle() {
+    font-family: $header-font;
+    font-size: $accordion-menu-title-size;
+    color: $grey;
+}
+
+// Media Mixins-- Min-Width
+
+// SM Mobile
+@mixin bp-sm-mobile {
+    @media screen and (max-width: $sm-mobile) {
+        @content;
+    }
+}
+
+// MD Tablet
+@mixin bp-md-tablet {
+    @media screen and (min-width: $md-tablet) {
+        @content;
+    }
+}
+
+// LG Tablet
+@mixin bp-lg-tablet {
+    @media screen and (min-width: $lg-tablet) {
+        @content;
+    }
+}
+
+// XL Desktop
+@mixin bp-xl-desktop {
+    @media screen and (min-width: $xl-desktop) {
+        @content;
+    }
+}
+
+// XXL Desktop
+@mixin bp-xxl-desktop {
+    @media screen and (min-width: $xxl-desktop) {
+        @content;
+    }
+}
+
+// Media Mixins-- Max-Width
+// XS Mobile
+@mixin bp-xs-mobile {
+    @media screen and (max-width: $xs-mobile) {
+        @content;
+    }
+}

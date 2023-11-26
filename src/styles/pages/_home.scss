@@ -1,0 +1,252 @@
+// Home Banner
+.home-banner {
+    width: 90%;
+    height: 31.25rem;
+    overflow: hidden;
+    padding: auto;
+    margin: auto;
+    border-radius: .625rem;
+
+    .home-banner-image {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+
+    &-container {
+        width: 90%;
+        height: 31.25rem;
+        margin: auto;
+        @include flex(column, center, center);
+
+        .home-banner-title {
+            @include HeaderTwo;
+            color: $light-cream;
+            text-align: center;
+        }
+
+        .home-banner-body {
+            @include BodyFont;
+            color: $light-cream;
+            text-align: center;
+        }
+    }
+    .home-primary-button {
+        @include MainDefaultBtn;
+    }
+}
+
+
+// Our Collection
+.home-section1 {
+    width: 90%;
+    @include flex(column, start, center);
+    margin: auto;
+    padding: 7.5rem 0 6.25rem 0;
+
+    .collection-title {
+        @include HomeSection1Title;
+        background: -webkit-linear-gradient($grey, $light-cream);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        z-index: 0;
+        padding-bottom: .8125rem;
+    }
+
+    .collection-container {
+        background: none;
+        width: 100%;
+        margin: auto;
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: none;
+        gap: 1.25rem;
+
+        .collection-card {
+            @include flex(column, space-evenly, center);
+            padding-bottom: 3rem;
+
+            &-image {
+                width: 12.5rem;
+                height: 9.4375rem;
+                z-index: 1;
+                background: none;
+                padding-top: .8125rem;
+            }
+
+            &-copy {
+                text-align: center;
+
+                .collection-copy-title {
+                    @include HeaderTwo;
+                    padding: 1rem 0;
+                }
+
+                .collection-copy-body {
+                    @include BodyFont;
+                    padding: 1rem 1.5rem;
+                }
+            }
+        }
+    }
+
+}
+
+// Why Choose
+.home-section2 {
+    @include flex(column, start, center);
+    width: 90%;
+    height: 100rem;
+    margin: auto;
+    //padding: 4rem 0;
+    position: relative;
+    
+
+    .home-choose {
+        height: 100vh;
+        text-align: center;
+        background-color: $sec-color-dk-grey-blue;
+        border-radius: .625rem;
+
+        .choose {
+            &-title {
+                @include HeaderTwo;
+                font-size: 1.75rem;
+                color: $light-cream;
+                padding-top: 3rem;
+            }
+
+            &-body {
+                @include BodyFont;
+                color: $light-cream;
+                font-size: .9375rem;
+                opacity: 0.7;
+                margin: 1.5rem 1.5rem 1.75rem 1.5rem;
+            }
+        }
+
+        .choose-container {
+            width: 100%;
+            height: auto;
+            display: grid;
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: none;
+            gap: 1.875rem;
+            margin-top: 3rem;
+
+            .choose-card {
+                width: 17.4375rem;
+                height: 23.75rem;
+                margin: auto;
+                @include flex(column, space-evenly, center);
+                background-color: $prim-color-dk-cyan;
+                border-radius: .625rem;
+
+                &-image {
+                    width: 4.5rem;
+                    height: 4.5rem;
+                    margin-top: 1.5rem;
+                }
+
+                &-copy {
+
+                    .choose-card-title {
+                        @include HeaderFour;
+                        color: $light-cream;
+                    }
+
+                    .choose-card-body {
+                        @include BodyFont;
+                        color: $light-cream;
+                        font-size: .9375rem;
+                        margin: 1rem 2rem 3rem 2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// How it works
+.home-section3 {
+    @include flex(column, start, center);
+    width: 90%;
+    height: 87.5rem;
+    margin: auto;
+    position: relative;
+
+    .home-works {
+        @include flex(column, start, center);
+
+        .works-title {
+            @include HeaderFour;
+            color: $header-font-color;
+            padding-bottom: 1.875rem;
+            text-align: center;
+
+            
+        }
+
+        .works-container {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: none;
+            gap: 1.875rem;
+            margin-top: 3rem;
+
+
+
+            .works-card {
+                width: 20.4375rem;
+                height: 21.875rem;
+                margin: auto;
+                padding-top: 3rem;
+                @include flex(column, space-evenly, center);
+
+                &-number {
+                    @include HeaderOne;
+                    color: $acc-color-pale-orange;
+                }
+
+                &-step {
+                    @include HeaderThree;
+                    font-size: 1.75rem;
+                    color: $sec-color-dk-grey-blue;
+                    padding-top: 1.5625rem;
+                }
+
+                &-detail {
+                    @include BodyFont;
+                    color: $sec-color-dk-grey-blue;
+                    text-align: center;
+                    padding-top: 1.875rem;
+                }
+            }
+
+
+        }
+
+        .works-primary-button {
+            @include MainDefaultBtn;
+
+        }
+
+    }
+
+}
+
+
+
+
+
+
+// Miscellaneous Styling 
+.home-section1,
+.home-section2,
+.home-section3 {
+    overflow: hidden;
+}
