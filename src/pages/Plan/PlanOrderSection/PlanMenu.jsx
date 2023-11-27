@@ -1,7 +1,7 @@
 import React from 'react';
 import { MenuChoices } from './planData';
 
-{/* New Menu */ }
+{/* New Menu 
 
 export function PlanMenu() {
     return (
@@ -22,10 +22,10 @@ export function PlanMenu() {
         </div>
     );
 }
+*/ }
 
 
-
-{/* 
+{/* */ }
 export function PlanMenu({
     menuPref,
     menuBean,
@@ -62,4 +62,3 @@ export function PlanMenu({
         </div>
     );
 }
-*/}

@@ -3,11 +3,12 @@ import { PlanBanner } from './PlanBanner.jsx';
 import { PlanHowSection } from './PlanHowSection.jsx';
 import { PlanOrderSummary } from './PlanOrderSection/PlanOrderSummary.jsx';
 import { PlanMenu } from './PlanOrderSection/PlanMenu.jsx';
-import { PlanAccordionItem } from './PlanOrderSection/PlanAccordionItem.jsx';
+//import { PlanAccordionItem } from './PlanOrderSection/PlanAccordionItem.jsx';
+import { PlanAccordion } from './PlanOrderSection/PlanAccordion.jsx';
 import { Questions } from './PlanOrderSection/planData.js';
 
 export function Plan() {
-    const [option] = useState(Questions);
+    const [question] = useState(Questions);
 
     {/* For Modal */ }
     const [isNotMobile, setIsNotMobile] = useState(window.innerWidth > 576);
@@ -115,19 +116,19 @@ export function Plan() {
 
                     {/* Plan Accordion */}
                     <div className="plan-options-right">
-                        <PlanAccordionItem
+                        <PlanAccordion
                             defaultChecked={defaultChecked}
-                            option={option[0]}
+                            question={question[0]}
                             changeWord={(word) => setDrink(word)}
                             setMenuActive={(item) => setMenuPref(true)}
                         />
-                        <PlanAccordionItem
-                            option={option[1]}
+                        <PlanAccordion
+                            question={question[1]}
                             changeWord={(word) => setType(word)}
                             setMenuActive={(item) => setMenuBean(true)}
                         />
-                        <PlanAccordionItem
-                            option={option[2]}
+                        <PlanAccordion
+                            question={question[2]}
                             changeWord={(word) => setQuantity(word)}
                             setMenuActive={(item) => setMenuQuantity(true)}
                         />
@@ -141,15 +142,15 @@ export function Plan() {
                             </div>
                         ) : (
 
-                            <PlanAccordionItem
-                                option={option[3]}
+                            <PlanAccordion
+                                question={question[3]}
                                 changeWord={(word) => setGrind(word)}
                                 setMenuActive={(item) => setMenuGrind(true)}
                             />
                         )}
 
-                        <PlanAccordionItem
-                            option={option[4]}
+                        <PlanAccordion
+                            question={question[4]}
                             changeWord={(word) => setFrequency(word)}
                             setMenuActive={(item) => setMenuDelivery(true)}
                         />

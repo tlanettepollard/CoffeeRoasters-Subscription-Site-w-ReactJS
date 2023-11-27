@@ -139,6 +139,8 @@
             margin-top: 1rem;
         }
 
+
+
     }
 
     .activated-primary-btn {
@@ -149,12 +151,12 @@
     }
 }
 
-// PlanAccordionItem
+// PlanAccordion
 
 .plan-options-right {
     @include flex(column, space-between, start);
     width: 90%;
-    height: 43.75rem;
+    height: auto;
     max-width: 100%;
     margin: auto;
     color: $grey;
@@ -163,14 +165,14 @@
         width: 100%;
 
         &-header {
-            .option-btn {
+            /* .option-btn {
                 width: 100%;
                 @include flex(row, space-between, center);
                 text-align: left;
                 background-color: transparent;
                 border: none;
 
-            }
+            }*/
 
             .accordion-header-title {
                 color: $grey;
