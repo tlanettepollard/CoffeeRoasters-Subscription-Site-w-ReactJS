@@ -8,7 +8,7 @@ import { PlanAccordion } from './PlanOrderSection/PlanAccordion.jsx';
 import { Questions } from './PlanOrderSection/planData.js';
 
 export function Plan() {
-    const [option] = useState(Questions);
+    const [question] = useState(Questions);
 
     {/* For Modal */ }
     const [isNotMobile, setIsNotMobile] = useState(window.innerWidth > 576);
@@ -118,17 +118,17 @@ export function Plan() {
                     <div className="plan-options-right">
                         <PlanAccordion
                             defaultChecked={defaultChecked}
-                            option={option[0]}
+                            question={question[0]}
                             changeWord={(word) => setDrink(word)}
                             setMenuActive={(item) => setMenuPref(true)}
                         />
                         <PlanAccordion
-                            option={option[1]}
+                            question={question[1]}
                             changeWord={(word) => setType(word)}
                             setMenuActive={(item) => setMenuBean(true)}
                         />
                         <PlanAccordion
-                            option={option[2]}
+                            question={question[2]}
                             changeWord={(word) => setQuantity(word)}
                             setMenuActive={(item) => setMenuQuantity(true)}
                         />
@@ -143,14 +143,14 @@ export function Plan() {
                         ) : (
 
                             <PlanAccordion
-                                option={option[3]}
+                                question={question[3]}
                                 changeWord={(word) => setGrind(word)}
                                 setMenuActive={(item) => setMenuGrind(true)}
                             />
                         )}
 
                         <PlanAccordion
-                            option={option[4]}
+                            question={question[4]}
                             changeWord={(word) => setFrequency(word)}
                             setMenuActive={(item) => setMenuDelivery(true)}
                         />
