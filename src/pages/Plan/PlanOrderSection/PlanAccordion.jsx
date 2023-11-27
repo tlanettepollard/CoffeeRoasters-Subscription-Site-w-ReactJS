@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-{/* */ }
+
 export function PlanAccordion({
     question,
     changeWord,
