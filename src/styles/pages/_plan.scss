@@ -92,10 +92,10 @@
 }
 
 //Plan Menu
-.plan-menu-left {
+.plan-nav {
     @include flex(column, center, center);
 
-    .plan-menu {
+    .plan-nav-list {
         display: none;
         cursor: pointer;
 
