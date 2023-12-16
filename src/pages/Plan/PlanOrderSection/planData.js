@@ -1,54 +1,60 @@
 export const PlanChoices = [
     {
-        id: 1,
+        id: '01',
         question: 'How do you drink your coffee?',
         preferred: 'Preferences',
         name: 'preference',
         options: [
             {
                 id: '20',
-                title: 'Capsule',
+                sub: 'capsule',
+                type: 'Capsule',
                 description: 'Compatible with Nespresso systems and similar brewers',
             },
             {
                 id: '21',
-                title: 'Filter',
+                sub: 'filter',
+                type: 'Filter',
                 description: 'For pour over or drip methods like Aeropress, Chemex, V60',
             },
             {
                 id: '22',
-                title: 'Espresso',
+                sub: 'espresso',
+                type: 'Espresso',
                 description: 'Dense and finely ground beans for an intense flavorful experience',
             }
         ]
     },
 
     {
-        id: 2,
+        id: '02',
         question: 'What type of coffee?',
         preferred: 'Bean Type',
         name: 'bean',
         options: [
             {
                 id: '30',
-                title: "Single Origin",
+                sub: 'single',
+                type: "Single Origin",
                 description: 'Distinct high quality coffee from a specific family-owned farm',
             },
             {
                 id: '31',
-                title: 'Decaf',
+                sub: 'decaf',
+                type: 'Decaf',
                 description: 'Just like regular coffee, except the caffeine has been removed',
             },
             {
                 id: '32',
-                title: 'Blended',
+                sub: 'blended',
+                type: 'Blended',
                 description: 'Combination of two or three dark roasted beans of organic coffees',
             }
         ]
     },
 
     {
-        id: 3,
+        id: '03',
         question: 'How much would you like?',
         preferred: 'Quantity',
         name: 'quantity',
@@ -75,7 +81,7 @@ export const PlanChoices = [
     },
 
     {
-        id: 4,
+        id: '04',
         question: 'Want us to grind them?',
         preferred: 'Grind Option',
         name: 'grind',
@@ -102,7 +108,7 @@ export const PlanChoices = [
     },
 
     {
-        id: 5,
+        id: '05',
         question: 'How often should we deliver?',
         preferred: 'Deliveries',
         name: 'deliveries',
