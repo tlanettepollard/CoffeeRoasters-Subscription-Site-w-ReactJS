@@ -2,8 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 import { Navbar } from "./layout/Navbar/Navbar";
 import { Footer } from "./layout/Footer/Footer";
-import { Home } from "./pages/Home/Home";
-import { About } from "./pages/About/About";
+import { Home } from "./pages/Home/HomePage";
+import { About } from "./pages/About/AboutPage";
 import { Plan } from "./pages/Plan/Plan";
 
 
