@@ -9,17 +9,17 @@ export function HomeBanner() {
 
     const css = `@media (max-width: 767px) {
         .home-banner-image {
-            background-image: url('/public/assets/home/mobile/image-hero-coffeepress.jpg')
+            background-image: url('/assets/home/mobile/image-hero-coffeepress.jpg')
         }
     }
     @media (min-width: 768px) {
         .home-banner-image {
-            background-image: url('/public/assets/home/tablet/image-hero-coffeepress.jpg')
+            background-image: url('/assets/home/tablet/image-hero-coffeepress.jpg')
         }
     }
     @media (min-width: 1200px) {
         .home-banner-image {
-            background-image: url('/public/assets/home/desktop/image-hero-coffeepress.jpg');
+            background-image: url('/assets/home/desktop/image-hero-coffeepress.jpg');
         }
     }`;
 
