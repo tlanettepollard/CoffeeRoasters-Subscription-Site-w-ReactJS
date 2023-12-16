@@ -56,7 +56,7 @@ export function Navbar() {
                 <>
                     <nav className='mobile-nav'>
                         <Link to='/'>
-                            <img className='company-logo' src='/public/assets/shared/desktop/logo.svg' alt='coffee roasters logo' />
+                            <img className='company-logo' src='/assets/shared/desktop/logo.svg' alt='coffee roasters logo' />
                         </Link>
                         {isNavExpanded ? (
                             <svg
