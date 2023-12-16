@@ -1,16 +1,16 @@
 export function PlanBanner() {
     const css = `@media (max-width: 767px){
         .plan-banner-image {
-            background-image: url('/public/assets/plan/mobile/image-hero-blackcup.jpg')
+            background-image: url('/assets/plan/mobile/image-hero-blackcup.jpg')
         }
     }
     @media (min-width: 768px) {
         .plan-banner-image {
-            background-image: url('/public/assets/plan/tablet/image-hero-blackcup.jpg')
+            background-image: url('/assets/plan/tablet/image-hero-blackcup.jpg')
         }
     }
     @media (min-width: 1200px) {
-        background-image: url('/public/assets/plan/desktop/image-hero-blackcup.jpg');
+        background-image: url('/assets/plan/desktop/image-hero-blackcup.jpg');
     }`;
 
     return (
