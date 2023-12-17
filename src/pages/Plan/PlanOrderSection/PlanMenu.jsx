@@ -8,12 +8,14 @@ export function PlanMenu() {
                 {MenuChoices.map((choice) => {
                     return (
                         <div key={choice.id}>
-                            <li className="plan-nav-content">
-                                <h4 className="select-title">
-                                    <span className="select-number">
-                                        {choice.number}
-                                    </span>{choice.title}
-                                </h4>
+                            <li className="plan-nav-item">
+                                <a href={`#${choice.sub}`}>
+                                    <h4 className="select-title">
+                                        <span className="select-number">
+                                            {choice.number}
+                                        </span>{choice.title}
+                                    </h4>
+                                </a>
                             </li>
                         </div>
                     );
