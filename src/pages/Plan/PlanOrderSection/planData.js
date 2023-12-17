@@ -140,26 +140,31 @@ export const MenuChoices = [
     {
         id: 6,
         number: '01',
+        sub: 'preferences',
         title: 'Preferences',
     },
     {
         id: 7,
         number: '02',
+        sub: 'bean',
         title: 'Bean Type',
     },
     {
         id: 8,
         number: '03',
+        sub: 'quantity',
         title: 'Quantity',
     },
     {
         id: 9,
         number: '04',
+        sub: 'grind',
         title: 'Grind Options',
     },
     {
         id: 10,
         number: '05',
+        sub: 'delivery',
         title: 'Deliveries',
     },
 ];
