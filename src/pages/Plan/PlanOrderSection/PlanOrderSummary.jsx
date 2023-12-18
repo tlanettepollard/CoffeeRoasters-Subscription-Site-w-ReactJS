@@ -1,4 +1,4 @@
-export function PlanOrderSummary(preferred, beanSelection, qty, grind, deliver, verb) {
+export function PlanOrderSummary({ preferred, beanSelection, qty, grind, deliver, verb }) {
 
     return (
         <div className="order-container">
