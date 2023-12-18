@@ -8,7 +8,7 @@ export function PlanCheckoutModal({ verb, prefer, bean, quantity, grind, deliver
     console.log(shipping)
 
     return (
-        <div className='suscribe-modal'>
+        <div className='subscribe-modal'>
             <form className='subscribe-modal-summary' on Submit={onSubmit}>
                 <div className="modal-title-container">
                     <h3 className="modal-title">
