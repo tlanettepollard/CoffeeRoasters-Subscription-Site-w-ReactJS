@@ -54,8 +54,24 @@ export function PlanAccordion() {
     }
 
     // Submitting Order Form - Opens Modal
+    const handleSubmit = (event) => {
+        const overlay = document.querySelector('.overlay');
+        const modal = document.querySelector('.subscribe-modal');
+        overlay.classList.remove('hide__overlay');
+        modal.classList.toggle('subscribe__show');
+        event.preventDefault();
+    }
 
     // Submitting Checkout Form -- Checkout Modal
+    const handleSubscribe = (event) => {
+        const overlay = document.querySelector('.overlay');
+        const modal = document.querySelector('.subscribe-modal');
+        modal.classList.toggle('subscribe__show');
+        overlay.classList.add('hide__overlay');
+
+        event.preventDefault();
+    }
+
 
     // Toggle for Accordion
 
@@ -75,8 +91,10 @@ export function PlanAccordion() {
 
                 </ul>
 
-                <PlanOrderSummary />
-                <PlanCheckoutModal />
+                <PlanOrderSummary onSubmit={handleSubmit} />
+                <PlanCheckoutModal onSubmit={handleSubscribe} />
+
+                <div className="overlay hide__overlay"></div>
             </div>
         </section>
 
