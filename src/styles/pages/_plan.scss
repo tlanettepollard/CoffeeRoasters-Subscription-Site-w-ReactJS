@@ -110,9 +110,6 @@
 
 
 
-
-
-
 //PLanOrderSumary
 .order-summary-wrapper {
     @include flex(column, center, center);
@@ -152,6 +149,10 @@
     }
 }
 
+//PlanCheckoutModal
+
+
+
 // PlanAccordion
 
 .accordion-container {
@@ -188,31 +189,3 @@
     }
 }
 
-
-
-// Accordion Card Hidden Class
-.hidden {
-    .accordion-header {
-        img {
-            transform: rotate(0);
-            transition: 0.3s;
-        }
-    }
-
-    .accordion-body {
-        display: none;
-    }
-}
-
-.disabled {
-    .accordion-body {
-        display: none;
-    }
-}
-
-.grind__disable {
-    pointer-events: none;
-    color: #E2DEDB;
-}
-
-.hide__grind {}

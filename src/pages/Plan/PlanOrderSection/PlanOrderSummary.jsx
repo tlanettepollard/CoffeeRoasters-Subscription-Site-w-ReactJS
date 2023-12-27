@@ -1,16 +1,16 @@
-export function PlanOrderSummary({ preferred, beanSelection, qty, grind, deliver, verb }) {
+import React from 'react';
 
+export function PlanOrderSummary({ drink, type, quantity, grind, frequency }) {
     return (
-        <div className="order-container">
-            <form className="order-container">
-                <div className="order-summary">
-                    <h3 className="order-title">Order Summary</h3>
-                    <p className="order-text">
-                        "I drink my coffee <strong>{verb} </strong> <span className="order-item"> {preferred}</span>,  with a <span className='order-item'> {beanSelection}</span> type of bean. <span className='order-item'> {qty}</span> <strong className='show-grind'>ground ala <span className='order-item'> {grind} </span>, </strong> sent to me <span className='order-item'> {deliver}</span>."
-                    </p>
-                </div>
-                <button className="home-primary-button order-btn disabled" title='proceed to checkout form'>Create your plan</button>
-            </form>
+        <div className="order-summary-container">
+            <div className="order-summary">
+                <span className="order-summary-title">Order Summary</span>
+                <p className="order-summary-text">
+                    "I drink my coffee <span className='summary-options'>{drink}</span>, with a <span className='summary-options'>{type}</span> type of bean. <span className='summary-options'>{quantity}</span> ground ala <span className='summary-options'>{grind}</span> , sent to me <span className='summary-options'>{frequency}</span>"
+                </p>
+            </div>
         </div>
     );
-}
+
+};
+
