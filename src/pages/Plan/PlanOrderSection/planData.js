@@ -2,8 +2,6 @@ export const PlanQuestions = [
     {
         id: 1,
         question: 'How do you drink your coffee?',
-        preferred: 'Preferences',
-        name: 'preference',
         optionOne: {
             id: 'Capsule',
             title: 'Capsule',
@@ -26,8 +24,6 @@ export const PlanQuestions = [
     {
         id: 2,
         question: 'What type of coffee?',
-        preferred: 'Bean Type',
-        name: 'bean',
         optionOne: {
             id: 'Single',
             title: "Single Origin",
@@ -49,8 +45,6 @@ export const PlanQuestions = [
     {
         id: 3,
         question: 'How much would you like?',
-        preferred: 'Quantity',
-        name: 'quantity',
         optionOne: {
             id: '250g',
             title: '250g',
@@ -73,8 +67,6 @@ export const PlanQuestions = [
     {
         id: 4,
         question: 'Want us to grind them?',
-        preferred: 'Grind Option',
-        name: 'grind',
         optionOne: {
             id: 'Wholebean',
             title: 'Wholebean',
@@ -97,8 +89,6 @@ export const PlanQuestions = [
     {
         id: 5,
         question: 'How often should we deliver?',
-        preferred: 'Deliveries',
-        name: 'deliveries',
         optionOne: {
             id: 'Every week',
             title: 'Every week',

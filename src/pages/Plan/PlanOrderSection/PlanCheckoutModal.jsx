@@ -1,34 +1,34 @@
-export function PlanCheckoutModal({ verb, prefer, bean, quantity, grind, deliver, shipping, onSubmit }) {
-    const formatter = new Intl.NumberFormat('en-US', {
-        style: 'currency',
-        currency: 'USD',
-    })
+import React, { Children } from 'react';
 
-    const payment = formatter.format(shipping)
-    //console.log(shipping)
-
+export function PlanCheckoutModal({ drink, type, quantity, grind, frequency, price, open, onClose }) {
+    if (!open) return null;
     return (
-        <div className='subscribe-modal'>
-            <form className='subscribe-modal-summary' onSubmit={onSubmit}>
-                <div className="modal-title-container">
-                    <h3 className="modal-title">
-                        Order Summary
-                    </h3>
+        <div>
+            <div className="overlay"></div>
+            <div className="modal">
+                <div className="modal-inner">
+                    <h2 className="modal-title">Order Summary</h2>
                 </div>
-                <p className="modal-content">
-                    "I drink my coffee <strong> {verb} </strong> <span className='order-item'> {prefer} </span>, with a <span className='order-item'> {bean} </span> type of bean.  <span className='order-item'> {quantity} </span> <strong className={`show-grind ${verb === 'using' ? 'hide-grind' : ""}`}> ground ala <span className='order-item'> {grind} </span> </strong> sent to me <span className='order-item'> {deliver} </span>."
-                </p>
-
-                <p className="order-confirm">
-                    Is this correct? You can proceed to checkout or go back to plan selection if something is off. Subscription discount codes can also be redeemed at the checkout.
-                </p>
-
-                <div className="checkout-container">
-                    <span className="checkout-amount">{payment}/mo</span>
-                    <button type='submit' className="modal-checkout-btn home-primary-button">Checkout</button>
+                <div className="modal-content">
+                    <p className="modal-detail">
+                        "I drink coffee <span className='summary-options'>{drink}</span>, with a <span className='summary-options'>{type}</span> type of bean. {quantity} ground ala <span className='summary-options'>{grind}</span> , sent to me <span className='summary-options'>{frequency}</span> ."
+                    </p>
+                    <p>Is this correct? You can proceed to checkout or go back to plan selection if something is off. Subscription discount codes can also be redeemed at the checkout.</p>
+                    <div className="modal-bottom">
+                        <span className="modal-total">{price}</span>
+                        <div className="modal-mobile">
+                            <button onClick={onClose} className='modal-primary-button'>
+                                Checkout - {price}
+                            </button>
+                        </div>
+                        <div className="modal-desktop">
+                            <button onClick={onClose} className='modal-primary-button'>
+                                Checkout
+                            </button>
+                        </div>
+                    </div>
                 </div>
-            </form>
+            </div>
         </div>
     );
-
-}
+};
