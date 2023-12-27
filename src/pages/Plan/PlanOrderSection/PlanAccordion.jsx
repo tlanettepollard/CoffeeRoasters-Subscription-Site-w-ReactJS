@@ -16,6 +16,7 @@ export function PlanAccordion() {
     const [isActive, setIsActive] = useState(false);
     const [radioBtn, setRadioBtn] = useState(initialState);
 
+
     // Disable selectionBtn if selection not made
     useEffect(() => {
         const checkoutBtn = document.querySelector('.modal-checkout-btn');
@@ -88,7 +89,32 @@ export function PlanAccordion() {
             {/* Accordion */}
             <div className="accordion-container">
                 <ul className="accordion">
+                    {PlanChoices.map(plan => {
+                        return <li className='accordion-list-item' key={plan.id}>
+                            <div id={plan.name} className='accordion-item'>
+                                <h3 className="accordion-header">
+                                    <button aria-expaned={plan.id === '01' ? true : false} aria-controls={`collapse$(plan.id)`} id={`accordionBtn${plan.id}`} className={'accordion-btn'} data-toggle='collapse' data-target={`collapse${plan.id}`}>{plan.question}</button>
+                                </h3>
+                                <div id={`collapse${plan.id}`} className={`plan-card collapse${plan.id}`} role='region'>
+                                    {plan.options.map(option => {
+                                        return <div className={`plan-select${plan.name}`} key={option.id}>
+                                            <input type='radio' name={plan.name} id={option.sub} />
+                                            <label htmlFor={option.sub} className='radio-label'>
+                                                <span className={`plan-card-title radio-large-text container__${plan.name}`}>
+                                                    {option.type}
+                                                </span>
+                                                <span className={`plan-card-content radio-small-text ${option.sub}`}>
+                                                    {option.description}
+                                                </span>
+                                            </label>
+                                        </div>
+                                    })}
+                                </div>
+                            </div>
+                        </li>
 
+
+                    })}
                 </ul>
 
                 <PlanOrderSummary onSubmit={handleSubmit} />
@@ -96,7 +122,7 @@ export function PlanAccordion() {
 
                 <div className="overlay hide__overlay"></div>
             </div>
-        </section>
+        </section >
 
     );
 
