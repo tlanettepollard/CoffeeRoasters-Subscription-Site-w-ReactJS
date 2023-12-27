@@ -1,15 +1,15 @@
-export function PlanCheckoutModal({ verb, prefer, bean, quantity, grind, deliver, shipping }) {
+export function PlanCheckoutModal({ verb, prefer, bean, quantity, grind, deliver, shipping, onSubmit }) {
     const formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',
         currency: 'USD',
     })
 
     const payment = formatter.format(shipping)
-    console.log(shipping)
+    //console.log(shipping)
 
     return (
         <div className='subscribe-modal'>
-            <form className='subscribe-modal-summary' on Submit={onSubmit}>
+            <form className='subscribe-modal-summary' onSubmit={onSubmit}>
                 <div className="modal-title-container">
                     <h3 className="modal-title">
                         Order Summary

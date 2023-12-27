@@ -15,6 +15,7 @@ export function PlanAccordion() {
     }
     const [isActive, setIsActive] = useState(false);
     const [radioBtn, setRadioBtn] = useState(initialState);
+    const [verb, setVerb] = useState('as');
 
 
     // Disable selectionBtn if selection not made
@@ -75,9 +76,56 @@ export function PlanAccordion() {
 
 
     // Toggle for Accordion
+    const handleShow = (event) => {
+        setIsActive(!isActive);
+        const btn = event.target;
+        const parent = btn.parentElement;
+        const attribute = btn.getAttribute('data-target');
+        console.log(attribute);
+        const targetDiv = parent.nextSibling;
+        console.log(targetDiv);
+        btn.classList.toggle('collapsed')
+        targetDiv.classList.toggle(attribute)
+        targetDiv.classList.toggle('collapse__show')
+    }
 
 
     // Radio Buttons for Order Selection
+    const onChange = (event) => {
+        const { name, id } = event.target
+        setRadioBtn({ ...radioBtn, [name]: id })
+
+        console.log(name)
+        console.log(id)
+        console.log(radioBtn)
+
+        const selectedChoice = Array.from(document.querySelectorAll("input[name='preference']"))
+        const grind = document.getElementById('accordionBtn04')
+        const grind__child = document.querySelector('collapse04')
+        const show__grind = document.querySelector('.show__grind')
+        const orderBtn = document.querySelector('.order-btn')
+
+        const prefer = selectedChoice.filter(choice => choice.checked && choice.id === 'capsule')
+        console.log(prefer)
+
+        if (prefer.length > 0) {
+            grind.classList.add('grind-disable')
+            grind__child.classList.add('collapse04')
+            show__grind.classList.add('hide-grind')
+            setVerb('using')
+        } else {
+            grind.classList.remove('grind-disable')
+            grind__child.classList.remove('collapse04')
+            show__grind.classList.remove('hide-grind')
+            setVerb('as')
+            if (radioBtn.grinds !== null) {
+                orderBtn.classList.remove('disabled')
+            } else {
+                orderBtn.classList.add('disabled')
+            }
+        }
+    }
+
 
 
 
@@ -93,12 +141,12 @@ export function PlanAccordion() {
                         return <li className='accordion-list-item' key={plan.id}>
                             <div id={plan.name} className='accordion-item'>
                                 <h3 className="accordion-header">
-                                    <button aria-expaned={plan.id === '01' ? true : false} aria-controls={`collapse$(plan.id)`} id={`accordionBtn${plan.id}`} className={'accordion-btn'} data-toggle='collapse' data-target={`collapse${plan.id}`}>{plan.question}</button>
+                                    <button aria-expanded={plan.id === '01' ? true : false} aria-controls={`collapse$(plan.id)`} id={`accordionBtn${plan.id}`} className={'accordion-btn'} onClick={handleShow} data-toggle='collapse' data-target={`collapse${plan.id}`}>{plan.question}</button>
                                 </h3>
                                 <div id={`collapse${plan.id}`} className={`plan-card collapse${plan.id}`} role='region'>
                                     {plan.options.map(option => {
                                         return <div className={`plan-select${plan.name}`} key={option.id}>
-                                            <input type='radio' name={plan.name} id={option.sub} />
+                                            <input type='radio' name={plan.name} id={option.sub} onChange={onChange} />
                                             <label htmlFor={option.sub} className='radio-label'>
                                                 <span className={`plan-card-title radio-large-text container__${plan.name}`}>
                                                     {option.type}
@@ -117,8 +165,8 @@ export function PlanAccordion() {
                     })}
                 </ul>
 
-                <PlanOrderSummary onSubmit={handleSubmit} />
-                <PlanCheckoutModal onSubmit={handleSubscribe} />
+                <PlanOrderSummary onSubmit={handleSubmit} preferred={preferred} beanChoice={beanChoice} qty={qty} grind={grind} delivery={deliver} />
+                <PlanCheckoutModal onSubmit={handleSubscribe} prefer={radioBtn.preference} bean={radioBtn.bean} quantity={radioBtn.quantity} grind={radioBtn.grind} deliver={radioBtn.deliveries} verb={verb} shipping={shippingCost} />
 
                 <div className="overlay hide__overlay"></div>
             </div>
