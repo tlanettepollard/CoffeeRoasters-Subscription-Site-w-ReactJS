@@ -4,7 +4,7 @@ export function HomeCollection() {
             <p className='collection-title'>our collection</p>
             <div className='collection-container'>
                 <div className="collection-card">
-                    <img src="/public/assets/home/desktop/image-gran-espresso.png" alt="gran espresso coffee bag" className="collection-card-image" />
+                    <img src="/assets/home/desktop/image-gran-espresso.png" alt="gran espresso coffee bag" className="collection-card-image" />
 
                     <div className="collection-card-copy">
                         <p className="collection-copy-title">Gran Espresso</p>
@@ -13,7 +13,7 @@ export function HomeCollection() {
                 </div>
 
                 <div className="collection-card">
-                    <img src="/public/assets/home/desktop/image-planalto.png" alt="gran espresso coffee bag" className="collection-card-image" />
+                    <img src="/assets/home/desktop/image-planalto.png" alt="gran espresso coffee bag" className="collection-card-image" />
 
                     <div className="collection-card-copy">
                         <p className="collection-copy-title">Planalto</p>
@@ -22,7 +22,7 @@ export function HomeCollection() {
                 </div>
 
                 <div className="collection-card">
-                    <img src="/public/assets/home/desktop/image-piccollo.png" alt="gran espresso coffee bag" className="collection-card-image" />
+                    <img src="/assets/home/desktop/image-piccollo.png" alt="gran espresso coffee bag" className="collection-card-image" />
 
                     <div className="collection-card-copy">
                         <p className="collection-copy-title">Piccollo </p>
@@ -31,7 +31,7 @@ export function HomeCollection() {
                 </div>
 
                 <div className="collection-card">
-                    <img src="/public/assets/home/desktop/image-danche.png" alt="gran espresso coffee bag" className="collection-card-image" />
+                    <img src="/assets/home/desktop/image-danche.png" alt="gran espresso coffee bag" className="collection-card-image" />
 
                     <div className="collection-card-copy">
                         <p className="collection-copy-title">Danche</p>
