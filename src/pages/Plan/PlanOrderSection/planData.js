@@ -78,7 +78,7 @@ export const PlanQuestions = [
         },
         optionTwo: {
             id: 'Filtered',
-            type: 'Filtered',
+            title: 'Filtered',
             description: 'For drip or pour-over coffee methods such as V60 and Aeropress',
         },
         optionThree: {
@@ -106,7 +106,7 @@ export const PlanQuestions = [
         },
         optionThree: {
             id: 'Every month',
-            type: 'Every month',
+            title: 'Every month',
             description: '$22.50 per shipment. Includes free first-class shipping.',
         },
         open: false,

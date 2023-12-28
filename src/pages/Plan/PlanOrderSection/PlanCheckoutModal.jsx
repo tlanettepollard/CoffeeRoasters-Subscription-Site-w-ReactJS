@@ -1,7 +1,7 @@
-import React, { Children } from 'react';
+import React, { Children, useState, useEffect } from 'react';
 
 export function PlanCheckoutModal({ drink, type, quantity, grind, frequency, price, open, onClose }) {
-    
+
     const [isNotMobile, setNotMobile] = useState(window.innerWidth > 768);
 
     const updateMobile = () => {

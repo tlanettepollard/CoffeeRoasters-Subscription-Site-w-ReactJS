@@ -92,11 +92,11 @@
 }
 
 //Plan Menu
-.plan-select-nav {
+.planmenu-nav {
     @include flex(column, center, center);
     //height: 37.5rem;
 
-    .plan-nav-list {
+    .planmenu-nav-list {
         display: none;
         cursor: pointer;
 
@@ -155,7 +155,7 @@
 
 // PlanAccordion
 
-.accordion-container {
+.option-container {
     @include flex(column, space-between, start);
     width: 90%;
     height: auto;
@@ -163,29 +163,26 @@
     margin: auto;
     color: $grey;
 
+    .option-button {
+        width: 100%;
+        text-align: start;
+        @include flex(row, space-between, center);
+    }
+
     .accordion {
         width: 100%;
+        @include flex(column, space-around, center);
 
-        &-header {
-            /* .option-btn {
-                width: 100%;
-                @include flex(row, space-between, center);
+        .option-items {
+            @include flex(row, space-between, center);
+            
+            .option-label {
                 text-align: left;
-                background-color: transparent;
-                border: none;
-
-            }*/
-
-            .accordion-header-title {
-                color: $grey;
-                width: 80%;
-
+                @include flex(column, space-evenly, start);
             }
-
-
         }
+
 
 
     }
 }
-
