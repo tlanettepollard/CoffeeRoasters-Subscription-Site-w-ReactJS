@@ -36,7 +36,7 @@ export function Navbar() {
             {isNotMobile ? (
                 <nav className='navbar'>
                     <Link to='/'>
-                        <img className='company-logo' src='/public/assets/shared/desktop/logo.svg' alt='coffee roasters logo' />
+                        <img className='company-logo' src='/assets/shared/desktop/logo.svg' alt='coffee roasters logo' />
                     </Link>
                     <div className='navbar-menu'>
                         <ul className='navbar-menu--list'>
