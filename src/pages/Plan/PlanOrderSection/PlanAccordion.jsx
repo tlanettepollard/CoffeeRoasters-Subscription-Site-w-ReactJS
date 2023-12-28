@@ -17,7 +17,27 @@ export function PlanAccordion(props) {
             </button>
             {expand &&
                 <form className="option-items">
-
+                    <div onChange={(e) => changeWord(e.target.value)}>
+                        <input type='radio' name={option.id} id={option.optionOne.id} value={option.optionOne.title} />
+                        <label className='option-label' htmlFor={option.optionOne.title}>
+                            <span className='option-subtitle'>{option.optionOne.title}</span>
+                            <span classname='option-text'>{option.optionOne.description}</span>
+                        </label>
+                    </div>
+                    <div onChange={(e) => changeWord(e.target.value)}>
+                        <input type='radio' name={option.id} id={option.optionTwo.id} value={option.optionTwo.title} />
+                        <label className='option-label' htmlFor={option.optionTwo.title}>
+                            <span className='option-subtitle'>{option.optionTwo.title}</span>
+                            <span classname='option-text'>{option.optionTwo.description}</span>
+                        </label>
+                    </div>
+                    <div onChange={(e) => changeWord(e.target.value)}>
+                        <input type='radio' name={option.id} id={option.optionThree.id} value={option.optionThree.title} />
+                        <label className='option-label' htmlFor={option.optionThree.title}>
+                            <span className='option-subtitle'>{option.optionThree.title}</span>
+                            <span classname='option-text'>{option.optionThree.description}</span>
+                        </label>
+                    </div>
                 </form>
             }
         </div>
