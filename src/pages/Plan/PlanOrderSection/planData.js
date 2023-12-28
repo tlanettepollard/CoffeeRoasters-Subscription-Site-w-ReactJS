@@ -27,7 +27,7 @@ export const PlanQuestions = [
         question: 'What type of coffee?',
         name: 'beantype',
         optionOne: {
-            id: 'Single',
+            id: 'Single Origin',
             title: "Single Origin",
             description: 'Distinct high quality coffee from a specific family-owned farm',
         },
@@ -60,7 +60,7 @@ export const PlanQuestions = [
         },
         optionThree: {
             id: '1000g',
-            type: '1000g',
+            title: '1000g',
             description: 'Perfect for offices and events. Yields about 90 delightful cups.',
         },
         open: false,
