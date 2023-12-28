@@ -4,6 +4,8 @@ import { PlanBanner } from './PlanBanner.jsx';
 import { PlanHowSection } from './PlanHowSection.jsx';
 import { PlanMenu } from './PlanOrderSection/PlanMenu.jsx';
 import { PlanAccordion } from './PlanOrderSection/PlanAccordion.jsx';
+import { PlanOrderSummary } from './PlanOrderSection/PlanOrderSummary.jsx';
+import { PlanCheckoutModal } from './PlanOrderSection/PlanCheckoutModal.jsx';
 
 
 
@@ -58,13 +60,19 @@ export function Plan() {
                 <PlanHowSection />
                 <div className='selection-container'>
                     <PlanMenu />
-                    <PlanAccordion option={options[0]} />
-                    <PlanAccordion option={options[1]} />
-                    <PlanAccordion option={options[2]} />
-                    <PlanAccordion option={options[3]} />
-                    <PlanAccordion option={options[4]} />
+                    <PlanAccordion option={options[0]} changeWord={(word) => setDrink(word)} />
+                    <PlanAccordion option={options[1]} changeWord={(word) => setType(word)} />
+                    <PlanAccordion option={options[2]} changeWord={(word) => setQuantity(word)} />
+                    <PlanAccordion option={options[3]} changeWord={(word) => setGrind(word)} />
+                    <PlanAccordion option={options[4]} changeWord={(word) => setFrequency(word)} />
                 </div>
-
+                <PlanOrderSummary drink={drink} type={type} quantity={quantity} grind={grind} frequency={frequency} price={price} />
+                <div className="button-container">
+                    <button onClick={() => showPrice()} className='order-primary-button'>
+                        Create a plan
+                    </button>
+                    <PlanCheckoutModal drink={drink} type={type} quantity={quantity} grind={grind} frequency={frequency} price={price} open={showModal} onClose={() => setShowModal(false)} />
+                </div>
 
             </div>
         </>
