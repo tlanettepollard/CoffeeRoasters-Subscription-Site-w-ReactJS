@@ -6,6 +6,7 @@ import { PlanMenu } from './PlanOrderSection/PlanMenu.jsx';
 import { PlanAccordion } from './PlanOrderSection/PlanAccordion.jsx';
 import { PlanOrderSummary } from './PlanOrderSection/PlanOrderSummary.jsx';
 import { PlanCheckoutModal } from './PlanOrderSection/PlanCheckoutModal.jsx';
+import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
 
 
 
@@ -21,6 +22,7 @@ export function Plan() {
 
     // Grind Option
     const [isGrindDisabled, setIsGrindDisabled] = useState(false);
+
     useEffect(() => {
         if (drink === 'Capsule') {
             setIsGrindDisabled(true);
@@ -49,6 +51,10 @@ export function Plan() {
         }
     }
 
+    // Active and Disabled Buttons
+    const disabledButton = drink !== "____" && type !== "____" && quantity !== "____" && frequency !== "____" ? false : true;
+
+    const activeButton = drink !== "____" && type !== "____" && quantity !== "____" && grind !== "____" && frequency !== "____" ? false : true;
 
 
 
@@ -63,23 +69,38 @@ export function Plan() {
                     <PlanAccordion option={options[0]} changeWord={(word) => setDrink(word)} />
                     <PlanAccordion option={options[1]} changeWord={(word) => setType(word)} />
                     <PlanAccordion option={options[2]} changeWord={(word) => setQuantity(word)} />
-                    <PlanAccordion option={options[3]} changeWord={(word) => setGrind(word)} />
+                    {isGrindDisabled ? (
+                        <button className='option-button'>
+                            <h2 id={options.name} className='option-title' style={{ color: '#83888F', opacity: .05 }}>
+                                Want us to grind them?
+                            </h2>
+
+                        </button>
+                    ) : (
+                        <PlanAccordion option={options[3]} changeWord={(word) => setGrind(word)} />
+                    )}
+
                     <PlanAccordion option={options[4]} changeWord={(word) => setFrequency(word)} />
                 </div>
 
                 <div className='summary-container'>
-                    <PlanOrderSummary drink={drink} type={type} quantity={quantity} grind={grind} frequency={frequency} price={price} />
+                    <PlanOrderSummary drink={drink} type={type} quantity={quantity} grind={grind} frequency={frequency} price={price} disabled={isGrindDisabled} />
                     <div className="button-container">
-                        <button onClick={() => showPrice()} className='activated-order-btn disabled'>
-                            Create a plan
-                        </button>
+                        {isGrindDisabled ? (
+                            <button disabled={disabledButton} onClick={() => showPrice()} className='activated-order-btn disabled'>
+                                Create a plan
+                            </button>
+                        ) : (
+                            <button disabled={activeButton} onClick={() => showPrice()} className='activated-order-btn disabled'>
+                                Create a plan
+                            </button>
+                        )}
                     </div>
                 </div>
 
                 <div className='modal-container'>
                     <PlanCheckoutModal drink={drink} type={type} quantity={quantity} grind={grind} frequency={frequency} price={price} open={showModal} onClose={() => setShowModal(false)} />
                 </div>
-
 
             </div>
         </>
