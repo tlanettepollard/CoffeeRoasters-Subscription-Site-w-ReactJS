@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 export function HomeBanner() {
     let navigate = useNavigate();
     const changeRoute = () => {
-        let path = '/subscribe';
+        let path = '/plan';
         navigate(path);
     }
 

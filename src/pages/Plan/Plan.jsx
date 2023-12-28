@@ -66,13 +66,20 @@ export function Plan() {
                     <PlanAccordion option={options[3]} changeWord={(word) => setGrind(word)} />
                     <PlanAccordion option={options[4]} changeWord={(word) => setFrequency(word)} />
                 </div>
-                <PlanOrderSummary drink={drink} type={type} quantity={quantity} grind={grind} frequency={frequency} price={price} />
-                <div className="button-container">
-                    <button onClick={() => showPrice()} className='order-primary-button'>
-                        Create a plan
-                    </button>
+
+                <div className='summary-container'>
+                    <PlanOrderSummary drink={drink} type={type} quantity={quantity} grind={grind} frequency={frequency} price={price} />
+                    <div className="button-container">
+                        <button onClick={() => showPrice()} className='activated-order-btn disabled'>
+                            Create a plan
+                        </button>
+                    </div>
+                </div>
+
+                <div className='modal-container'>
                     <PlanCheckoutModal drink={drink} type={type} quantity={quantity} grind={grind} frequency={frequency} price={price} open={showModal} onClose={() => setShowModal(false)} />
                 </div>
+
 
             </div>
         </>
