@@ -151,7 +151,7 @@
     width: 90%;
     height: auto;
     margin: auto;
-    
+
 
     .order-summary {
         max-width: 22.5rem;
@@ -177,6 +177,22 @@
 }
 
 //PlanCheckoutModal
+
+.checkout-desktop {
+    display: none;
+
+    @include bp-md-tablet {
+        display: block;
+    }
+}
+
+.checkout-mobile {
+    @include bp-md-tablet {
+        display: none;
+    }
+}
+
+
 
 // Plan Page
 .summary-container {
