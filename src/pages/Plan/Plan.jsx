@@ -18,7 +18,7 @@ export function Plan() {
     const [quantity, setQuantity] = useState('____');
     const [grind, setGrind] = useState('____');
     const [frequency, setFrequency] = useState('____');
-    const [payment, setPayment] = useState(0);
+    //const [payment, setPayment] = useState(0);
 
 
     // Calculate total shipping
