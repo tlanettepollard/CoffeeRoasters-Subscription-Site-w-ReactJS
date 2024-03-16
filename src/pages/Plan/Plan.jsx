@@ -47,7 +47,7 @@ export function Plan() {
             </div>
             <div className="selection-container">
                 <PlanMenu />
-                <PlanAccordion option={options[0]} changeWord={(word) => setDrink(word)} />
+                <PlanAccordion className='bg' option={options[0]} changeWord={(word) => setDrink(word)} />
                 <PlanAccordion option={options[1]} changeWord={(word) => setType(word)} />
                 <PlanAccordion option={options[2]} changeWord={(word) => setQuantity(word)} />
                 <PlanAccordion option={options[3]} changeWord={(word) => setGrind(word)} />

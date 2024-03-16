@@ -7,7 +7,7 @@ export function AboutHeadQtrs() {
                 </div>
                 <div className="about-headqtrs-container">
                     <div className="about-hq-card">
-                        <img src="/public/assets/about/desktop/illustration-uk.svg" alt="map of United Kingdom illustration" className="about-hq-card-image" />
+                        <img src="/assets/about/desktop/illustration-uk.svg" alt="map of United Kingdom illustration" className="about-hq-card-image" />
                         <div className="about-hq-card-copy">
                             <p className="about-hq-card-title">United Kingdom</p>
                             <div className="about-hq-card-body">
@@ -20,7 +20,7 @@ export function AboutHeadQtrs() {
                     </div>
 
                     <div className="about-hq-card">
-                        <img src="/public/assets/about/desktop/illustration-canada.svg" alt="map of Canada illustration" className="about-hq-card-image" />
+                        <img src="/assets/about/desktop/illustration-canada.svg" alt="map of Canada illustration" className="about-hq-card-image" />
                         <div className="about-hq-card-copy">
                             <p className="about-hq-card-title">Canada</p>
                             <div className="about-hq-card-body">
@@ -33,7 +33,7 @@ export function AboutHeadQtrs() {
                     </div>
 
                     <div className="about-hq-card">
-                        <img src="/public/assets/about/desktop/illustration-australia.svg" alt="map of Australia illustration" className="about-hq-card-image" />
+                        <img src="/assets/about/desktop/illustration-australia.svg" alt="map of Australia illustration" className="about-hq-card-image" />
                         <div className="about-hq-card-copy">
                             <p className="about-hq-card-title">Australia</p>
                             <div className="about-hq-card-body">
