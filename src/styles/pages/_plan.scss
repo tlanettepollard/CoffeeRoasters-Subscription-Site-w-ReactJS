@@ -145,16 +145,31 @@
         .option-items {
             @include flex(row, space-between, center);
             flex-shrink: 0;
+            width: 20.5rem;
             height: 8.75rem;
             background-color: $light-tan;
             margin-bottom: 1rem;
             border-radius: .5rem;
 
             .option-label {
+                height: 8.75rem;
                 text-align: left;
+                border-radius: .5rem;
                 @include flex(column, space-evenly, start);
             }
 
+        }
+
+        .option-items:hover {
+            background-color: $acc-color-pale-orange;
+        }
+
+        input[type='radio'] {
+            display: none;
+        }
+
+        input[type='radio']:checked+.option-label {
+            background-color: $prim-color-dk-cyan;
         }
 
     }
