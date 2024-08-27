@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 
 export function PlanCheckoutModal(props) {
+    
 
     const formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',
@@ -28,6 +29,7 @@ export function PlanCheckoutModal(props) {
                 <p className="modal-confirm">
                     Is this correct? You can proceed to checkout or go back to plan selection if something is off. Subscription discount codes can also be redeemed at the checkout.
                 </p>
+
                 <div className="modal-checkout-container">
                     <span className="checkout-amount checkout-desktop">{payment}/mo</span>
                     <button type='submit' className="modal-primary-btn checkout-desktop" onClick={props.onClick}>

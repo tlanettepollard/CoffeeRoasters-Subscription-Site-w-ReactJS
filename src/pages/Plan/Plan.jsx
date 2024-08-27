@@ -18,8 +18,14 @@ export function Plan() {
     const [quantity, setQuantity] = useState('____');
     const [grind, setGrind] = useState('____');
     const [frequency, setFrequency] = useState('____');
+
+    const [isGrindDisabled, setIsGrindDisabled] = useState(false);
+    const [defaultChecked, setDefaultChecked] = useState("Capsule");
+
     //const [payment, setPayment] = useState(0);
 
+    // Modal State
+    //const [modalOpen, setModalOpen] = useState(false);
 
     // Calculate total shipping
     const shippingCost = () => {
@@ -38,6 +44,25 @@ export function Plan() {
         }
     }
 
+    // Default Checked
+    useEffect(() => {
+        setDefaultChecked("");
+    }, []);
+
+    useEffect(() => {
+        if (drink === "Capsule") {
+            setIsGrindDisabled(true);
+        } else {
+            setIsGrindDisabled(false);
+        }
+    }, [drink]);
+
+
+    // Buttons
+    const buttonDisabled = drink !== "____" && type !== "____" && quantity !== "____" && frequency !== "____" ? false : true;
+
+    const buttonActive = drink !== "____" && type !== "____" && quantity !== "____" && grind !== "____" && frequency !== "____" ? false : true;
+
 
     return (
         <>
@@ -47,16 +72,38 @@ export function Plan() {
             </div>
             <div className="selection-container">
                 <PlanMenu />
-                <PlanAccordion className='bg' option={options[0]} changeWord={(word) => setDrink(word)} />
+                <PlanAccordion className='bg' defaultChecked={defaultChecked} option={options[0]} changeWord={(word) => setDrink(word)} />
                 <PlanAccordion option={options[1]} changeWord={(word) => setType(word)} />
                 <PlanAccordion option={options[2]} changeWord={(word) => setQuantity(word)} />
-                <PlanAccordion option={options[3]} changeWord={(word) => setGrind(word)} />
+                {isGrindDisabled ? (
+                    <div className='option-button'>
+                        <h2 style={{ color: "#83888f", opacity: 0.5 }}>
+                            Want us to grind them?
+                        </h2>
+                    </div>
+                ) : (
+                    <PlanAccordion option={options[3]} changeWord={(word) => setGrind(word)} />
+                )}
+
                 <PlanAccordion option={options[4]} changeWord={(word) => setFrequency(word)} />
             </div>
 
             <div className="summary-container">
-                <PlanOrderSummary drink={drink} type={type} quantity={quantity} grind={grind} frequency={frequency} />
+                <PlanOrderSummary drink={drink} type={type} quantity={quantity} grind={grind} frequency={frequency} disabled={isGrindDisabled} />
             </div>
+
+            {isGrindDisabled ? (
+                <button disabled={buttonDisabled} className="button-primary-activated" onClick={show}>
+                    Create my plan!
+                </button>
+            ) : (
+                <button disabled={buttonActive} className='button-primary-activated' onClick={show}>
+                    Create my plan!
+                </button>
+            )}
+
+
+
             <div className="checkout-container">
                 <PlanCheckoutModal drink={drink} type={type} quantity={quantity} grind={grind} frequency={frequency} shipping={shippingCost()} />
             </div>
