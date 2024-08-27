@@ -27,7 +27,7 @@ export function Navbar() {
 
     let navigate = useNavigate();
     const changeRoute = () => {
-        let path = '/subscribe';
+        let path = '/plan';
         navigate(path);
     }
 
