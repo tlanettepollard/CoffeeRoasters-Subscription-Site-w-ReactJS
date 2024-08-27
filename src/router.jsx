@@ -4,7 +4,7 @@ import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import { Home } from "./pages/HomePage";
 import { About } from "./pages/AboutPage";
-import { Plan } from "./pages/Subscribe";
+import { Subscribe } from "./pages/Subscribe";
 
 
 export const router = createBrowserRouter([
