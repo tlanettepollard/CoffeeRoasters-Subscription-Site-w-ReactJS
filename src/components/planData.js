@@ -1,4 +1,62 @@
-export const PlanQuestions = [
+// Collection Images
+import granEspressoImg from '../../public/assets/home/desktop/image-gran-espresso.png';
+import dancheImg from '../../public/assets/home/desktop/image-danche.png';
+import piccolloImg from '../../public/assets/home/desktop/image-piccollo.png';
+import planaltoImg from '../../public/assets/home/desktop/image-planalto.png';
+
+// Benefits Images
+import coffeeBeanImg from '../../public/assets/home/desktop/icon-coffee-bean.svg';
+import giftImg from '../../public/assets/home/desktop/icon-gift.svg';
+import truckImg from '../../public/assets/home/desktop/icon-truck.svg';
+
+// Commitment Images
+import commitMobile from '../../public/assets/about/mobile/image-commitment.jpg';
+import commitTablet from '../../public/assets/about/tablet/image-commitment.jpg';
+import commitDesktop from '../../public/assets/about/desktop/image-commitment.jpg';
+
+import qualityMobile from '../../public/assets/about/mobile/image-quality.jpg'
+import qualityTablet from '../../public/assets/about/tablet/image-quality.jpg'
+import qualityDesktop from '../../public/assets/about/desktop/image-quality.jpg';
+
+// Headquarters Images
+
+import ukImg from '../../public/assets/about/desktop/illustration-uk.svg';
+import canadaImg from '../../public/assets/about/desktop/illustration-canada.svg';
+import australiaImg from '../../public/assets/about/desktop/illustration-australia.svg';
+
+
+export const Collections = [
+    {
+        id: '1',
+        title: 'Gran Espresso',
+        summary: 'Light and flavorful blend with cocoa and black pepper for an intense experience',
+        imgUrl: granEspressoImg,
+    },
+    {
+        id: '2',
+        title: 'Planalto',
+        summary: 'Brazilian dark roast with rich and velvety body, and hints of fruits and nuts',
+        imgUrl: planaltoImg,
+    },
+    {
+        id: '3',
+        title: 'Piccollo',
+        summary: 'Mild and smooth blend featuring notes of toasted almond and dried cherry',
+        imgUrl: piccolloImg,
+    },
+    {
+        id: '4',
+        title: 'Danche',
+        summary: 'Ethiopian hand-harvested blend densely packed with vibrant fruit notes',
+        imgUrl: dancheImg,
+    },
+
+]
+
+
+
+
+export const SubQuestions = [
     {
         id: '01',
         question: 'How do you drink your coffee?',
@@ -141,7 +199,7 @@ export const PlanQuestions = [
 ];
 
 
-export const MenuChoices = [
+export const SubscribeNav = [
     {
         id: 6,
         number: '01',
