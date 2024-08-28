@@ -1,4 +1,5 @@
-
+@use '../abstracts/' as *;
+@use '../base/typography' as *;
 
 // Main Button Default & Hover
 @mixin MainDefaultBtn() {

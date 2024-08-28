@@ -1,4 +1,6 @@
-
+@use 'colors' as *;
+@use 'media' as *;
+@use '../base/typography' as *;
 
 // Flex Mixin
 @mixin flex ($direction, $justifyContent, $alignItems) {

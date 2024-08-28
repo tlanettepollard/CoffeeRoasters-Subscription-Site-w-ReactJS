@@ -8,9 +8,15 @@
 @use 'components/buttons' as *;
 @use 'components/modal' as *;
 
+@use 'layout/footer' as *;
+@use 'layout/hero' as *;
+@use 'layout/navbar' as *;
 
+@use 'pages/about' as *;
+@use 'pages/home' as *;
+@use 'pages/subscribe' as *;
 
-
+@use 'vendors/normalize' as *;
 
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Fraunces:wght@900&display=swap");
 

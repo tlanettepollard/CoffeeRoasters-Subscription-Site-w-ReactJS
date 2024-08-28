@@ -1,4 +1,6 @@
-@use '../abstracts' as *;
+@use '../abstracts/colors' as *;
+@use '../abstracts/media' as *;
+@use '../abstracts/mixins' as *;
 
 footer {
     width: 90%;
