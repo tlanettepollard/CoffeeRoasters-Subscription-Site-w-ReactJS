@@ -54,7 +54,29 @@ export const Collections = [
 ]
 
 
-
+export BenefitCards = [
+    {
+        id: '5',
+        title: 'Best Quality',
+        summary: 'Discover an endless variety of the world’s best artisan coffee from each of our roasters.',
+        imgUrl: coffeeBeanImg,
+        alt: 'coffee beans of superior quality'
+    },
+    {
+        id: '6',
+        title: 'Exclusive Benefits',
+        summary: 'Special offers and swag when you subscribe, including 30% off your first shipment.',
+        imgUrl: giftImg,
+        alt: 'coffee beans of superior quality'
+    },
+    {
+        id: '7',
+        title: 'Free shipping',
+        summary: 'We cover the cost and coffee is delivered fast. Peak freshness: guaranteed.',
+        imgUrl: truckImg,
+        alt: 'coffee beans of superior quality'
+    },
+]
 
 export const SubQuestions = [
     {
