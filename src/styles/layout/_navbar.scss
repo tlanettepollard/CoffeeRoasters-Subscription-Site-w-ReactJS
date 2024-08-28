@@ -1,3 +1,10 @@
+@use '../abstracts/colors' as *;
+@use '../abstracts/media' as *;
+@use '../abstracts/mixins' as *;
+@use '../base/typography' as *;
+@use '../components/buttons' as *;
+
+
 .navbar {
     margin: auto;
     padding: 1.5rem 2rem;
