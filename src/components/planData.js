@@ -51,9 +51,93 @@ export const Collections = [
         imgUrl: dancheImg,
     },
 
+];
+
+
+export const BenefitCards = [
+    {
+        id: '5',
+        title: 'Best Quality',
+        summary: 'Discover an endless variety of the world’s best artisan coffee from each of our roasters.',
+        imgUrl: coffeeBeanImg,
+        alt: 'coffee beans of superior quality'
+    },
+    {
+        id: '6',
+        title: 'Exclusive Benefits',
+        summary: 'Special offers and swag when you subscribe, including 30% off your first shipment.',
+        imgUrl: giftImg,
+        alt: 'coffee beans of superior quality'
+    },
+    {
+        id: '7',
+        title: 'Free shipping',
+        summary: 'We cover the cost and coffee is delivered fast. Peak freshness: guaranteed.',
+        imgUrl: truckImg,
+        alt: 'coffee beans of superior quality'
+    },
+];
+
+
+export const Works = [
+    {
+        id: '8',
+        number: '01',
+        title: 'Pick your coffee',
+        summary: 'Select from our evolving range of artisan coffees. Our beans are ethically sourced and we pay fair prices for them. There are new coffees in all profiles every month for you to try out.',
+    },
+    {
+        id: '9',
+        number: '02',
+        title: 'Choose the frequency',
+        summary: 'Customize your order frequency, quantity, even your roast style and grind type. Pause, skip or cancel your subscription with no commitment through our online portal.',
+    },
+    {
+        id: '10',
+        number: '03',
+        title: 'Recieve and enjoy',
+        summary: 'We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning world-class coffees curated to provide a distinct tasting experience',
+    },
+];
+
+export const Countries = [
+    {
+        id: '11',
+        imgUrl: ukImg,
+        width: 40.84,
+        height: 49.07,
+        country: 'United Kingdom',
+        address1: '68 Asfordby Rd',
+        city: 'Alcaston',
+        postcode: 'SY6 1YA',
+        number: '+44 1241 918425',
+
+    },
+    {
+        id: '12',
+        imgUrl: canadaImg,
+        width: 51.56,
+        height: 49.96,
+        country: 'Canada',
+        address1: '1528 Eglinton Avenue',
+        city: 'Toronto',
+        postcode: 'Ontario M4P 1A6',
+        number: '+1 416 485 2997',
+
+    },
+    {
+        id: '13',
+        imgUrl: australiaImg,
+        width: 48.97,
+        height: 43.94,
+        country: 'Australia',
+        address1: '36 Swanston Street',
+        city: 'Kewell',
+        postcode: 'Victoria',
+        number: '+61 4 9928 3629',
+
+    },
 ]
-
-
 
 
 export const SubQuestions = [
