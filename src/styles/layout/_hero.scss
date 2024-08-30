@@ -15,4 +15,14 @@
     background: url('src/assets/about/mobile/image-hero-whitecup.jpg') no-repeat;
     background-size: cover;
     background-position: center;
+    @include bp-md-tablet {
+        background: url('src/assets/about/tablet/image-hero-whitecup.jpg') no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    @include bp-xl-desktop {
+        background: url('src/assets/about/desktop/image-hero-whitecup.jpg') no-repeat;
+            background-size: cover;
+            background-position: center;
+    }
 }
