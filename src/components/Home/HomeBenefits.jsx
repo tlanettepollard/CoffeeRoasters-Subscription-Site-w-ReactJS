@@ -1,6 +1,6 @@
 import { BenefitCards } from "../planData";
 
-export function BenefitCards() {
+export function HomeBenefits() {
     return (
         <ul className='cards'>
             {BenefitCards.map(card => {
