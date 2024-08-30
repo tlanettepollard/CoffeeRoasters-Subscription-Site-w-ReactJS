@@ -12,15 +12,18 @@ $light-grey: #e2ded8;
 
 // Element Colors
 $page-background: $light-cream;
-$active-btn: $prim-color-dk-cyan;
-$btn-hover: $light-cyan;
-$btn-disabled: $light-grey;
-$selection-opt-active: $prim-color-dk-cyan;
-$selection-opt-hover: $acc-color-pale-orange;
-$selection-opt-default: $light-tan;
+$main-btn-active: $prim-color-dk-cyan;
+$main-btn-hover: $light-cyan;
+$main-btn-disabled: $light-grey;
+
+$select-opt-active: $prim-color-dk-cyan;
+$select-opt-hover: $acc-color-pale-orange;
+$select-opt-default: $light-tan;
+
 $accordion-caret-default: $prim-color-dk-cyan;
 $accordion-caret-hover: $light-cyan;
 $accordion-caret-disabled: $light-cyan;
+
 $footer-background: $sec-color-dk-grey-blue;
 
 
@@ -30,6 +33,8 @@ $header-font-color: $sec-color-dk-grey-blue;
 $home-section1-heading-color: $grey;
 $about-section3-heading-color: $grey;
 $subscribe-section1-heading-color: $light-cream;
-$accordion-heading-color: $grey;
+$accordion-font-default: $grey;
+$accordion-font-hover: $grey;
+$accordion-font-disabled: $light-grey;
 $navbar-font-color: $grey;
 $mobile-navbar-font-color: $sec-color-dk-grey-blue;

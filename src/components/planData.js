@@ -1,28 +1,28 @@
 // Collection Images
-import granEspressoImg from '../../public/assets/home/desktop/image-gran-espresso.png';
-import dancheImg from '../../public/assets/home/desktop/image-danche.png';
-import piccolloImg from '../../public/assets/home/desktop/image-piccollo.png';
-import planaltoImg from '../../public/assets/home/desktop/image-planalto.png';
+import granEspressoImg from '../../assets/home/desktop/image-gran-espresso.png';
+import dancheImg from '../../assets/home/desktop/image-danche.png';
+import piccolloImg from '../../assets/home/desktop/image-piccollo.png';
+import planaltoImg from '../../assets/home/desktop/image-planalto.png';
 
 // Benefits Images
-import coffeeBeanImg from '../../public/assets/home/desktop/icon-coffee-bean.svg';
-import giftImg from '../../public/assets/home/desktop/icon-gift.svg';
-import truckImg from '../../public/assets/home/desktop/icon-truck.svg';
+import coffeeBeanImg from '../../assets/home/desktop/icon-coffee-bean.svg';
+import giftImg from '../../assets/home/desktop/icon-gift.svg';
+import truckImg from '../../assets/home/desktop/icon-truck.svg';
 
 // Commitment Images
-import commitMobile from '../../public/assets/about/mobile/image-commitment.jpg';
-import commitTablet from '../../public/assets/about/tablet/image-commitment.jpg';
-import commitDesktop from '../../public/assets/about/desktop/image-commitment.jpg';
+import commitMobile from '../../assets/about/mobile/image-commitment.jpg';
+import commitTablet from '../../assets/about/tablet/image-commitment.jpg';
+import commitDesktop from '../../assets/about/desktop/image-commitment.jpg';
 
-import qualityMobile from '../../public/assets/about/mobile/image-quality.jpg'
-import qualityTablet from '../../public/assets/about/tablet/image-quality.jpg'
-import qualityDesktop from '../../public/assets/about/desktop/image-quality.jpg';
+import qualityMobile from '../../assets/about/mobile/image-quality.jpg'
+import qualityTablet from '../../assets/about/tablet/image-quality.jpg'
+import qualityDesktop from '../../assets/about/desktop/image-quality.jpg';
 
 // Headquarters Images
 
-import ukImg from '../../public/assets/about/desktop/illustration-uk.svg';
-import canadaImg from '../../public/assets/about/desktop/illustration-canada.svg';
-import australiaImg from '../../public/assets/about/desktop/illustration-australia.svg';
+import ukImg from '../../assets/about/desktop/illustration-uk.svg';
+import canadaImg from '../../assets/about/desktop/illustration-canada.svg';
+import australiaImg from '../../assets/about/desktop/illustration-australia.svg';
 
 
 export const Collections = [
@@ -137,12 +137,37 @@ export const Countries = [
         number: '+61 4 9928 3629',
 
     },
+];
+
+export const Commitment = [
+    {
+        id: '14',
+        title: 'Our commitment',
+        alt: 'man making coffee',
+        imgUrl: {
+            mobile: commitMobile,
+            tablet: commitTablet,
+            desktop: commitDesktop,
+        },
+        summary: 'We’re built on a simple mission and a commitment to doing good along the way. We want to make it easy for you to discover and brew the world’s best coffee at home. It all starts at the source. To locate the specific lots we want to purchase, we travel nearly 60 days a year trying to understand the challenges and opportunities in each of these places. We collaborate with exceptional coffee growers and empower a global community of farmers through with well above fair-trade benchmarks. We also offer training, support farm community initiatives, and invest in coffee plant science. Curating only the finest blends, we roast each lot to highlight tasting profiles distinctive to their native growing region.',
+    },
+    {
+        id: '15',
+        title: 'Uncompromising quality',
+        alt: 'coffee in white mug',
+        imgUrl: {
+            mobile: qualityMobile,
+            tablet: qualityTablet,
+            desktop: qualityDesktop,
+        },
+        summary: 'Although we work with growers who pay close attention to all stages of harvest and processing, we employ, on our end, a rigorous quality control program to avoid over-roasting or baking the coffee dry. Every bag of coffee is tagged with a roast date and batch number. Our goal is to roast consistent, user-friendly coffee, so that brewing is easy and enjoyable.',
+    }
 ]
 
 
 export const SubQuestions = [
     {
-        id: '01',
+        id: '16',
         question: 'How do you drink your coffee?',
         preferred: 'Preferences',
         name: 'preferences',
@@ -171,7 +196,7 @@ export const SubQuestions = [
 
 
     {
-        id: '02',
+        id: '17',
         question: 'What type of coffee?',
         preferred: 'Bean Type',
         name: 'bean',
@@ -198,7 +223,7 @@ export const SubQuestions = [
     },
 
     {
-        id: '03',
+        id: '18',
         question: 'How much would you like?',
         preferred: 'Quantity',
         name: 'quantity',
@@ -226,7 +251,7 @@ export const SubQuestions = [
     },
 
     {
-        id: '04',
+        id: '19',
         question: 'Want us to grind them?',
         preferred: 'Grind Option',
         name: 'grind',
@@ -254,7 +279,7 @@ export const SubQuestions = [
     },
 
     {
-        id: '05',
+        id: '20',
         question: 'How often should we deliver?',
         preferred: 'Deliveries',
         name: 'delivery',
@@ -285,33 +310,28 @@ export const SubQuestions = [
 
 export const SubscribeNav = [
     {
-        id: 6,
+        id: '21',
         number: '01',
-        sub: 'preferences',
         title: 'Preferences',
     },
     {
-        id: 7,
+        id: '22',
         number: '02',
-        sub: 'beantype',
         title: 'Bean Type',
     },
     {
-        id: 8,
+        id: '23',
         number: '03',
-        sub: 'quantity',
         title: 'Quantity',
     },
     {
-        id: 9,
+        id: '24',
         number: '04',
-        sub: 'grind',
         title: 'Grind Options',
     },
     {
-        id: 10,
+        id: '25',
         number: '05',
-        sub: 'delivery',
         title: 'Deliveries',
     },
 ];

@@ -1,9 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 import { Outlet } from "react-router-dom";
-import { Navbar } from "./components/Navbar";
+import { Navbar } from "./components/Navbar/Navbar";
 import { Footer } from "./components/Footer";
-import { Home } from "./pages/HomePage";
-import { About } from "./pages/AboutPage";
+import { Home } from "./pages/Home";
+import { About } from "./pages/About";
 import { Subscribe } from "./pages/Subscribe";
 
 
