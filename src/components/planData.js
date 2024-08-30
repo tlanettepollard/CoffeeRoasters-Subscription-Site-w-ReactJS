@@ -1,28 +1,28 @@
 // Collection Images
-import granEspressoImg from '../../assets/home/desktop/image-gran-espresso.png';
-import dancheImg from '../../assets/home/desktop/image-danche.png';
-import piccolloImg from '../../assets/home/desktop/image-piccollo.png';
-import planaltoImg from '../../assets/home/desktop/image-planalto.png';
+import granEspressoImg from '/src/assets/home/desktop/image-gran-espresso.png';
+import dancheImg from '/src/assets/home/desktop/image-gran-espresso.png';
+import piccolloImg from '/src/assets/home/desktop/image-piccollo.png';
+import planaltoImg from '/src/assets/home/desktop/image-planalto.png';
 
 // Benefits Images
-import coffeeBeanImg from '../../assets/home/desktop/icon-coffee-bean.svg';
-import giftImg from '../../assets/home/desktop/icon-gift.svg';
-import truckImg from '../../assets/home/desktop/icon-truck.svg';
+import coffeeBeanImg from '/src/assets/home/desktop/icon-coffee-bean.svg';
+import giftImg from '/src/assets/home/desktop/icon-gift.svg';
+import truckImg from '/src/assets/home/desktop/icon-truck.svg';
 
 // Commitment Images
-import commitMobile from '../../assets/about/mobile/image-commitment.jpg';
-import commitTablet from '../../assets/about/tablet/image-commitment.jpg';
-import commitDesktop from '../../assets/about/desktop/image-commitment.jpg';
+import commitMobile from '/src/assets/about/mobile/image-commitment.jpg';
+import commitTablet from '/src/assets/about/tablet/image-commitment.jpg';
+import commitDesktop from '/src/assets/about/desktop/image-commitment.jpg';
 
-import qualityMobile from '../../assets/about/mobile/image-quality.jpg'
-import qualityTablet from '../../assets/about/tablet/image-quality.jpg'
-import qualityDesktop from '../../assets/about/desktop/image-quality.jpg';
+import qualityMobile from '/src/assets/about/mobile/image-quality.jpg'
+import qualityTablet from '/src/assets/about/tablet/image-quality.jpg'
+import qualityDesktop from '/src/assets/about/desktop/image-quality.jpg';
 
 // Headquarters Images
 
-import ukImg from '../../assets/about/desktop/illustration-uk.svg';
-import canadaImg from '../../assets/about/desktop/illustration-canada.svg';
-import australiaImg from '../../assets/about/desktop/illustration-australia.svg';
+import ukImg from '/src/assets/about/desktop/illustration-uk.svg';
+import canadaImg from '/src/assets/about/desktop/illustration-canada.svg';
+import australiaImg from '/src/assets/about/desktop/illustration-australia.svg';
 
 
 export const Collections = [

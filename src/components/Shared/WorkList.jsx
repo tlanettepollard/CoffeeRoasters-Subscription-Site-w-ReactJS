@@ -13,7 +13,11 @@ export function WorkList() {
             <h2 className='works__title'>How it works</h2>
             <div className='works__container'>
                 <WorksItems />
-                
+                <div className='works__btn__container'>
+                    <button onClick={changeRoute} className="btn primary__btn works__btn">
+                        Create your plan
+                    </button>
+                </div>
             </div>
         </section>
     )

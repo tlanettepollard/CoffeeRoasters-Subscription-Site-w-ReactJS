@@ -1,6 +1,6 @@
 import { Collections } from "../planData";
 
-export function Collections() {
+export function HomeCollection() {
     return (
         <section className='collection'>
             <h2 className='collection__title'>Our collection</h2>
