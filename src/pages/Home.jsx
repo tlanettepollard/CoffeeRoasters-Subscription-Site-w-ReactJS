@@ -14,6 +14,7 @@ export function Home() {
             />
             <HomeCollection />
             <HomeBenefits />
+            <WorkList />
 
         </main>
     )
