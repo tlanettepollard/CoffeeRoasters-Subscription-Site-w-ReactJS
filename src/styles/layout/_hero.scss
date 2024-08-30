@@ -2,6 +2,31 @@
 @use '../abstracts//media' as *;
 @use '../abstracts/mixins' as *;
 
+.hero {
+    @include flex(column, center, center);
+    margin: auto;
+    width: 90%;
+    height: 25rem;
+    border-radius: .625rem;
+}
+
+.home {
+    background: url('/src/assets/home/mobile/image-hero-coffeepress.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include bp-md-tablet {
+        background: url('/src/assets/home/tablet/image-hero-coffeepress.jpg') no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    @include bp-xl-desktop {
+        background: url('/src/assets/home/desktop/image-hero-coffeepress.jpg') no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
 
 .sharedHero {
     @include flex(column, center, center);
