@@ -1,0 +1,18 @@
+@use '../abstracts/colors' as *;
+@use '../abstracts//media' as *;
+@use '../abstracts/mixins' as *;
+
+
+.sharedHero {
+    @include flex(column, center, center);
+    margin: auto;
+    width: 90%;
+    height: 25rem;
+    border-radius: .625rem;
+}
+
+.about{
+    background: url('src/assets/about/mobile/image-hero-whitecup.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
