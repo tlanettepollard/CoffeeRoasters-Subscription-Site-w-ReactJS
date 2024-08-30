@@ -79,8 +79,9 @@
 @mixin AccordionMenuTitle() {
     font-family: $header-font;
     font-size: $accordion-menu-title-size;
-    color: $grey;
+    color: $accordion-font-default;
 }
+
 
 // Media Mixins-- Min-Width
 
