@@ -11,19 +11,38 @@
     border-radius: .625rem;
 }
 
-.about{
+.about {
     background: url('src/assets/about/mobile/image-hero-whitecup.jpg') no-repeat;
     background-size: cover;
     background-position: center;
+
     @include bp-md-tablet {
         background: url('src/assets/about/tablet/image-hero-whitecup.jpg') no-repeat;
         background-size: cover;
         background-position: center;
     }
+
     @include bp-xl-desktop {
         background: url('src/assets/about/desktop/image-hero-whitecup.jpg') no-repeat;
-            background-size: cover;
-            background-position: center;
+        background-size: cover;
+        background-position: center;
     }
 }
 
+.subscribe {
+    background: url('/src/assets/plan/mobile/image-hero-blackcup.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include bp-md-tablet {
+        background: url('/src/assets/plan/tablet/image-hero-blackcup.jpg') no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    @include bp-xl-desktop {
+        background: url('/src/assets/plan/desktop/image-hero-blackcup.jpg') no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
