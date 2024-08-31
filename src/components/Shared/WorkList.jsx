@@ -9,16 +9,16 @@ export function WorkList() {
     }
 
     return (
-        <section className='works'>
-            <h2 className='works__title'>How it works</h2>
-            <div className='works__container'>
+        <section className='work container'>
+            <h2 className='work__title'>How it works</h2>
+            <div className='work__container'>
                 <WorksItems />
-                <div className='works__btn__container'>
-                    <button onClick={changeRoute} className="btn primary__btn works__btn">
+                <div className='work__btn__container'>
+                    <button onClick={changeRoute} className="btn primary__btn work__btn">
                         Create your plan
                     </button>
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};

@@ -7,7 +7,7 @@ import { WorkList } from "../components/Shared/WorkList";
 
 export function Home() {
     return (
-        <main className='container'>
+        <main className='main__home container'>
             <HomeHero
                 title='Great coffee made simple.'
                 content='Start your mornings with the world’s best coffees. Try our expertly curated artisan coffees from our best roasters delivered directly to your door, at your schedule.'
