@@ -7,12 +7,12 @@ export function AboutCommitment() {
                 {Commitment.map(commitItem => {
                     return <li key={commitItem.id} className='commit__list__item'>
                         <div className='commit__image__container'>
-                            <picture className='commit__picture'>
-                                <source media='(min-width: 1200px)' srcSet={commitItem.imgUrl.desktop} />
-                                <source media='(min-width: 768px)' srcSet={commitItem.imgUrl.tablet} />
-                                <source media='(max-width: 767px)' srcSet={commitItem.imgUrl.mobile} />
+                            <picture>
+                                <source media='(min-width: 1200px)' srcSet={commitItem.imgUrl.desktop} width='445' height='520' />
+                                <source media='(min-width: 768px)' srcSet={commitItem.imgUrl.tablet} width='286' height='400' />
+                                <source media='(max-width: 767px)' srcSet={commitItem.imgUrl.mobile} width='327' height='400' />
+                                <img className='commit__img' src={commitItem.imgUrl.mobile} alt={commitItem.alt} />
                             </picture>
-                            <img className='commit__img' src={commitItem.imgUrl.mobile} alt={commitItem.alt} width="327" height="400" />
                         </div>
 
                         <div className='commit__details'>
