@@ -6,7 +6,7 @@ import { AboutLocation } from "../components/About/AboutLocation";
 
 export function About() {
     return (
-        <main className='container'>
+        <main className='main__about container'>
             <SharedHero class='about' title='About Us' desc='Coffeeroasters began its journey of exotic discovery in 1999, highlighting stories of coffee from around the world. We have since been dedicated to bring the perfect cup - from bean to brew - in every shipment.' />
             <AboutCommitment />
             <AboutQuality />

@@ -8,7 +8,7 @@ export function HomeCollection() {
                 {Collections.map(item => {
                     return <li className='collection__item' key={item.id}>
                         <div className='collection__img__container'>
-                            <img className='collection__img' src={item.imgUrl} alt={`enjoy our ${item.title}`} />
+                            <img className='collection__img' src={item.imgUrl} width={item.width} height={item.height} alt={`enjoy our ${item.title}`} />
                         </div>
                         <div className='collection__summary'>
                             <h3 className='collection__subtitle'>

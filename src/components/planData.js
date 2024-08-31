@@ -31,24 +31,33 @@ export const Collections = [
         title: 'Gran Espresso',
         summary: 'Light and flavorful blend with cocoa and black pepper for an intense experience',
         imgUrl: granEspressoImg,
+        width: 200.3,
+        height: 151,
+        alt: 'Gran Espresso',
     },
     {
         id: '2',
         title: 'Planalto',
         summary: 'Brazilian dark roast with rich and velvety body, and hints of fruits and nuts',
         imgUrl: planaltoImg,
+        width: 200.3,
+        height: 151,
     },
     {
         id: '3',
         title: 'Piccollo',
         summary: 'Mild and smooth blend featuring notes of toasted almond and dried cherry',
         imgUrl: piccolloImg,
+        width: 200.3,
+        height: 151,
     },
     {
         id: '4',
         title: 'Danche',
         summary: 'Ethiopian hand-harvested blend densely packed with vibrant fruit notes',
         imgUrl: dancheImg,
+        width: 200.3,
+        height: 151,
     },
 
 ];
@@ -60,6 +69,8 @@ export const BenefitCards = [
         title: 'Best Quality',
         summary: 'Discover an endless variety of the world’s best artisan coffee from each of our roasters.',
         imgUrl: coffeeBeanImg,
+        width: 72,
+        height: 72,
         alt: 'coffee beans of superior quality'
     },
     {
@@ -67,6 +78,8 @@ export const BenefitCards = [
         title: 'Exclusive Benefits',
         summary: 'Special offers and swag when you subscribe, including 30% off your first shipment.',
         imgUrl: giftImg,
+        width: 72,
+        height: 72,
         alt: 'coffee beans of superior quality'
     },
     {
@@ -74,6 +87,8 @@ export const BenefitCards = [
         title: 'Free shipping',
         summary: 'We cover the cost and coffee is delivered fast. Peak freshness: guaranteed.',
         imgUrl: truckImg,
+        width: 72,
+        height: 72,
         alt: 'coffee beans of superior quality'
     },
 ];
@@ -154,10 +169,8 @@ export const Commitment = [
         },
         summary: 'We’re built on a simple mission and a commitment to doing good along the way. We want to make it easy for you to discover and brew the world’s best coffee at home. It all starts at the source. To locate the specific lots we want to purchase, we travel nearly 60 days a year trying to understand the challenges and opportunities in each of these places. We collaborate with exceptional coffee growers and empower a global community of farmers through with well above fair-trade benchmarks. We also offer training, support farm community initiatives, and invest in coffee plant science. Curating only the finest blends, we roast each lot to highlight tasting profiles distinctive to their native growing region.',
     },
-];
-
-
-export const Quality = [
+]
+export const Quality = [        
     {
         id: '15',
         title: 'Uncompromising quality',
