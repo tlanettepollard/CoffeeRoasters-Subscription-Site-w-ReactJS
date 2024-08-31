@@ -5,8 +5,16 @@
 @use 'base/typography' as *;
 
 @use 'components/accordion' as *;
+@use 'components/aside' as *;
+@use 'components/benefitsCard' as *;
 @use 'components/buttons' as *;
+@use 'components/collection' as *;
+@use 'components/commitment' as *;
+@use 'components/howWorks' as *;
+@use 'components/location' as *;
 @use 'components/modal' as *;
+@use 'components/modalSubscribe' as *;
+@use 'components/orderSummary' as *;
 
 @use 'layout/footer' as *;
 @use 'layout/hero' as *;

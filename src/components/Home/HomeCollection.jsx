@@ -4,7 +4,7 @@ export function HomeCollection() {
     return (
         <section className='collection'>
             <h2 className='collection__title'>Our collection</h2>
-            <ul className='collection__list'>
+            <ul className='collection__list container'>
                 {Collections.map(item => {
                     return <li className='collection__item' key={item.id}>
                         <div className='collection__img__container'>
