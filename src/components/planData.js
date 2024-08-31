@@ -107,10 +107,11 @@ export const Countries = [
         width: 40.84,
         height: 49.07,
         country: 'United Kingdom',
-        address1: '68 Asfordby Rd',
+        street: '68 Asfordby Rd',
         city: 'Alcaston',
         postcode: 'SY6 1YA',
-        number: '+44 1241 918425',
+        phone: '+44 1241 918425',
+        alt: 'site location in united kingdom',
 
     },
     {
@@ -119,10 +120,11 @@ export const Countries = [
         width: 51.56,
         height: 49.96,
         country: 'Canada',
-        address1: '1528 Eglinton Avenue',
+        street: '1528 Eglinton Avenue',
         city: 'Toronto',
         postcode: 'Ontario M4P 1A6',
-        number: '+1 416 485 2997',
+        phone: '+1 416 485 2997',
+        alt: 'site location in canada',
 
     },
     {
@@ -131,10 +133,11 @@ export const Countries = [
         width: 48.97,
         height: 43.94,
         country: 'Australia',
-        address1: '36 Swanston Street',
+        street: '36 Swanston Street',
         city: 'Kewell',
         postcode: 'Victoria',
-        number: '+61 4 9928 3629',
+        phone: '+61 4 9928 3629',
+        alt: 'site location in australia',
 
     },
 ];

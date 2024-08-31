@@ -3,7 +3,7 @@ import { Quality } from "../planData";
 export function AboutQuality() {
     return (
         <section className='quality'>
-            <ul className='quality__list'>
+            <ul className='quality__list container'>
                 {Quality.map(qualityItem => {
                     return <li key={qualityItem.id} className='quality__list__item'>
                         <div className='quality__image__container'>
