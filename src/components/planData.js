@@ -31,24 +31,33 @@ export const Collections = [
         title: 'Gran Espresso',
         summary: 'Light and flavorful blend with cocoa and black pepper for an intense experience',
         imgUrl: granEspressoImg,
+        width: 200.3,
+        height: 151,
+        alt: 'Gran Espresso',
     },
     {
         id: '2',
         title: 'Planalto',
         summary: 'Brazilian dark roast with rich and velvety body, and hints of fruits and nuts',
         imgUrl: planaltoImg,
+        width: 200.3,
+        height: 151,
     },
     {
         id: '3',
         title: 'Piccollo',
         summary: 'Mild and smooth blend featuring notes of toasted almond and dried cherry',
         imgUrl: piccolloImg,
+        width: 200.3,
+        height: 151,
     },
     {
         id: '4',
         title: 'Danche',
         summary: 'Ethiopian hand-harvested blend densely packed with vibrant fruit notes',
         imgUrl: dancheImg,
+        width: 200.3,
+        height: 151,
     },
 
 ];
@@ -60,6 +69,8 @@ export const BenefitCards = [
         title: 'Best Quality',
         summary: 'Discover an endless variety of the world’s best artisan coffee from each of our roasters.',
         imgUrl: coffeeBeanImg,
+        width: 72,
+        height: 72,
         alt: 'coffee beans of superior quality'
     },
     {
@@ -67,6 +78,8 @@ export const BenefitCards = [
         title: 'Exclusive Benefits',
         summary: 'Special offers and swag when you subscribe, including 30% off your first shipment.',
         imgUrl: giftImg,
+        width: 72,
+        height: 72,
         alt: 'coffee beans of superior quality'
     },
     {
@@ -74,6 +87,8 @@ export const BenefitCards = [
         title: 'Free shipping',
         summary: 'We cover the cost and coffee is delivered fast. Peak freshness: guaranteed.',
         imgUrl: truckImg,
+        width: 72,
+        height: 72,
         alt: 'coffee beans of superior quality'
     },
 ];

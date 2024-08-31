@@ -12,7 +12,7 @@ export function AboutCommitment() {
                                 <source media='(min-width: 768px)' srcSet={commitItem.imgUrl.tablet} />
                                 <source media='(max-width: 767px)' srcSet={commitItem.imgUrl.mobile} />
                             </picture>
-                            <img className='commit__img' src={commitItem.imgUrl.mobile} srcSet={commitItem.imgUrl.mobile} alt={commitItem.alt} />
+                            <img className='commit__img' src={commitItem.imgUrl.mobile} alt={commitItem.alt} width="327" height="400" />
                         </div>
 
                         <div className='commit__details'>
