@@ -13,6 +13,7 @@ export function Subscribe() {
             <section className='plan__section container'>
                 <AsideNav />
             </section>
+            
         </main>
     )
 }
