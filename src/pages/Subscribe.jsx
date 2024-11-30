@@ -3,6 +3,7 @@ import SharedHero from "../components/Shared/SharedHero";
 import { WorkList } from "../components/Shared/WorkList";
 import { AsideNav } from "../components/Subscribe/AsideNav";
 
+
 export function Subscribe() {
     return (
         <main className='main__subscribe container'>
