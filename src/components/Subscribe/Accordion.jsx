@@ -53,8 +53,28 @@ export function Accordion() {
     }
     //Accordion Toggle: click question to reveal answers
 
+    const handleShow = (event) => {
+        setShow(!show)
+        const btn = event.target
+        const parent = btn.parentElement
+        const attribut = btn.getAttribute('data-target')
+        console.log(attribute)
+        const targetDiv = parent.nextSibling
+        console.log(targetDiv)
+        btn.classList.toggle('collapsed')
+        targetDiv.classList.toggle(attribute)
+        targetDiv.classList.toggle('collapse__show')
+    }
 
-
+    //Radio Buttons to make selection
+    const onChange = (event) => {
+        console.log(event.target)
+        const { name, id } = event.target
+        setRadioData({ ...radioData, [name]: id })
+        console.log(name)
+        console.log(id)
+        console.log(radioData)
+    }
 
 
     return (
