@@ -190,7 +190,7 @@ export const PlanQuestions = [
         id: '16',
         question: 'How do you drink your coffee?',
         preferred: 'Preferences',
-        name: 'preferences',
+        name: 'preference',
         options: [
             {
                 id: '20',
