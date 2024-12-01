@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function OrderSummary({ drink, beanType, qty, grind, frequency }) {
+export default function OrderSummary({ drink, beanType, qty, grind, frequency }) {
     return (
         <section className='order'>
             <form className='order__wrapper'>
