@@ -39,7 +39,7 @@ export default function Accordion() {
 
         }
     }
-
+// Left off adding Switch statement for shipping
 
     return (
         <div className="order">
