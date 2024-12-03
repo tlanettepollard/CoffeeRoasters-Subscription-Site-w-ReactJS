@@ -4,6 +4,7 @@ import Modal from '../Subscribe/Modal';
 import OrderSummary from '../Subscribe/OrderSummary';
 
 export default function Accordion() {
+    // Set the initial buttons as null
 
     const initialState = {
         preference: null,
@@ -13,8 +14,8 @@ export default function Accordion() {
         delivery: null,
     }
 
-    const [show, setShow] = useState(false);
-    const [radioData, setRadioData] = useState(initialState);
+    const [show, setShow] = useState(false); //Setting the state for the modal
+    const [radioData, setRadioData] = useState(initialState); // Setting the state for the radio buttons on the selection section
 
     useEffect(() => {
         //console.log('radio data changes')
@@ -27,6 +28,8 @@ export default function Accordion() {
         }
     }, [radioData])
 
+    
+    // Set variables to represent data for radio button selections
     const drink = radioData.preference === null ? '____' : radioData.preference
     const beanType = radioData.bean === null ? '____' : radioData.bean
     const qty = radioData.quantity === null ? '____' : radioData.quantity
