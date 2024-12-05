@@ -76,7 +76,20 @@ export default function Accordion() {
         console.log(id)
         console.log(radioData)
 
-        //Left off before preferred choice
+        const customerChoice = Array.from(document.querySelectorAll("input[name='preference']"))
+        console.log(customerChoice)
+        const grind = document.getElementById('accordionBtn19')
+        const grind__child = document.getElementById('collapse19')
+        const show__grind = document.querySelector('.show__grind')
+        const orderBtn = document.querySelector('order--btn')
+
+        // Check if first option 'Capsule' is selected
+        // if selected, disable the grind option
+        // and uncheck its options
+
+        const prefer = customerChoice.filter(choice => choice.checked && choice.id === 'capsule')
+        console.log(prefer)
+
 
     }
 
