@@ -75,7 +75,12 @@ export default function Accordion() {
         console.log(name)
         console.log(id)
         console.log(radioData)
+
+        //Left off before preferred choice
+
     }
+
+
 
 
 
