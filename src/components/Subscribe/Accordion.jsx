@@ -89,8 +89,21 @@ export default function Accordion() {
 
         const prefer = customerChoice.filter(choice => choice.checked && choice.id === 'capsule')
         console.log(prefer)
+        if (prefer.length > 0) {
+            grind.classList.add('grind__disable')
+            grind__child.classList.add('collapse19')
+            show__grind.classList.add('hide__grind')
 
-
+        } else {
+            grind.classList.remove('grind__disable')
+            grind__child.classList.remove('collapse19')
+            show__grind.classList.remove('hide__grind')
+            if (radioData.grind != null) {
+                orderBtn.classList.remove('disable')
+            } else {
+                orderBtn.classList.add('disable')
+            }
+        }
     }
 
 
