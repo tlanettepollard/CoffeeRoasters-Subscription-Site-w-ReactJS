@@ -106,12 +106,29 @@ export default function Accordion() {
         }
     }
 
-    // Form submission next
+    // Form submission to open order modal
+    const handleSubmit = (event) => {
+        const overlay = document.querySelector('.overlay')
+        const modal = document.querySelector('.subscribe__modal')
 
+        overlay.classList.remove('hide__overlay')
+        modal.classList.toggle('subscribe__show')
+        console.log(event)
+        event.preventDefault()
+    }
 
+    // handle subscribe form - checkout modal
+    const handleSubscribe = (event) => {
+        const overlay = document.querySelector('.overlay')
+        const modal = document.querySelector('.subscribe__modal')
+        modal.classList.toggle('subscribe__show')
+        overlay.classList.add('hide__overlay')
 
+        event.preventDefault()
 
+    }
 
+    
     return (
         <div className="order">
             <OrderSummary />
@@ -119,9 +136,6 @@ export default function Accordion() {
         </div>
 
     )
-
-
-
 
 
 
