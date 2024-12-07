@@ -1,10 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
 import { Outlet } from "react-router-dom";
-import { Navbar } from "./layout/Navbar/Navbar";
-import { Footer } from "./layout/Footer/Footer";
-import { Home } from "./pages/Home/Home";
-import { About } from "./pages/About/About";
-import { Plan } from "./pages/Plan/Plan";
+import { Navbar } from "./components/Navbar/Navbar";
+import { Footer } from "./components/Footer";
+import { Home } from "./pages/Home";
+import { About } from "./pages/About";
+import { Subscribe } from "./pages/Subscribe";
 
 
 export const router = createBrowserRouter([
@@ -13,7 +13,7 @@ export const router = createBrowserRouter([
         children: [
             { path: '/', element: <Home /> },
             { path: '/about', element: <About /> },
-            { path: '/plan', element: <Plan /> },
+            { path: '/subscribe', element: <Subscribe /> },
         ],
     },
     {
