@@ -3,7 +3,7 @@ import { PlanQuestions } from '../planData';
 import Modal from '../Subscribe/Modal';
 import OrderSummary from '../Subscribe/OrderSummary';
 
-export default function Accordion() {
+export function Accordion() {
     // Set the initial buttons as null
 
     const initialState = {

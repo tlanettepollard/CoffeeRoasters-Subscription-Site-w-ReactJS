@@ -1,4 +1,4 @@
-export function Modal(props) {
+export default function Modal(props) {
     const formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',
         currency: 'USD',
