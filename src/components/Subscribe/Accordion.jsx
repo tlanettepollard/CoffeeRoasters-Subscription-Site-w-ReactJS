@@ -102,9 +102,9 @@ export function Accordion() {
             grind__child.classList.remove('collapse19')
             show__grind.classList.remove('hide__grind')
             if (radioData.grind != null) {
-                orderBtn.classList.remove('disable')
+                orderBtn.classList.remove('disabled')
             } else {
-                orderBtn.classList.add('disable')
+                orderBtn.classList.add('disabled')
             }
         }
     }
@@ -162,9 +162,9 @@ export function Accordion() {
             {/* Need to handle Order Summary */}
 
             <div className="order">
-                <OrderSummary onSubmit={handleSubmit} />
+                <OrderSummary onSubmit={handleSubmit} {...drink} />
             </div>
-            <Modal onSubmit={handleSubscribe} prefer={radioData.preference} bean={radioData.bean} quantity={radioData.quantity} grind={radioData.grind} delivery={radioData.delivery} shipping={shippingCost} />
+            <Modal onSubmit={handleSubscribe} />
             <div className="overlay hide__overlay"></div>
         </div>
     )
