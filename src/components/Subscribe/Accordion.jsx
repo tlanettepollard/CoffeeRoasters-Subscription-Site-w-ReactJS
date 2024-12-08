@@ -34,7 +34,7 @@ export function Accordion() {
     const beanType = radioData.bean === null ? '____' : radioData.bean
     const qty = radioData.quantity === null ? '____' : radioData.quantity
     const grind = radioData.grind === null ? '____' : radioData.grind
-    const frequency = radioData.delivery === 'weekly' ? 'Every week' : radioData.delivery === 'fortnight' ? 'Every 2 weeks' : radioData.delivery === 'monthly' ? 'Monthly' : '____'
+    const deliver = radioData.delivery === 'weekly' ? 'Every week' : radioData.delivery === 'fortnight' ? 'Every 2 weeks' : radioData.delivery === 'monthly' ? 'Monthly' : '____'
 
     // calculate total shipping cost per month per weight
     const shippingCost = () => {
@@ -162,7 +162,7 @@ export function Accordion() {
             {/* Need to handle Order Summary */}
 
             <div className="order">
-                <OrderSummary onSubmit={handleSubmit} {...drink} />
+                <OrderSummary onSubmit={handleSubmit} {...drink} {...beanType} {...qty} {...grind}  {...deliver} />
             </div>
             <Modal onSubmit={handleSubscribe} />
             <div className="overlay hide__overlay"></div>
