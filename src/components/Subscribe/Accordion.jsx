@@ -128,13 +128,37 @@ export default function Accordion() {
 
     }
 
-    
-    return (
-        <div className="order">
-            <OrderSummary />
-            <Modal />
-        </div>
 
+    return (
+        <div className="accordion__wrapper">
+            <ul className="accordion">
+                {PlanQuestions.map(plan => {
+                    <li className="accordion__list__item" key={plan.id}>
+                        <h3 className="accordion__header">
+                            <button aria-expanded={plan.id === '16' ? true : false} aria-controls={`collapse${plan.id}`} id={`accordionBtn${plan.id}`} className={`accordion--btn`} onClick={handleShow} data-toggle='collapse' data-target={`collapse${plan.id}`}>{plan.question}</button>
+                        </h3>
+                        <div id={`collapse${plan.id}`} role='region' className={`plan__card collapse${plan.id}`}>
+                            {plan.options.map(opt => {
+                                return <div className={`plan__select ${plan.name}`} key={opt.id}>
+                                    <input type='radio' name={plan.name} id={opt.sub} onChange={onChange} />
+                                    <label>
+
+                                    </label>
+                                </div>
+                            })}
+                        </div>
+                    </li>
+                })}
+            </ul>
+
+
+
+            <div className="order">
+                <OrderSummary />
+            </div>
+            <Modal />
+            <div className="overlay hide__overlay"></div>
+        </div>
     )
 
 
