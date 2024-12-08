@@ -144,7 +144,15 @@ export default function Accordion() {
                                 </button>
                             </h3>
                             <div id={`collapse${plan.id}`} role='region' className={`plan__card collapse${plan.id}`}>
-
+                                {plan.options.map(opt => {
+                                    return <div className={`plan__select ${plan.name}`} key={opt.id}>
+                                        <input type="radio" name={plan.name} id={opt.sub} onChange={onChange} />
+                                        <label className='radio__label' htmlFor={opt.sub}>
+                                            <span className={`plan__card__title radio__big__text wrapper__${plan.name}`}>{opt.type}</span>
+                                            <span className={`plan__card__content radio__small__text ${opt.sub}`}>{opt.answer}</span>
+                                        </label>
+                                    </div>
+                                })}
                             </div>
                         </div>
                     </li>
@@ -152,9 +160,9 @@ export default function Accordion() {
             </ul>
 
             <div className="order">
-                <OrderSummary />
+                <OrderSummary onSubmit={handleSubmit} />
             </div>
-            <Modal />
+            <Modal onSubmit={handleSubscribe} />
             <div className="overlay hide__overlay"></div>
         </div>
     )
