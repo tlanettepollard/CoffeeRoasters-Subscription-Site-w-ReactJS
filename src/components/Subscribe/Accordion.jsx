@@ -159,6 +159,8 @@ export default function Accordion() {
                 })}
             </ul>
 
+            {/* Need to handle Order Summary */}
+
             <div className="order">
                 <OrderSummary onSubmit={handleSubmit} />
             </div>
