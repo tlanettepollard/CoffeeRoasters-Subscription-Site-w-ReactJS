@@ -164,7 +164,7 @@ export function Accordion() {
             <div className="order">
                 <OrderSummary onSubmit={handleSubmit} />
             </div>
-            <Modal onSubmit={handleSubscribe} />
+            <Modal onSubmit={handleSubscribe} prefer={radioData.preference} bean={radioData.bean} quantity={radioData.quantity} grind={radioData.grind} delivery={radioData.delivery} shipping={shippingCost} />
             <div className="overlay hide__overlay"></div>
         </div>
     )
