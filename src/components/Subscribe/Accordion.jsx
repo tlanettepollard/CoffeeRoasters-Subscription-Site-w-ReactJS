@@ -162,7 +162,7 @@ export function Accordion() {
             {/* Need to handle Order Summary */}
 
             <div className="order">
-                <OrderSummary onSubmit={handleSubmit} {...drink} {...beanType} {...qty} {...grind}  {...deliver} />
+                <OrderSummary onSubmit={handleSubmit} />
             </div>
             <Modal onSubmit={handleSubscribe} />
             <div className="overlay hide__overlay"></div>
