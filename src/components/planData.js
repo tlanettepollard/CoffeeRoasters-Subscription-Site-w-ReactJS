@@ -277,17 +277,17 @@ export const PlanQuestions = [
         id: '20',
         question: 'How often should we deliver?',
         option1: {
-            id: 'Every week',
+            id: 'Weekly',
             title: 'Every week',
             answer: '$14.00 per shipment. Includes free first-class shipping.',
         },
         option2: {
-            id: 'Every 2 weeks',
+            id: 'Fortnight',
             title: 'Every 2 weeks',
             answer: '$17.25 per shipment. Includes free priority shipping.',
         },
         option3: {
-            id: 'Every month',
+            id: 'Monthly',
             title: 'Every month',
             answer: '$22.50 per shipment. Includes free first-class shipping.',
         },
