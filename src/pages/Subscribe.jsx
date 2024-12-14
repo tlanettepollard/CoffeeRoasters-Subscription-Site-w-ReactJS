@@ -1,7 +1,7 @@
 import React from "react";
 import SharedHero from "../components/Shared/SharedHero";
 import { WorksItems } from "../components/Shared/WorksItems";
-import { Plans } from "../components/Subscribe/Plans";
+//import { Plans } from "../components/Subscribe/Plans";
 
 
 export function Subscribe() {
@@ -11,7 +11,7 @@ export function Subscribe() {
             <section className='works__container subscribe__works__container'>
                 <WorksItems />
             </section>
-            <Plans />
+
         </main>
     )
 }

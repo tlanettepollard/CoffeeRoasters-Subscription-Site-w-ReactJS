@@ -189,57 +189,45 @@ export const PlanQuestions = [
     {
         id: '16',
         question: 'How do you drink your coffee?',
-        preferred: 'Preferences',
-        name: 'preference',
-        options: [
-            {
-                id: '20',
-                sub: 'capsule',
-                type: 'Capsule',
-                answer: 'Compatible with Nespresso systems and similar brewers',
-            },
-            {
-                id: '21',
-                sub: 'filter',
-                type: 'Filter',
-                answer: 'For pour over or drip methods like Aeropress, Chemex, V60',
-            },
-            {
-                id: '22',
-                sub: 'espresso',
-                type: 'Espresso',
-                answer: 'Dense and finely ground beans for an intense flavorful experience',
-            }
-        ]
+        option1: {
+            id: 'Capsule',
+            title: 'Capsule',
+            answer: 'Compatible with Nespresso systems and similar brewers',
+        },
+        option2: {
+            id: 'Filter',
+            title: 'Filter',
+            answer: 'For pour over or drip methods like Aeropress, Chemex, V60',
+        },
+        option3: {
+            id: 'Espresson',
+            title: 'Espresso',
+            answer: 'Dense and finely ground beans for an intense flavorful experience',
+        },
+        open: false,
 
     },
-
 
     {
         id: '17',
         question: 'What type of coffee?',
-        preferred: 'Bean Type',
-        name: 'bean',
-        options: [
-            {
-                id: '30',
-                sub: 'single',
-                type: "Single origin",
-                answer: 'Distinct high quality coffee from a specific family-owned farm',
-            },
-            {
-                id: '31',
-                sub: 'decaf',
-                type: 'Decaf',
-                answer: 'Just like regular coffee, except the caffeine has been removed',
-            },
-            {
-                id: '32',
-                sub: 'blended',
-                type: 'Blended',
-                answer: 'Combination of two or three dark roasted beans of organic coffees',
-            }
-        ]
+        option1: {
+            id: 'Single',
+            title: "Single origin",
+            answer: 'Distinct high quality coffee from a specific family-owned farm',
+        },
+        option2: {
+            id: 'Decaf',
+            title: 'Decaf',
+            answer: 'Just like regular coffee, except the caffeine has been removed',
+        },
+        option3: {
+            id: 'Blended',
+            title: 'Blended',
+            answer: 'Combination of two or three dark roasted beans of organic coffees',
+        },
+        open: false,
+
     },
 
     {
