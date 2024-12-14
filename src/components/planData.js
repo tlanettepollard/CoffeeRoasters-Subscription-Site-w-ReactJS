@@ -212,7 +212,7 @@ export const PlanQuestions = [
         id: '17',
         question: 'What type of coffee?',
         option1: {
-            id: 'Single',
+            id: 'Single origin',
             title: "Single origin",
             answer: 'Distinct high quality coffee from a specific family-owned farm',
         },
@@ -233,85 +233,65 @@ export const PlanQuestions = [
     {
         id: '18',
         question: 'How much would you like?',
-        preferred: 'Quantity',
-        name: 'quantity',
-        options: [
-            {
-                id: '40',
-                sub: '250g',
-                type: '250g',
-                answer: 'Perfect for the solo drinker. Yields about 12 delicious cups.',
-            },
-            {
-                id: '41',
-                sub: '500g',
-                type: '500g',
-                answer: 'Perfect option for a couple. Yields about 40 delectable cups.',
-            },
-            {
-                id: '42',
-                sub: '1000g',
-                type: '1000g',
-                answer: 'Perfect for offices and events. Yields about 90 delightful cups.',
-            }
+        option1: {
+            id: '250g',
+            title: '250g',
+            answer: 'Perfect for the solo drinker. Yields about 12 delicious cups.',
+        },
+        option2: {
+            id: '500g',
+            title: '500g',
+            answer: 'Perfect option for a couple. Yields about 40 delectable cups.',
+        },
+        option3: {
+            id: '1000g',
+            title: '1000g',
+            answer: 'Perfect for offices and events. Yields about 90 delightful cups.',
+        },
+        open: false,
 
-        ]
     },
 
     {
         id: '19',
         question: 'Want us to grind them?',
-        preferred: 'Grind Option',
-        name: 'grind',
-        options: [
-            {
-                id: '50',
-                sub: 'wholebean',
-                type: 'Wholebean',
-                answer: 'Best choice if you cherish the full sensory experience',
-            },
-            {
-                id: '51',
-                sub: 'filtered',
-                type: 'Filtered',
-                answer: 'For drip or pour-over coffee methods such as V60 and Aeropress',
-            },
-            {
-                id: '52',
-                sub: 'cafetiére',
-                type: 'Cafetiére',
-                answer: 'Course ground beans specifically suited for french press coffees',
-            }
-        ]
-
+        option1: {
+            id: 'Wholebean',
+            title: 'Wholebean',
+            answer: 'Best choice if you cherish the full sensory experience',
+        },
+        option2: {
+            id: 'Filtered',
+            title: 'Filtered',
+            answer: 'For drip or pour-over coffee methods such as V60 and Aeropress',
+        },
+        option3: {
+            id: 'Cafetiére',
+            title: 'Cafetiére',
+            answer: 'Course ground beans specifically suited for french press coffees',
+        },
+        open: false,
     },
 
     {
         id: '20',
         question: 'How often should we deliver?',
-        preferred: 'Deliveries',
-        name: 'delivery',
-        options: [
-            {
-                id: '60',
-                sub: 'weekly',
-                type: 'Every week',
-                answer: '$14.00 per shipment. Includes free first-class shipping.',
-            },
-            {
-                id: '61',
-                sub: 'fortnight',
-                type: 'Every 2 weeks',
-                description: '$17.25 per shipment. Includes free priority shipping.',
-            },
-            {
-                id: '62',
-                sub: 'monthly',
-                type: 'Every month',
-                answer: '$22.50 per shipment. Includes free first-class shipping.',
-            }
-        ]
-
+        option1: {
+            id: 'Every week',
+            title: 'Every week',
+            answer: '$14.00 per shipment. Includes free first-class shipping.',
+        },
+        option2: {
+            id: 'Every 2 weeks',
+            title: 'Every 2 weeks',
+            answer: '$17.25 per shipment. Includes free priority shipping.',
+        },
+        option3: {
+            id: 'Every month',
+            title: 'Every month',
+            answer: '$22.50 per shipment. Includes free first-class shipping.',
+        },
+        open: false,
     },
 ];
 
