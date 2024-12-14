@@ -3,171 +3,58 @@ import { PlanQuestions } from '../planData';
 import Modal from '../Subscribe/Modal';
 import OrderSummary from '../Subscribe/OrderSummary';
 
-export function Accordion() {
+const Accordion = () => {
     // Set the initial buttons as null
-
     const initialState = {
-        preference: null,
+        drink: null,
         bean: null,
         quantity: null,
         grind: null,
-        delivery: null,
+        frequency: null,
     }
 
-    const [show, setShow] = useState(false); //Setting the state for the modal
-    const [radioData, setRadioData] = useState(initialState); // Setting the state for the radio buttons on the selection section
+    const [show, setShow] = useState(false);
+    [radioData, setRadioData] = useState(initialState);
+    const [verb, setVerb] = useState('as');
+
+
 
     useEffect(() => {
-        //console.log('radio data changes')
-        //disable orderBtn if no selection has been made
+        // will disable orderBtn if no selection made
         const orderBtn = document.querySelector('.order--btn')
-        if (radioData.preference !== null && radioData.bean !== null && radioData.quantity !== null && radioData.delivery !== null) {
+        if (radioData.drink !== null && radioData.bean !== null && radioData.quantity !== null && radioData.frequency !== null) {
             orderBtn.classList.remove('disabled')
         } else {
             orderBtn.classList.add('disabled')
         }
     }, [radioData])
 
-
-    // Set variables to represent data for radio button selections
-    const drink = radioData.preference === null ? '____' : radioData.preference
-    const beanType = radioData.bean === null ? '____' : radioData.bean
+    const preferDrink = radioData.drink === null ? '____' : radioData.drink
+    const beanChoice = radioData.bean === null ? '____' : radioData.bean
     const qty = radioData.quantity === null ? '____' : radioData.quantity
     const grind = radioData.grind === null ? '____' : radioData.grind
-    const deliver = radioData.delivery === 'weekly' ? 'Every week' : radioData.delivery === 'fortnight' ? 'Every 2 weeks' : radioData.delivery === 'monthly' ? 'Monthly' : '____'
+    const delivery = radioData.frequency === 'Weekly' ? 'Every week' : radioData.frequency === 'Fortnight' ? 'Every 2 weeks' : radioData.frequency === 'Monthly' ? 'Every month' : '____'
 
-    // calculate total shipping cost per month per weight
+    // Calculate total shipping cost per month per weight
+
     const shippingCost = () => {
-        switch (radioData.quantity) {
+        switch (qty) {
             case '250g':
-                return radioData.delivery === 'Every week' ? 7.20 * 4 : radioData.delivery === 'Every 2 weeks' ? 9.60 * 2 : 12.00;
+                return delivery === 'Every week' ? 7.20 * 4 : delivery === 'Every 2 weeks' ? 9.60 * 2 : 12.00;
                 break;
             case '500g':
-                return radioData.delivery === 'Every week' ? 13 * 4 : radioData.delivery === 'Every 2 weeks' ? 17.50 * 2 : 22.00;
+                return delivery === 'Every week' ? 13 * 4 : delivery === 'Every 2 weeks' ? 17.50 * 2 : 22.00;
                 break;
             case '1000g':
-                return radioData.delivery === 'Every week' ? 22.00 * 4 : radioData.delivery === 'Every 2 weeks' ? 32.00 * 2 : 42.00;
+                return 'Every week' ? 22.00 * 4 : delivery === 'Every 2 weeks' ? 32.00 * 2 : 42.00;
                 break;
             default:
                 return shippingCost;
-
-
-        }
-    }
-    // Accordion control: toggle
-    // Click the question to reveal and close answers
-
-    const handleShow = (event) => {
-        setShow(!show)
-        const btn = event.target;
-        const parent = btn.parentElement;
-        const attribute = btn.getAttribute('data-target')
-        console.log(attribute)
-        const targetDiv = parent.nextSibling;
-        console.log(targetDiv)
-        btn.classList.toggle('collapsed')
-        targetDiv.classList.toggle(attribute)
-        targetDiv.classList.toggle('collapse__show')
-    }
-
-    // radio buttons to make selection
-    const onChange = (event) => {
-        console.log(event.target)
-        const { name, id } = event.target
-        setRadioData({ ...radioData, [name]: id })
-        console.log(name)
-        console.log(id)
-        console.log(radioData)
-
-        const customerChoice = Array.from(document.querySelectorAll("input[name='preference']"))
-        console.log(customerChoice)
-        const grind = document.getElementById('accordionBtn19')
-        const grind__child = document.getElementById('collapse19')
-        const show__grind = document.querySelector('.show__grind')
-        const orderBtn = document.querySelector('order--btn')
-
-        // Check if first option 'Capsule' is selected
-        // if selected, disable the grind option
-        // and uncheck its options
-
-        const prefer = customerChoice.filter(choice => choice.checked && choice.id === 'capsule')
-        console.log(prefer)
-        if (prefer.length > 0) {
-            grind.classList.add('grind__disable')
-            grind__child.classList.add('collapse19')
-            show__grind.classList.add('hide__grind')
-
-        } else {
-            grind.classList.remove('grind__disable')
-            grind__child.classList.remove('collapse19')
-            show__grind.classList.remove('hide__grind')
-            if (radioData.grind != null) {
-                orderBtn.classList.remove('disabled')
-            } else {
-                orderBtn.classList.add('disabled')
-            }
         }
     }
 
-    // Form submission to open order modal
-    const handleSubmit = (event) => {
-        const overlay = document.querySelector('.overlay')
-        const modal = document.querySelector('.subscribe__modal')
-
-        overlay.classList.remove('hide__overlay')
-        modal.classList.toggle('subscribe__show')
-        console.log(event)
-        event.preventDefault()
-    }
-
-    // handle subscribe form - checkout modal
-    const handleSubscribe = (event) => {
-        const overlay = document.querySelector('.overlay')
-        const modal = document.querySelector('.subscribe__modal')
-        modal.classList.toggle('subscribe__show')
-        overlay.classList.add('hide__overlay')
-
-        event.preventDefault()
-
-    }
 
 
-    return (
-        <div className="accordion__wrapper">
-            <ul className='accordion'>
-                {PlanQuestions.map(plan => {
-                    return <li className='accordion__list__item' key={plan.id}>
-                        <div id={plan.name} className='accordion__item'>
-                            <h3 className='accordion__header'>
-                                <button aria-expanded={plan.id === '16' ? true : false} aria-controls={`collapse${plan.id}`} id={`accordionBtn${plan.id}`} className={`accordion--btn`} onClick={handleShow} data-toggle='collapse' data-target={`collapse${plan.id}`}>
-                                    {plan.question}
-                                </button>
-                            </h3>
-                            <div id={`collapse${plan.id}`} role='region' className={`plan__card collapse${plan.id}`}>
-                                {plan.options.map(opt => {
-                                    return <div className={`plan__select ${plan.name}`} key={opt.id}>
-                                        <input type="radio" name={plan.name} id={opt.sub} onChange={onChange} />
-                                        <label className='radio__label' htmlFor={opt.sub}>
-                                            <span className={`plan__card__title radio__big__text wrapper__${plan.name}`}>{opt.type}</span>
-                                            <span className={`plan__card__content radio__small__text ${opt.sub}`}>{opt.answer}</span>
-                                        </label>
-                                    </div>
-                                })}
-                            </div>
-                        </div>
-                    </li>
-                })}
-            </ul>
+};
 
-            {/* Need to handle Order Summary */}
-
-            <div className="order">
-                <OrderSummary onSubmit={handleSubmit} />
-            </div>
-            <Modal onSubmit={handleSubscribe} />
-            <div className="overlay hide__overlay"></div>
-        </div>
-    )
-
-
-}
+export default Accordion;
