@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function OrderSummary({ preference, bean, quantity, grind, delivery }) {
+const OrderSummary = ({ preference, bean, quantity, grind, delivery }) => {
     return (
         <section className='order'>
             <form className='order__wrapper'>
@@ -14,4 +14,6 @@ export default function OrderSummary({ preference, bean, quantity, grind, delive
             </form>
         </section>
     );
-}
+};
+
+export default OrderSummary
