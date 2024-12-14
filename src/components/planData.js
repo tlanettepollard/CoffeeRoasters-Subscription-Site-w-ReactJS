@@ -296,7 +296,7 @@ export const PlanQuestions = [
 ];
 
 
-export const SubscribeNav = [
+export const ChoicesNav = [
     {
         id: '21',
         number: '01',

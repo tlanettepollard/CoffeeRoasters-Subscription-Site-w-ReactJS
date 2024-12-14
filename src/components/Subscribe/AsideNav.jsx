@@ -1,15 +1,16 @@
-import { SubscribeNav } from "../planData";
+import React from 'react';
+import { ChoicesNav } from "../planData";
 
-export function AsideNav() {
+const AsideNav = () => {
     return (
-        <aside>
+        <aside className='choice__container'>
             <nav>
                 <ul className='nav__list'>
-                    {SubscribeNav.map(option => {
-                        return <li className='nav__item' key={option.id}>
+                    {ChoicesNav.map((choice) => {
+                        return <li className='nav__item' key={choice.id}>
                             <a href="#preferences">
-                                <span className={`nav__item__number span ${option.id}`}>{option.number}</span>
-                                <span className='nav__item__text'>{option.title}</span>
+                                <span className={`nav__item__number span ${choice.id}`}>{choice.number}</span>
+                                <span className='nav__item__text'>{choice.title}</span>
                             </a>
                         </li>
                     })}
@@ -18,3 +19,4 @@ export function AsideNav() {
         </aside>
     );
 };
+export default AsideNav;
