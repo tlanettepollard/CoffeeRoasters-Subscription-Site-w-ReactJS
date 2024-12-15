@@ -12,7 +12,7 @@ const Modal = ({ isGrindDisabled, onSubmit, verb, drink, bean, quantity, grind, 
 
     return (
         <div>
-            <div className="modal__overlay"></div>
+            <div className="modal__overlay hide__overlay"></div>
             <div className="modal__container">
                 <form className="modal__content" onSubmit={onSubmit}>
 
