@@ -187,7 +187,7 @@ export const Quality = [
 
 export const PlanQuestions = [
     {
-        id: '16',
+        id: '01',
         question: 'How do you drink your coffee?',
         option1: {
             id: 'Capsule',
@@ -209,7 +209,7 @@ export const PlanQuestions = [
     },
 
     {
-        id: '17',
+        id: '02',
         question: 'What type of coffee?',
         option1: {
             id: 'Single origin',
@@ -231,7 +231,7 @@ export const PlanQuestions = [
     },
 
     {
-        id: '18',
+        id: '03',
         question: 'How much would you like?',
         option1: {
             id: '250g',
@@ -253,7 +253,7 @@ export const PlanQuestions = [
     },
 
     {
-        id: '19',
+        id: '04',
         question: 'Want us to grind them?',
         option1: {
             id: 'Wholebean',
@@ -274,7 +274,7 @@ export const PlanQuestions = [
     },
 
     {
-        id: '20',
+        id: '05',
         question: 'How often should we deliver?',
         option1: {
             id: 'Weekly',
@@ -298,27 +298,27 @@ export const PlanQuestions = [
 
 export const ChoicesNav = [
     {
-        id: '21',
+        id: '16',
         number: '01',
         title: 'Preferences',
     },
     {
-        id: '22',
+        id: '17',
         number: '02',
         title: 'Bean Type',
     },
     {
-        id: '23',
+        id: '18',
         number: '03',
         title: 'Quantity',
     },
     {
-        id: '24',
+        id: '19',
         number: '04',
         title: 'Grind Options',
     },
     {
-        id: '25',
+        id: '20',
         number: '05',
         title: 'Deliveries',
     },

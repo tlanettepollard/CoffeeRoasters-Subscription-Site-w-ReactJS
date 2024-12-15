@@ -80,8 +80,8 @@ const Accordion = () => {
 
         const preferredChoice = Array.from(document.querySelectorAll("input[title='drink']"))
         console.log(preferredChoice)
-        const grind = document.getElementById('accordionBtn19')
-        const grind__child = document.getElementById('collapse19')
+        const grind = document.getElementById('accordionBtn04')
+        const grind__child = document.getElementById('collapse04')
         const show__grind = document.querySelector('.show__grind')
         const orderBtn = document.querySelector('.order--btn')
 
@@ -92,13 +92,13 @@ const Accordion = () => {
         console.log(prefer)
         if (prefer.length > 0) {
             grind.classList.add('grind__disable')
-            grind__child.classList.add('collapse19')
+            grind__child.classList.add('collapse04')
             show__grind.classList.add('hide__grind')
             setVerb('using')
 
         } else {
             grind.classList.remove('grind__disable')
-            grind__child.classList.remove('collapse19')
+            grind__child.classList.remove('collapse04')
             show__grind.classList.remove('hide__grind')
             setVerb('as')
             if (radioData.grind !== null) {
@@ -129,7 +129,28 @@ const Accordion = () => {
         e.preventDefault()
     }
 
+    return (
+        <div className="accordion__container">
+            <ul className="accordion">
+                {PlanQuestions.map(plan => {
+                    return <li className="accordion__list__item" key={plan.id}>
+                        <div id={plan.title} className="accordion__item">
+                            <h3 className="accordion__header">
+                                <button aria-expanded={plan.id === '01' ? true : false} aria-controls={`collapse${plan.id}`} id={`accordionBtn&${plan.id}`} className={`accordion--btn`} onClick={handleShow} data-toggle='collapse' data-target={`collapse${plan.id}`}>{plan.question}</button>
+                            </h3>
+                            <div id={`collapse${plan.id}`} role='region' className={`plan__card collapse${plan.id}`}>
+                                {plan.options.map(opt => {
+                                    return <div>
 
+                                    </div>
+                                })}
+                            </div>
+                        </div>
+                    </li>
+                })}
+            </ul>
+        </div>
+    )
 
 };
 
