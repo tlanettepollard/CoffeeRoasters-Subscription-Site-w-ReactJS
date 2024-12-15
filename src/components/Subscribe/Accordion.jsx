@@ -53,6 +53,82 @@ const Accordion = () => {
         }
     }
 
+    // Toggle Accordion control, click question
+    // to reveal and close the answers
+    // show available answers
+    const handleShow = (e) => {
+        setShow(!show)
+        const btn = e.target
+        const parent = btn.parentElement
+        const attribute = btn.getAttribute('data-target')
+        console.log(attribute)
+        const targetDiv = parent.nextSibling
+        // console.log(targetDiv)
+        btn.classList.toggle('collapsed')
+        targetDiv.classList.toggle(attribute)
+        targetDiv.classList.toggle('collapse__show')
+    }
+
+    // Radion buttons to make selection
+    const onChange = (e) => {
+        console.log(e.target)
+        const { title, id } = e.target
+        setRadioData({ ...radioData, [title]: id })
+        console.log(title)
+        console.log(id)
+        console.log(radioData)
+
+        const preferredChoice = Array.from(document.querySelectorAll("input[title='drink']"))
+        console.log(preferredChoice)
+        const grind = document.getElementById('accordionBtn19')
+        const grind__child = document.getElementById('collapse19')
+        const show__grind = document.querySelector('.show__grind')
+        const orderBtn = document.querySelector('.order--btn')
+
+        // Check if first option selected is Capsule
+        // If selected, disable grind option and uncheck
+
+        const prefer = preferredChoice.filter(choice => choice.checked && choice.id === 'Capsule')
+        console.log(prefer)
+        if (prefer.length > 0) {
+            grind.classList.add('grind__disable')
+            grind__child.classList.add('collapse19')
+            show__grind.classList.add('hide__grind')
+            setVerb('using')
+
+        } else {
+            grind.classList.remove('grind__disable')
+            grind__child.classList.remove('collapse19')
+            show__grind.classList.remove('hide__grind')
+            setVerb('as')
+            if (radioData.grind !== null) {
+                orderBtn.classList.remove('disabled')
+            } else {
+                orderBtn.classList.add('disabled')
+            }
+        }
+
+    }
+
+    // Form submission - opens subscribe modal
+    const handleSubmit = (e) => {
+        const overlay = document.querySelector('.modal__overlay')
+        const modal = document.querySelector('.modal__container')
+        modal.classList.toggle('subscribe__show')
+        overlay.classList.add('hide__overlay')
+        e.preventDefault()
+    }
+
+    // Handle subscribe form checkout modal
+    const handleSubscribe = (e) => {
+        const overlay = document.querySelector('.modal__overlay')
+        const modal = document.querySelector('.modal__container')
+        modal.classList.toggle('subscribe__show')
+        overlay.classList.add('hide__overlay')
+
+        e.preventDefault()
+    }
+
 
 
 };
