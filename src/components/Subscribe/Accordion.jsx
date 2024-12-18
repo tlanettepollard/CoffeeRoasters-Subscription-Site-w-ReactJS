@@ -142,7 +142,7 @@ const Accordion = () => {
                                 {plan.options.map(opt => {
                                     return <div className={`plan__select ${plan.title}`} key={opt.id}>
                                         <input type="radio" name={plan.name} id={opt.title} onChange={onChange} />
-
+                                            {/* Label next */}
                                     </div>
                                 })}
                             </div>
