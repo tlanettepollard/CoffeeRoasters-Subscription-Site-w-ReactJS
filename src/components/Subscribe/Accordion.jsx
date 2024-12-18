@@ -6,11 +6,11 @@ import OrderSummary from '../Subscribe/OrderSummary';
 const Accordion = () => {
     // Set the initial buttons as null
     const initialState = {
-        drink: null,
+        preference: null,
         bean: null,
         quantity: null,
         grind: null,
-        frequency: null,
+        deliveries: null,
     }
 
     const [show, setShow] = useState(false);
@@ -22,18 +22,18 @@ const Accordion = () => {
     useEffect(() => {
         // will disable orderBtn if no selection made
         const orderBtn = document.querySelector('.order--btn')
-        if (radioData.drink !== null && radioData.bean !== null && radioData.quantity !== null && radioData.frequency !== null) {
+        if (radioData.preference !== null && radioData.bean !== null && radioData.quantity !== null && radioData.deliveries !== null) {
             orderBtn.classList.remove('disabled')
         } else {
             orderBtn.classList.add('disabled')
         }
     }, [radioData])
 
-    const preferDrink = radioData.drink === null ? '____' : radioData.drink
+    const preferDrink = radioData.preference === null ? '____' : radioData.preference
     const beanChoice = radioData.bean === null ? '____' : radioData.bean
     const qty = radioData.quantity === null ? '____' : radioData.quantity
     const grind = radioData.grind === null ? '____' : radioData.grind
-    const delivery = radioData.frequency === 'Weekly' ? 'Every week' : radioData.frequency === 'Fortnight' ? 'Every 2 weeks' : radioData.frequency === 'Monthly' ? 'Every month' : '____'
+    const delivery = radioData.deliveries === 'Weekly' ? 'Every week' : radioData.deliveries === 'Fortnight' ? 'Every 2 weeks' : radioData.deliveries === 'Monthly' ? 'Every month' : '____'
 
     // Calculate total shipping cost per month per weight
 
@@ -72,13 +72,13 @@ const Accordion = () => {
     // Radion buttons to make selection
     const onChange = (e) => {
         console.log(e.target)
-        const { title, id } = e.target
-        setRadioData({ ...radioData, [title]: id })
-        console.log(title)
+        const { name, id } = e.target
+        setRadioData({ ...radioData, [name]: id })
+        console.log(name)
         console.log(id)
         console.log(radioData)
 
-        const preferredChoice = Array.from(document.querySelectorAll("input[title='drink']"))
+        const preferredChoice = Array.from(document.querySelectorAll("input[name='preference']"))
         console.log(preferredChoice)
         const grind = document.getElementById('accordionBtn04')
         const grind__child = document.getElementById('collapse04')
@@ -134,12 +134,17 @@ const Accordion = () => {
             <ul className="accordion">
                 {PlanQuestions.map(plan => {
                     return <li className="accordion__list__item" key={plan.id}>
-                        <div id={plan.title} className="accordion__item">
+                        <div id={plan.name} className="accordion__item">
                             <h3 className="accordion__header">
                                 <button aria-expanded={plan.id === '01' ? true : false} aria-controls={`collapse${plan.id}`} id={`accordionBtn&${plan.id}`} className={`accordion--btn`} onClick={handleShow} data-toggle='collapse' data-target={`collapse${plan.id}`}>{plan.question}</button>
                             </h3>
                             <div id={`collapse${plan.id}`} role='region' className={`plan__card collapse${plan.id}`}>
-                                
+                                {plan.options.map(opt => {
+                                    return <div className={`plan__select ${plan.title}`} key={opt.id}>
+                                        <input type="radio" name={plan.name} id={opt.title} onChange={onChange} />
+
+                                    </div>
+                                })}
                             </div>
                         </div>
                     </li>
