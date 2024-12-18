@@ -189,109 +189,114 @@ export const PlanQuestions = [
     {
         id: '01',
         question: 'How do you drink your coffee?',
-        option1: {
-            id: 'Capsule',
-            title: 'Capsule',
-            answer: 'Compatible with Nespresso systems and similar brewers',
-        },
-        option2: {
-            id: 'Filter',
-            title: 'Filter',
-            answer: 'For pour over or drip methods like Aeropress, Chemex, V60',
-        },
-        option3: {
-            id: 'Espresson',
-            title: 'Espresso',
-            answer: 'Dense and finely ground beans for an intense flavorful experience',
-        },
-        open: false,
+        options: [
+            {
+                id: 'Capsule',
+                title: 'Capsule',
+                answer: 'Compatible with Nespresso systems and similar brewers',
+            },
+            {
+                id: 'Filter',
+                title: 'Filter',
+                answer: 'For pour over or drip methods like Aeropress, Chemex, V60',
+            },
+            {
+                id: 'Espresson',
+                title: 'Espresso',
+                answer: 'Dense and finely ground beans for an intense flavorful experience',
+            },
+        ]
 
     },
 
     {
         id: '02',
         question: 'What type of coffee?',
-        option1: {
-            id: 'Single origin',
-            title: "Single origin",
-            answer: 'Distinct high quality coffee from a specific family-owned farm',
-        },
-        option2: {
-            id: 'Decaf',
-            title: 'Decaf',
-            answer: 'Just like regular coffee, except the caffeine has been removed',
-        },
-        option3: {
-            id: 'Blended',
-            title: 'Blended',
-            answer: 'Combination of two or three dark roasted beans of organic coffees',
-        },
-        open: false,
+        options: [
+            {
+                id: 'Single origin',
+                title: "Single origin",
+                answer: 'Distinct high quality coffee from a specific family-owned farm',
+            },
+            {
+                id: 'Decaf',
+                title: 'Decaf',
+                answer: 'Just like regular coffee, except the caffeine has been removed',
+            },
+            {
+                id: 'Blended',
+                title: 'Blended',
+                answer: 'Combination of two or three dark roasted beans of organic coffees',
+            },
+        ]
 
     },
 
     {
         id: '03',
         question: 'How much would you like?',
-        option1: {
-            id: '250g',
-            title: '250g',
-            answer: 'Perfect for the solo drinker. Yields about 12 delicious cups.',
-        },
-        option2: {
-            id: '500g',
-            title: '500g',
-            answer: 'Perfect option for a couple. Yields about 40 delectable cups.',
-        },
-        option3: {
-            id: '1000g',
-            title: '1000g',
-            answer: 'Perfect for offices and events. Yields about 90 delightful cups.',
-        },
-        open: false,
+        options: [
+            {
+                id: '250g',
+                title: '250g',
+                answer: 'Perfect for the solo drinker. Yields about 12 delicious cups.',
+            },
+            {
+                id: '500g',
+                title: '500g',
+                answer: 'Perfect option for a couple. Yields about 40 delectable cups.',
+            },
+            {
+                id: '1000g',
+                title: '1000g',
+                answer: 'Perfect for offices and events. Yields about 90 delightful cups.',
+            },
+        ]
 
     },
 
     {
         id: '04',
         question: 'Want us to grind them?',
-        option1: {
-            id: 'Wholebean',
-            title: 'Wholebean',
-            answer: 'Best choice if you cherish the full sensory experience',
-        },
-        option2: {
-            id: 'Filtered',
-            title: 'Filtered',
-            answer: 'For drip or pour-over coffee methods such as V60 and Aeropress',
-        },
-        option3: {
-            id: 'Cafetiére',
-            title: 'Cafetiére',
-            answer: 'Course ground beans specifically suited for french press coffees',
-        },
-        open: false,
+        options: [
+            {
+                id: 'Wholebean',
+                title: 'Wholebean',
+                answer: 'Best choice if you cherish the full sensory experience',
+            },
+            {
+                id: 'Filtered',
+                title: 'Filtered',
+                answer: 'For drip or pour-over coffee methods such as V60 and Aeropress',
+            },
+            {
+                id: 'Cafetiére',
+                title: 'Cafetiére',
+                answer: 'Course ground beans specifically suited for french press coffees',
+            },
+        ]
     },
 
     {
         id: '05',
         question: 'How often should we deliver?',
-        option1: {
-            id: 'Weekly',
-            title: 'Every week',
-            answer: '$14.00 per shipment. Includes free first-class shipping.',
-        },
-        option2: {
-            id: 'Fortnight',
-            title: 'Every 2 weeks',
-            answer: '$17.25 per shipment. Includes free priority shipping.',
-        },
-        option3: {
-            id: 'Monthly',
-            title: 'Every month',
-            answer: '$22.50 per shipment. Includes free first-class shipping.',
-        },
-        open: false,
+        options: [
+            {
+                id: 'Weekly',
+                title: 'Every week',
+                answer: '$14.00 per shipment. Includes free first-class shipping.',
+            },
+            {
+                id: 'Fortnight',
+                title: 'Every 2 weeks',
+                answer: '$17.25 per shipment. Includes free priority shipping.',
+            },
+            {
+                id: 'Monthly',
+                title: 'Every month',
+                answer: '$22.50 per shipment. Includes free first-class shipping.',
+            },
+        ]
     },
 ];
 

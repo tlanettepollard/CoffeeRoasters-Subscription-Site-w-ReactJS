@@ -139,7 +139,7 @@ const Accordion = () => {
                                 <button aria-expanded={plan.id === '01' ? true : false} aria-controls={`collapse${plan.id}`} id={`accordionBtn&${plan.id}`} className={`accordion--btn`} onClick={handleShow} data-toggle='collapse' data-target={`collapse${plan.id}`}>{plan.question}</button>
                             </h3>
                             <div id={`collapse${plan.id}`} role='region' className={`plan__card collapse${plan.id}`}>
-                                {/* Map options */}
+                                
                             </div>
                         </div>
                     </li>
