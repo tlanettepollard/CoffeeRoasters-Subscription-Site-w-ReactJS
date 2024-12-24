@@ -1,5 +1,5 @@
-import { AsideNav } from "./AsideNav";
-import { Accordion } from "./Accordion";
+import AsideNav from "./AsideNav";
+import Accordion from "./Accordion";
 
 export function Plans() {
     return (

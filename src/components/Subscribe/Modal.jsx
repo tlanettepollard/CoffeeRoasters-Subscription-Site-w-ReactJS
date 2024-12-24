@@ -26,7 +26,7 @@ const Modal = ({ isGrindDisabled, onSubmit, verb, drink, bean, quantity, grind, 
                         </p>
                     ) : (
                         <p className="modal__text">
-                            "I drink my coffee <span className='order-option'>{verb}</span> <span className='order-option'>{props.drink}</span>, with a <span className='order-option'>{bean}</span> type of bean. <span className='order-option'>{quantity}</span> ground ala <span className='order-option'>{grind}</span>, sent to me <span className='order-option'> {frequency}</span>."
+                            "I drink my coffee <span className='order-option'>{verb}</span> <span className='order-option'>{drink}</span>, with a <span className='order-option'>{bean}</span> type of bean. <span className='order-option'>{quantity}</span> ground ala <span className='order-option'>{grind}</span>, sent to me <span className='order-option'> {frequency}</span>."
                         </p>
                     )}
                     <p className="modal__confirm">

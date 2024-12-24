@@ -14,7 +14,7 @@ const Accordion = () => {
     }
 
     const [show, setShow] = useState(false);
-    [radioData, setRadioData] = useState(initialState);
+    const [radioData, setRadioData] = useState(initialState);
     const [verb, setVerb] = useState('as');
 
 
@@ -88,7 +88,7 @@ const Accordion = () => {
         // Check if first option selected is Capsule
         // If selected, disable grind option and uncheck
 
-        const prefer = preferredChoice.filter(choice => choice.checked && choice.id === 'Capsule')
+        const prefer = preferredChoice.filter(choice => choice.checked && choice.id === 'capsule')
         console.log(prefer)
         if (prefer.length > 0) {
             grind.classList.add('grind__disable')
