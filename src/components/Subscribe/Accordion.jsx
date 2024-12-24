@@ -89,7 +89,7 @@ const Accordion = () => {
         // Check if first option selected is Capsule
         // If selected, disable grind option and uncheck
 
-        const prefer = preferredChoice.filter(choice => choice.checked && choice.id === 'capsule')
+        const prefer = preferredChoice.filter(selection => selection.checked && selection.id === 'capsule')
         console.log(prefer)
         if (prefer.length > 0) {
             grind.classList.add('grind__disable')
