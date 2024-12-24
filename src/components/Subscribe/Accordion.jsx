@@ -142,7 +142,15 @@ const Accordion = () => {
                                 {plan.options.map(opt => {
                                     return <div className={`plan__select ${plan.name}`} key={opt.id}>
                                         <input type="radio" name={plan.name} id={opt.sub} onChange={onChange} />
+                                        <label className='radio__label' htmlFor={opt.sub}>
+                                            <span className={`plan__card__heading radio__heading container__${plan.name}`}>
+                                                {opt.title}
+                                            </span>
+                                            <span className={`plan__card__text radio__text ${opt.sub}`}>
+                                                {opt.answer}
+                                            </span>
 
+                                        </label>
                                     </div>
                                 })}
                             </div>
@@ -150,6 +158,10 @@ const Accordion = () => {
                     </li>
                 })}
             </ul>
+
+            <OrderSummary onSubmit={handleSubmit} drink={preferDrink} bean={beanChoice} quantity={qty} grind={grind} frequency={delivery} />
+            <Modal onSubmit={handleSubscribe} prefer={radioData.preference} bean={radioData.bean} quantity={radioData.quantity} grind={radioData.grind} delivery={radioData.deliveries} shipping={shippingCost()} verb={verb} />
+
         </div>
     )
 
