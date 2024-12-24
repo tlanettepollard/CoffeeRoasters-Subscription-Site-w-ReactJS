@@ -305,19 +305,19 @@ export const PlanQuestions = [
         options: [
             {
                 id: '33',
-                sub: 'every week',
+                sub: 'weekly',
                 title: 'Every week',
                 answer: '$14.00 per shipment. Includes free first-class shipping.',
             },
             {
                 id: '34',
-                sub: 'every 2 weeks',
+                sub: 'fortnight',
                 title: 'Every 2 weeks',
                 answer: '$17.25 per shipment. Includes free priority shipping.',
             },
             {
                 id: '35',
-                sub: 'every month',
+                sub: 'monthly',
                 title: 'Every month',
                 answer: '$22.50 per shipment. Includes free first-class shipping.',
             },

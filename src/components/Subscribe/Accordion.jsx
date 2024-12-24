@@ -33,20 +33,20 @@ const Accordion = () => {
     const beanChoice = radioData.bean === null ? '____' : radioData.bean
     const qty = radioData.quantity === null ? '____' : radioData.quantity
     const grind = radioData.grind === null ? '____' : radioData.grind
-    const delivery = radioData.deliveries === 'Weekly' ? 'Every week' : radioData.deliveries === 'Fortnight' ? 'Every 2 weeks' : radioData.deliveries === 'Monthly' ? 'Every month' : '____'
+    const delivery = radioData.deliveries === 'weekly' ? 'Every week' : radioData.deliveries === 'fortnight' ? 'Every 2 weeks' : radioData.deliveries === 'monthly' ? 'Every month' : '____'
 
     // Calculate total shipping cost per month per weight
 
     const shippingCost = () => {
         switch (qty) {
             case '250g':
-                return delivery === 'Every week' ? 7.20 * 4 : delivery === 'Every 2 weeks' ? 9.60 * 2 : 12.00;
+                return radioData.deliveries === 'weekly' ? 7.20 * 4 : radioData.deliveries === 'fortnight' ? 9.60 * 2 : 12.00;
                 break;
             case '500g':
-                return delivery === 'Every week' ? 13 * 4 : delivery === 'Every 2 weeks' ? 17.50 * 2 : 22.00;
+                return radioData.deliveries === 'weekly' ? 13 * 4 : radioData.deliveries === 'fortnight' ? 17.50 * 2 : 22.00;
                 break;
             case '1000g':
-                return 'Every week' ? 22.00 * 4 : delivery === 'Every 2 weeks' ? 32.00 * 2 : 42.00;
+                return 'weekly' ? 22.00 * 4 : radioData.deliveries === 'fortnight' ? 32.00 * 2 : 42.00;
                 break;
             default:
                 return shippingCost;
@@ -160,7 +160,7 @@ const Accordion = () => {
             </ul>
 
             <OrderSummary onSubmit={handleSubmit} drink={preferDrink} bean={beanChoice} quantity={qty} grind={grind} frequency={delivery} />
-            <Modal onSubmit={handleSubscribe} prefer={radioData.preference} bean={radioData.bean} quantity={radioData.quantity} grind={radioData.grind} delivery={radioData.deliveries} shipping={shippingCost()} verb={verb} />
+            <Modal onSubmit={handleSubscribe} drink={radioData.preference} bean={radioData.bean} quantity={radioData.quantity} grind={radioData.grind} frequency={radioData.deliveries} shipping={shippingCost()} verb={verb} />
 
         </div>
     )
