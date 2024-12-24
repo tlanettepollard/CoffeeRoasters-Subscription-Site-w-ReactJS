@@ -14,7 +14,7 @@ const Accordion = () => {
     }
 
     const [show, setShow] = useState(false);
-    [radioData, setRadioData] = useState(initialState);
+    const [radioData, setRadioData] = useState(initialState);
     const [verb, setVerb] = useState('as');
 
 
@@ -33,20 +33,20 @@ const Accordion = () => {
     const beanChoice = radioData.bean === null ? '____' : radioData.bean
     const qty = radioData.quantity === null ? '____' : radioData.quantity
     const grind = radioData.grind === null ? '____' : radioData.grind
-    const delivery = radioData.deliveries === 'Weekly' ? 'Every week' : radioData.deliveries === 'Fortnight' ? 'Every 2 weeks' : radioData.deliveries === 'Monthly' ? 'Every month' : '____'
+    const delivery = radioData.deliveries === 'weekly' ? 'Every week' : radioData.deliveries === 'fortnight' ? 'Every 2 weeks' : radioData.deliveries === 'monthly' ? 'Every month' : '____'
 
     // Calculate total shipping cost per month per weight
 
     const shippingCost = () => {
         switch (qty) {
             case '250g':
-                return delivery === 'Every week' ? 7.20 * 4 : delivery === 'Every 2 weeks' ? 9.60 * 2 : 12.00;
+                return radioData.deliveries === 'weekly' ? 7.20 * 4 : radioData.deliveries === 'fortnight' ? 9.60 * 2 : 12.00;
                 break;
             case '500g':
-                return delivery === 'Every week' ? 13 * 4 : delivery === 'Every 2 weeks' ? 17.50 * 2 : 22.00;
+                return radioData.deliveries === 'weekly' ? 13 * 4 : radioData.deliveries === 'fortnight' ? 17.50 * 2 : 22.00;
                 break;
             case '1000g':
-                return 'Every week' ? 22.00 * 4 : delivery === 'Every 2 weeks' ? 32.00 * 2 : 42.00;
+                return 'weekly' ? 22.00 * 4 : radioData.deliveries === 'fortnight' ? 32.00 * 2 : 42.00;
                 break;
             default:
                 return shippingCost;
@@ -88,7 +88,7 @@ const Accordion = () => {
         // Check if first option selected is Capsule
         // If selected, disable grind option and uncheck
 
-        const prefer = preferredChoice.filter(choice => choice.checked && choice.id === 'Capsule')
+        const prefer = preferredChoice.filter(choice => choice.checked && choice.id === 'capsule')
         console.log(prefer)
         if (prefer.length > 0) {
             grind.classList.add('grind__disable')
@@ -142,7 +142,15 @@ const Accordion = () => {
                                 {plan.options.map(opt => {
                                     return <div className={`plan__select ${plan.name}`} key={opt.id}>
                                         <input type="radio" name={plan.name} id={opt.sub} onChange={onChange} />
+                                        <label className='radio__label' htmlFor={opt.sub}>
+                                            <span className={`plan__card__heading radio__heading container__${plan.name}`}>
+                                                {opt.title}
+                                            </span>
+                                            <span className={`plan__card__text radio__text ${opt.sub}`}>
+                                                {opt.answer}
+                                            </span>
 
+                                        </label>
                                     </div>
                                 })}
                             </div>
@@ -150,6 +158,10 @@ const Accordion = () => {
                     </li>
                 })}
             </ul>
+
+            <OrderSummary onSubmit={handleSubmit} drink={preferDrink} bean={beanChoice} quantity={qty} grind={grind} frequency={delivery} />
+            <Modal onSubmit={handleSubscribe} drink={radioData.preference} bean={radioData.bean} quantity={radioData.quantity} grind={radioData.grind} frequency={radioData.deliveries} shipping={shippingCost()} verb={verb} />
+
         </div>
     )
 
