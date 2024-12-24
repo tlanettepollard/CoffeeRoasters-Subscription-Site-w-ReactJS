@@ -206,6 +206,7 @@ export const PlanQuestions = [
             },
             {
                 id: '23',
+                sub: 'espresso',
                 title: 'Espresso',
                 answer: 'Dense and finely ground beans for an intense flavorful experience',
             },
@@ -221,16 +222,19 @@ export const PlanQuestions = [
         options: [
             {
                 id: '24',
+                sub: 'single origin',
                 title: "Single origin",
                 answer: 'Distinct high quality coffee from a specific family-owned farm',
             },
             {
                 id: '25',
+                sub: 'decaf',
                 title: 'Decaf',
                 answer: 'Just like regular coffee, except the caffeine has been removed',
             },
             {
                 id: '26',
+                sub: 'blended',
                 title: 'Blended',
                 answer: 'Combination of two or three dark roasted beans of organic coffees',
             },
@@ -246,16 +250,19 @@ export const PlanQuestions = [
         options: [
             {
                 id: '27',
+                sub: '250g',
                 title: '250g',
                 answer: 'Perfect for the solo drinker. Yields about 12 delicious cups.',
             },
             {
                 id: '28',
+                sub: '500g',
                 title: '500g',
                 answer: 'Perfect option for a couple. Yields about 40 delectable cups.',
             },
             {
                 id: '29',
+                sub: '1000g',
                 title: '1000g',
                 answer: 'Perfect for offices and events. Yields about 90 delightful cups.',
             },
@@ -271,16 +278,19 @@ export const PlanQuestions = [
         options: [
             {
                 id: '30',
+                sub: 'wholebean',
                 title: 'Wholebean',
                 answer: 'Best choice if you cherish the full sensory experience',
             },
             {
                 id: '31',
+                sub: 'filtered',
                 title: 'Filtered',
                 answer: 'For drip or pour-over coffee methods such as V60 and Aeropress',
             },
             {
                 id: '32',
+                sub: 'cafetiére',
                 title: 'Cafetiére',
                 answer: 'Course ground beans specifically suited for french press coffees',
             },
@@ -295,16 +305,19 @@ export const PlanQuestions = [
         options: [
             {
                 id: '33',
+                sub: 'every week',
                 title: 'Every week',
                 answer: '$14.00 per shipment. Includes free first-class shipping.',
             },
             {
                 id: '34',
+                sub: 'every 2 weeks',
                 title: 'Every 2 weeks',
                 answer: '$17.25 per shipment. Includes free priority shipping.',
             },
             {
                 id: '35',
+                sub: 'every month',
                 title: 'Every month',
                 answer: '$22.50 per shipment. Includes free first-class shipping.',
             },
