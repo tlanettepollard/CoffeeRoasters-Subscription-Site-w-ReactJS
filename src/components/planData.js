@@ -193,17 +193,19 @@ export const PlanQuestions = [
         name: 'preference',
         options: [
             {
-                id: 'Capsule',
+                id: '21',
+                sub: 'capsule',
                 title: 'Capsule',
                 answer: 'Compatible with Nespresso systems and similar brewers',
             },
             {
-                id: 'Filter',
+                id: '22',
+                sub: 'filter',
                 title: 'Filter',
                 answer: 'For pour over or drip methods like Aeropress, Chemex, V60',
             },
             {
-                id: 'Espresson',
+                id: '23',
                 title: 'Espresso',
                 answer: 'Dense and finely ground beans for an intense flavorful experience',
             },
@@ -218,17 +220,17 @@ export const PlanQuestions = [
         name: 'bean',
         options: [
             {
-                id: 'Single origin',
+                id: '24',
                 title: "Single origin",
                 answer: 'Distinct high quality coffee from a specific family-owned farm',
             },
             {
-                id: 'Decaf',
+                id: '25',
                 title: 'Decaf',
                 answer: 'Just like regular coffee, except the caffeine has been removed',
             },
             {
-                id: 'Blended',
+                id: '26',
                 title: 'Blended',
                 answer: 'Combination of two or three dark roasted beans of organic coffees',
             },
@@ -243,17 +245,17 @@ export const PlanQuestions = [
         name: 'quantity',
         options: [
             {
-                id: '250g',
+                id: '27',
                 title: '250g',
                 answer: 'Perfect for the solo drinker. Yields about 12 delicious cups.',
             },
             {
-                id: '500g',
+                id: '28',
                 title: '500g',
                 answer: 'Perfect option for a couple. Yields about 40 delectable cups.',
             },
             {
-                id: '1000g',
+                id: '29',
                 title: '1000g',
                 answer: 'Perfect for offices and events. Yields about 90 delightful cups.',
             },
@@ -268,17 +270,17 @@ export const PlanQuestions = [
         name: 'grind',
         options: [
             {
-                id: 'Wholebean',
+                id: '30',
                 title: 'Wholebean',
                 answer: 'Best choice if you cherish the full sensory experience',
             },
             {
-                id: 'Filtered',
+                id: '31',
                 title: 'Filtered',
                 answer: 'For drip or pour-over coffee methods such as V60 and Aeropress',
             },
             {
-                id: 'Cafetiére',
+                id: '32',
                 title: 'Cafetiére',
                 answer: 'Course ground beans specifically suited for french press coffees',
             },
@@ -292,17 +294,17 @@ export const PlanQuestions = [
         name: 'deliveries',
         options: [
             {
-                id: 'Weekly',
+                id: '33',
                 title: 'Every week',
                 answer: '$14.00 per shipment. Includes free first-class shipping.',
             },
             {
-                id: 'Fortnight',
+                id: '34',
                 title: 'Every 2 weeks',
                 answer: '$17.25 per shipment. Includes free priority shipping.',
             },
             {
-                id: 'Monthly',
+                id: '35',
                 title: 'Every month',
                 answer: '$22.50 per shipment. Includes free first-class shipping.',
             },
