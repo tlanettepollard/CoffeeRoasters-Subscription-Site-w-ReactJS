@@ -56,9 +56,9 @@ const Accordion = () => {
     // Toggle Accordion control, click question
     // to reveal and close the answers
     // show available answers
-    const handleShow = (e) => {
+    const handleShow = (evt) => {
         setShow(!show)
-        const btn = e.target
+        const btn = evt.target
         const parent = btn.parentElement
         const attribute = btn.getAttribute('data-target')
         console.log(attribute)
@@ -70,9 +70,9 @@ const Accordion = () => {
     }
 
     // Radion buttons to make selection
-    const onChange = (e) => {
-        console.log(e.target)
-        const { name, id } = e.target
+    const onChange = (evt) => {
+        console.log(evt.target)
+        const { name, id } = evt.target
         setRadioData({ ...radioData, [name]: id })
         console.log(name)
         console.log(id)
@@ -80,6 +80,7 @@ const Accordion = () => {
 
         const preferredChoice = Array.from(document.querySelectorAll("input[name='preference']"))
         console.log(preferredChoice)
+
         const grind = document.getElementById('accordionBtn04')
         const grind__child = document.getElementById('collapse04')
         const show__grind = document.querySelector('.show__grind')
@@ -88,7 +89,7 @@ const Accordion = () => {
         // Check if first option selected is Capsule
         // If selected, disable grind option and uncheck
 
-        const prefer = preferredChoice.filter(choice => choice.checked && choice.id === 'capsule')
+        const prefer = preferredChoice.filter(selection => selection.checked && selection.id === 'capsule')
         console.log(prefer)
         if (prefer.length > 0) {
             grind.classList.add('grind__disable')
@@ -136,7 +137,7 @@ const Accordion = () => {
                     return <li className="accordion__list__item" key={plan.id}>
                         <div id={plan.name} className="accordion__item">
                             <h3 className="accordion__header">
-                                <button aria-expanded={plan.id === '01' ? true : false} aria-controls={`collapse${plan.id}`} id={`accordionBtn&${plan.id}`} className={`accordion--btn`} onClick={handleShow} data-toggle='collapse' data-target={`collapse${plan.id}`}>{plan.question}</button>
+                                <button aria-expanded={plan.id === '01' ? true : false} aria-controls={`collapse${plan.id}`} id={`accordionBtn${plan.id}`} className={`accordion--btn`} onClick={handleShow} data-toggle='collapse' data-target={`collapse${plan.id}`}>{plan.question}</button>
                             </h3>
                             <div id={`collapse${plan.id}`} role='region' className={`plan__card collapse${plan.id}`}>
                                 {plan.options.map(opt => {
