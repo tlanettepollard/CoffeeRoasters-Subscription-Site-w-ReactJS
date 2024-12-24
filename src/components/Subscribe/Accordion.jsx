@@ -140,9 +140,9 @@ const Accordion = () => {
                             </h3>
                             <div id={`collapse${plan.id}`} role='region' className={`plan__card collapse${plan.id}`}>
                                 {plan.options.map(opt => {
-                                    return <div className={`plan__select ${plan.title}`} key={opt.id}>
-                                        <input type="radio" name={plan.name} id={opt.title} onChange={onChange} />
-                                            {/* Label next */}
+                                    return <div className={`plan__select ${plan.name}`} key={opt.id}>
+                                        <input type="radio" name={plan.name} id={opt.sub} onChange={onChange} />
+
                                     </div>
                                 })}
                             </div>
