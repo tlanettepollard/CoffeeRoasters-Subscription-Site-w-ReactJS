@@ -7,7 +7,7 @@ export default function SharedHero(props) {
                 <h2 className='hero--title'>
                     {props.title}
                 </h2>
-                <p className='hero--desc'>{props.desc}</p>
+                <p className='hero--text'>{props.desc}</p>
             </div>
         </div>
     );
