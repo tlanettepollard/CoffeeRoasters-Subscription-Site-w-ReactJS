@@ -4,9 +4,11 @@
 
 .hero {
     @include flex(column, center, center);
-    margin: auto;
-    width: 90%;
-    height: 25rem;
+    //margin: auto;
+    //width: 90%;
+    margin: 0 1.5rem;
+    //height: 25rem;
+    color: white;
     border-radius: .625rem;
     background-repeat: no-repeat;
     background-size: cover;
@@ -58,4 +60,8 @@
         background-image: url('/src/assets/plan/desktop/image-hero-blackcup.jpg');
 
     }
+}
+
+.hero__content {
+    padding: 6rem 1.5rem;
 }
