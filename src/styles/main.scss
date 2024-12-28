@@ -2,6 +2,7 @@
 @use 'abstracts/media' as *;
 @use 'abstracts/mixins' as *;
 
+@use 'base/reset' as *;
 @use 'base/typography' as *;
 
 @use 'components/accordion' as *;
@@ -24,7 +25,6 @@
 @use 'pages/home' as *;
 @use 'pages/subscribe' as *;
 
-@use 'vendors/normalize' as *;
 
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Fraunces:wght@900&display=swap");
 
@@ -47,6 +47,7 @@ body {
     width: 100%;
     min-height: 100vh;
     margin: auto;
+    //line-height: .0938rem;
     background-color: $page-background;
 
 }
