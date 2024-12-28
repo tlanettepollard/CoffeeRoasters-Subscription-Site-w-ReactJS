@@ -1,6 +1,7 @@
 @use '../abstracts/colors' as *;
 @use '../abstracts//media' as *;
 @use '../abstracts/mixins' as *;
+@use '../base/typography' as *;
 
 .hero {
     @include flex(column, center, center);
@@ -18,7 +19,19 @@
     .hero__content {
         padding: 6rem 1.5rem;
         text-align: center;
+
+        .hero__text {
+            font-family: $body-font;
+            font-weight: 400;
+            font-size: $body-font-size;
+            line-height: 1.5625rem;
+            opacity: 0.8;
+
+        }
+
     }
+
+
 
 }
 
@@ -36,6 +49,11 @@
 
     }
 
+    .hero__content {
+        .hero__title {
+            @include HomeSection1Title;
+        }
+    }
 
 }
 
@@ -54,9 +72,7 @@
 
     }
 
-    .hero__btn {
-        display: none;
-    }
+
 }
 
 .subscribe {
@@ -73,6 +89,10 @@
 
     }
 
+}
+
+.about,
+.subscribe {
     .hero__btn {
         display: none;
     }
