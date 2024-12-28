@@ -64,7 +64,10 @@
 @mixin ButtonFont() {
     font-family: $header-font;
     font-size: $button-font-size;
+    font-weight: 900;
+    text-align: center;
     line-height: 1.5625rem;
+    color: $button-font-color;
 }
 
 @mixin NavbarFont() {
