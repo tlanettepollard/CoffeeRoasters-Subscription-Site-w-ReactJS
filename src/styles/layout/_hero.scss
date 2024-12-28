@@ -26,6 +26,7 @@
             font-size: $body-font-size;
             line-height: 1.5625rem;
             opacity: 0.8;
+            margin: 1.5rem auto 3rem;
 
         }
 
@@ -52,6 +53,14 @@
     .hero__content {
         .hero__title {
             @include HomeSection1Title;
+        }
+
+        .hero__btn {
+            background-color: $main-btn-active;
+            display: inline-block;
+            @include ButtonFont;
+            padding: 1rem 2.6rem;
+            border-radius: .375rem;
         }
     }
 
