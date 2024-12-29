@@ -5,8 +5,8 @@
 
 .hero {
     @include flex(column, center, center);
-    margin: auto;
-    width: 90%;
+    margin: 0 1.5rem;
+    //width: 90%;
     height: 25rem;
     color: white;
     flex-shrink: 0;
@@ -18,6 +18,11 @@
 
     @include bp-md-tablet {
         margin: 0rem 2.5rem;
+        align-items: flex-start;
+    }
+
+    @include bp-xl-desktop {
+        margin: 0 5rem;
     }
 
     .hero__content {
@@ -27,6 +32,28 @@
         @include bp-md-tablet {
             max-width: 25rem;
             text-align: left;
+        }
+
+        @include bp-xl-desktop {
+
+            padding: 7rem 0 7rem 4rem;
+            max-width: 35rem;
+        }
+
+        .hero__title {
+            font-size: $about-hero-heading-size;
+            font-weight: 900;
+            line-height: 1.75rem;
+
+            @include bp-md-tablet {
+                font-size: 3rem;
+            }
+
+            @include bp-xl-desktop {
+
+                font-size: $h1-heading-size;
+                line-height: 1.25;
+            }
         }
 
         .hero__text {
@@ -40,8 +67,6 @@
         }
 
     }
-
-
 
 }
 
@@ -60,13 +85,6 @@
     }
 
     .hero__content {
-        .hero__title {
-            @include HomeSection1Title;
-
-            @include bp-md-tablet {
-                text-align: left;
-            }
-        }
 
         .hero__btn {
             background-color: $main-btn-active;
@@ -118,15 +136,6 @@
 
     }
 
-    .hero__content {
-        .hero__title {
-            @include HomeSection1Title;
-
-            @include bp-md-tablet {
-                text-align: left;
-            }
-        }
-    }
 
 }
 
@@ -134,5 +143,16 @@
 .subscribe {
     .hero__btn {
         display: none;
+    }
+}
+
+.home .hero__content,
+.subscribe .hero__content {
+    .hero__title {
+        @include HomeSubscribeHeroTitle;
+
+        @include bp-md-tablet {
+            text-align: left;
+        }
     }
 }
