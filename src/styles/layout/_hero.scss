@@ -16,9 +16,18 @@
     background-size: cover;
     background-position: center;
 
+    @include bp-md-tablet {
+        margin: 0rem 2.5rem;
+    }
+
     .hero__content {
         padding: 6rem 1.5rem;
         text-align: center;
+
+        @include bp-md-tablet {
+            max-width: 25rem;
+            text-align: left;
+        }
 
         .hero__text {
             font-family: $body-font;
@@ -53,6 +62,10 @@
     .hero__content {
         .hero__title {
             @include HomeSection1Title;
+
+            @include bp-md-tablet {
+                text-align: left;
+            }
         }
 
         .hero__btn {
@@ -61,6 +74,13 @@
             @include ButtonFont;
             padding: 1rem 2.6rem;
             border-radius: .375rem;
+
+            &:hover,
+            &:focus {
+                background-color: $main-btn-hover;
+                outline: none;
+            }
+
         }
     }
 
@@ -96,6 +116,16 @@
     @include bp-xl-desktop {
         background-image: url('/src/assets/plan/desktop/image-hero-blackcup.jpg');
 
+    }
+
+    .hero__content {
+        .hero__title {
+            @include HomeSection1Title;
+
+            @include bp-md-tablet {
+                text-align: left;
+            }
+        }
     }
 
 }
