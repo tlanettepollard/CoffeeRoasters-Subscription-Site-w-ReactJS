@@ -2,6 +2,15 @@
 @use '../abstracts/media' as *;
 @use '../abstracts/mixins' as *;
 @use '../base/typography' as *;
-@use '../components/buttons' as *;
+//@use '../components/buttons' as *;
 
+.navbar {
+    position: relative;
+    @include flex (column, space-between, center);
+    padding: 2rem 1.5rem;
+}
 
+.nav__list {
+    text-align: center;
+    padding: 0;
+}
