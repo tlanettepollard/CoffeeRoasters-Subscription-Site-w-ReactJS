@@ -5,12 +5,21 @@
 //@use '../components/buttons' as *;
 
 .navbar {
-    position: relative;
-    @include flex (column, space-between, center);
-    padding: 2rem 1.5rem;
-}
+    margin: auto;
+    padding: 1.5rem 2rem;
+    display: block;
 
-.nav__list {
-    text-align: center;
-    padding: 0;
+    @include bp-md-tablet {
+        width: 90%;
+        padding: 2.5rem;
+        @include flex(row, space-between, center);
+
+        .navbar-menu {
+            &--list {
+                @include flex(row, space-between, flex-start);
+                gap: 2.0625rem;
+                flex-shrink: 0;
+            }
+        }
+    }
 }
