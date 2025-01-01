@@ -4,24 +4,9 @@
 @use '../base/typography' as *;
 //@use '../components/buttons' as *;
 
-.navbar {
-    margin: auto;
-    padding: 1.5rem 2rem;
-    display: block;
+.navbar {}
 
-    @include bp-md-tablet {
-        width: 90%;
-        padding: 2.5rem;
-        @include flex(row, space-between, center);
-
-        .navbar-menu {
-            &--list {
-                @include flex(row, space-between, flex-start);
-                gap: 2.0625rem;
-                flex-shrink: 0;
-            }
-        }
-    }
+.navbar__mobile {
+    @include flex(row, space-between, center);
+    padding: 2rem 1.5rem;
 }
-
-// change
