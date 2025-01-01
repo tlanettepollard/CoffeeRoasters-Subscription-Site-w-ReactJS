@@ -56,7 +56,7 @@ export function Navbar() {
                             </Link>
                         </div>
                         {isNavExpanded ? (
-                            <img src={Close} className='close' onClick={isNavClosed} />
+                            <img src={Close} className='close-icon' onClick={isNavClosed} />
                         ) : (
                             <img src={Hamburger} className='hamburger-icon' onClick={isNavOpen} />
                         )}
