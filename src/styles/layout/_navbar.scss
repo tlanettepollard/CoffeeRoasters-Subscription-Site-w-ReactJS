@@ -4,7 +4,16 @@
 @use '../base/typography' as *;
 //@use '../components/buttons' as *;
 
-.navbar {}
+.navbar {
+    margin: auto;
+    display: block;
+
+    @include bp-md-tablet {
+        padding: 2.5rem 2.4375rem;
+        @include flex (row, space-between, center);
+    }  
+
+}
 
 .navbar__mobile {
     @include flex(row, space-between, center);
