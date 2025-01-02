@@ -4,7 +4,7 @@
 @use '../base/typography' as *;
 //@use '../components/buttons' as *;
 
-.navbar {
+.nav {
     margin: auto;
     display: block;
 
@@ -27,5 +27,32 @@
 .navbar__mobile {
     @include flex(row, space-between, center);
     padding: 2rem 1.5rem;
+}
 
+.navbar__mobile--menu {
+    width: 100%;
+    height: 36.0625rem;
+
+    .navbar__menu {
+        //@include flex(column, center, center);
+        text-align: center;
+        .nav__list {
+            .nav__item {
+                color: $mobile-navbar-font-color;
+                font-family: $header-font;
+                font-size: 1.5rem;
+                font-weight: 900;
+                line-height: 2rem;
+                padding: 1rem;
+                list-style: none;
+
+                .nav__item--btn {
+                   text-decoration: none;
+                   outline: none; 
+                }
+                
+            }
+        }
+
+    }
 }

@@ -37,12 +37,13 @@ export function Navbar() {
     return (
         <>
             {isNotMobile ? (
-                <nav aria-label='site' className='navbar'>
+                <nav aria-label='site' className='nav'>
                     <div className='logo__wrapper'>
                         <Link to='/' className='logo--link'>
                             <img src={Logo} alt='welcome to coffee roasters' />
                         </Link>
                     </div>
+
                     <div className='navbar__wrapper'>
                         <NavList />
                     </div>
