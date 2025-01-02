@@ -11,11 +11,21 @@
     @include bp-md-tablet {
         padding: 2.5rem 2.4375rem;
         @include flex (row, space-between, center);
-    }  
+
+        .nav__menu--list {
+            width: 17.6875rem;
+            //height: .9375rem;
+            @include flex(row, center, flex-start);
+            padding-right: .0625rem;
+            gap: 2.0625rem;
+            flex-shrink: 0;
+        }
+    }
 
 }
 
 .navbar__mobile {
     @include flex(row, space-between, center);
     padding: 2rem 1.5rem;
+
 }
