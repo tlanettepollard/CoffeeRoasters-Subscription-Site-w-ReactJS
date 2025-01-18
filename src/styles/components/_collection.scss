@@ -21,7 +21,25 @@
             height: 78.75rem;
             @include flex(column, space-evenly, center);
 
-            
+            .collection__item {
+                @include flex(column, center, center);
+
+                .collection__img__container {
+                    .collection__img {
+                        padding-bottom: 1.5rem;
+                    }
+                }
+
+                .collection__summary {
+                    .collection__subtitle {
+                        padding-bottom: 1rem;
+                    }
+
+                    .collection__details {
+                        padding-inline: 2.875rem;
+                    }
+                }
+            }
         }
 
     }
