@@ -1,7 +1,5 @@
-@use '../abstracts/colors' as *;
-@use '../abstracts//media' as *;
-@use '../abstracts/mixins' as *;
-@use '../base/typography' as *;
+@use '../abstracts' as *;
+@use '../base' as *;
 
 .hero {
     @include flex(column, center, center);

@@ -1,7 +1,5 @@
-@use '../abstracts/colors' as *;
-@use '../abstracts/media' as *;
-@use '../abstracts/mixins' as *;
-@use '../base/typography' as *;
+@use '../abstracts' as *;
+@use '../base' as *;
 //@use '../components/buttons' as *;
 
 .nav {
@@ -10,7 +8,7 @@
 
     @include bp-md-tablet {
         padding: 2.5rem 2.4375rem;
-        @include flex (row, space-between, center);
+        @include flex(row, space-between, center);
 
         .nav__menu--list {
             width: 17.6875rem;
@@ -34,8 +32,8 @@
     height: 36.0625rem;
 
     .navbar__menu {
-        //@include flex(column, center, center);
         text-align: center;
+
         .nav__list {
             .nav__item {
                 color: $mobile-navbar-font-color;
@@ -47,10 +45,10 @@
                 list-style: none;
 
                 .nav__item--btn {
-                   text-decoration: none;
-                   outline: none; 
+                    text-decoration: none;
+                    outline: none;
                 }
-                
+
             }
         }
 

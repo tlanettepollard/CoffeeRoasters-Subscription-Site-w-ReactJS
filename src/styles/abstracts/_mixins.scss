@@ -3,7 +3,7 @@
 @use '../base/typography' as *;
 
 // Flex Mixin
-@mixin flex ($direction, $justifyContent, $alignItems) {
+@mixin flex($direction, $justifyContent, $alignItems) {
     display: flex;
     flex-direction: $direction;
     justify-content: $justifyContent;
