@@ -1,2 +1,21 @@
-@use '../abstracts';
-@use '../base';
+@use '../abstracts' as *;
+@use '../base' as *;
+
+.main__home {
+    .collection {
+        text-align: center;
+
+        &__title {
+            font-size: $h2-heading-size;
+            font-family: $header-font;
+            font-weight: 900;
+            line-height: 0.75;
+            color: $home-section1-heading-color;
+            text-transform: lowercase;
+            opacity: 0.4;
+            padding: 7.5rem 1.5rem .8125rem;
+
+        }
+
+    }
+}
